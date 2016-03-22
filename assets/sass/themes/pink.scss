@@ -1,0 +1,7 @@
+@import '../base/settings';
+.color-theme-pink {
+  $primary: $pink;
+  $secondary: $dark-pink;
+  $tertiary: $light-pink;
+  @import 'theme';
+}

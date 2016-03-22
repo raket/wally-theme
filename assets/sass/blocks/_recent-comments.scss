@@ -1,0 +1,116 @@
+.recent__item {
+  padding: $regular-spacing;
+  font-size: 0.75rem;
+  display: block;
+
+  & + & {
+    border-top: 1px solid $ghost-black;
+  }
+
+  a {
+    @include link-underline;
+    @include link-arrow-before;
+    line-height: 1.5;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+}
+
+.recent__text {
+  background: $off-white;
+  border-radius: 5px;
+  padding: $regular-spacing;
+  position: relative;
+  margin: 0 0 $regular-spacing 0;
+
+  &:before {
+    @include triangle($off-white, 0.5rem, up);
+    margin: 0;
+    bottom: -0.625rem;
+    top: -0.625rem;
+    left: 1rem;
+  }
+
+  a {
+    display: block;
+    margin-bottom: $small-spacing;
+  }
+
+  .recent__link {
+    font-size: 1em;
+  }
+
+  q {
+    display: inline-block;
+  }
+
+}
+
+.recent__author {
+
+  font-size: 0.625rem;
+  line-height: 1;
+  margin: $small-spacing 0;
+
+  img {
+    display: none;
+  }
+
+  span {
+    position: relative;
+
+  }
+
+  .avatar {
+    border-radius: 100%;
+    height: 1rem;
+    width: 1rem;
+    margin-right: $small-spacing/2;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}
+
+.recent__date, .recent__author {
+  display: inline-block;
+  margin: 0 0 $small-spacing;
+  font-size: 0.625rem;
+}
+
+
+.recent__link {
+  clear: both;
+}
+
+.recent__article {
+  line-height: 1;
+  margin: $small-spacing 0;
+}
+
+.recent__date {
+  font-size: 0.625rem;
+  margin: $regular-spacing 0;
+}
+
+.recent__content {
+  display: block;
+  margin-bottom: $small-spacing;
+
+}
+
+.recent__emotion {
+  height: 2rem;
+  vertical-align: middle;
+  width: auto;
+  margin-right: $small-spacing;
+  display: inline-block;
+}
+
+.recent__not-found {
+  padding: $regular-spacing;
+  margin: 0;
+}

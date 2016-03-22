@@ -1,0 +1,27 @@
+.modal {
+  position: relative;
+  .modal__body {
+    @include box;
+
+    display:none;
+    width: 100%;
+    max-width: 800px;
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: $regular-spacing;
+
+  }
+
+  &.open {
+    .modal__body {
+      display: block;
+    }
+  }
+}
+
+.modal-backdrop {
+  background-color: rgba(#000, .3);
+}

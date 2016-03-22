@@ -1,0 +1,7 @@
+@import '../base/settings';
+.color-theme-green {
+  $primary: $green;
+  $secondary: $dark-green;
+  $tertiary: $light-green;
+  @import 'theme';
+}

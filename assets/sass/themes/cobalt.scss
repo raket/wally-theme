@@ -1,0 +1,7 @@
+@import '../base/settings';
+.color-theme-cobalt {
+  $primary: $cobalt;
+  $secondary: $dark-cobalt;
+  $tertiary: $light-cobalt;
+  @import 'theme';
+}

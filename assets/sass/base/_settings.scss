@@ -1,0 +1,111 @@
+// Media queries
+$tiny: new_breakpoint(max-width 767px);
+$small: new_breakpoint(min-width 768px);
+$small-up: $small;
+$medium: new_breakpoint(min-width 960px);
+$large: new_breakpoint(min-width 1280px);
+$huge: new_breakpoint(min-width 1650px);
+
+$tiny-only: new_breakpoint((max-width 767px));
+$small-only: new_breakpoint((min-width 768px) and (max-width 959px));
+$medium-only: new_breakpoint((min-width 960px) and (max-width 1279px));
+$large-only: new_breakpoint((min-width 1280px) and (max-width 1649px));
+
+// Fonts
+$base-font-size: 20px;
+$headings-font-family: 'Roboto', sans-serif;
+$base-font-family: 'Roboto', sans-serif;
+
+/*
+$font-sizes: (
+  xxs: .625rem,
+  xs: .75rem,
+  sm: .875rem,
+  md: 1rem,
+  lg: 1.25rem,
+  xl: 2rem,
+  xxl: 2.5rem
+);
+*/
+
+$font-sizes: (
+        xxs: .625rem,
+        xs: .75rem,
+        sm: .875rem,
+        md: 1rem,
+        lg: 1.2rem,
+        xl: 1.4rem,
+        xxl: 1.6rem,
+        xxxl: 2rem
+);
+
+$fonts: (
+  roboto: 'Roboto, sans-serif',
+  arial: 'Arial, sans-serif',
+  verdana: 'Verdana, sans-serif',
+  trebuchet-ms: 'Trebuchet MS, sans-serif',
+  source-sans-pro: 'Source Sans Pro, sans-serif'
+);
+
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+$off-white: #F5F8F9;
+$ghost-black: rgba($black, 0.1);
+$ghost-white: rgba($white, 0.9);
+$light-gray: #BBBBBB;
+$dark-gray: #444;
+$gray: $dark-gray;
+$aqua: #1183D3;
+$mint: #00A28B;
+$light-green: #C8E6C9;
+
+$dark-red: #43130E;
+$red: #CF3F3F;
+$light-red: #EED3D0;
+
+$purple: #9249AA;
+$dark-purple: darken($purple, 10%);
+$light-purple: #D1D0F4;
+
+$dark-yellow: #FFA000;
+$yellow: #FFC107;
+$light-yellow: #FFECB3;
+
+$pink: #CF3F67;
+$dark-pink: $pink;
+$light-pink: #CFAEBF;
+
+$green: #008773;
+$dark-green: #00764F;
+$light-green: #E3F2E6;
+
+$cobalt: #4C6975;
+$dark-cobalt: $cobalt;
+$light-cobalt: #BBDCE8;
+
+$dark-blue: #1168A5;
+$blue: #137BC4;
+$light-blue: #B3E5FC;
+
+$facebook-blue: #3b5998;
+$twitter-blue: #55acee;
+
+$primary: $blue;
+$secondary: $blue;
+$tertiary: $light-blue;
+$fourtiary: $light-green;
+
+
+// Spacing
+$tiny-spacing: 0.25rem;
+$small-spacing: 0.5rem;
+$regular-spacing: 1rem;
+$large-spacing: 2rem;
+$huge-spacing: 4rem;
+
+// Navigation
+$navigation-height: 3rem;
+
+// Figures
+$figure-height: 16rem;

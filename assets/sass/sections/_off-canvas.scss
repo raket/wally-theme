@@ -1,0 +1,162 @@
+.overlay {
+  background: $white;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  @include hide;
+
+  transition: opacity .35s ease-in-out;
+
+  &.is-visible {
+    height: 100%;
+    width: 100%;
+    clip: auto;
+  }
+
+}
+
+.off-canvas {
+  @include shadow(1);
+  background: $white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 20;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 0.35s ease-in-out;
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  a {
+    color: $primary;
+  }
+
+  &.is-open {
+    transform: none;
+  }
+
+}
+
+.off-canvas__open {
+  @include font-size(xl);
+  float: right;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: $white;
+  margin: 0;
+  padding: 0;
+  i {
+    margin: 0;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+}
+
+// NAVIGATION
+.off-canvas__navigation {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+}
+
+.off-canvas__navigation__header {
+  background-color: $secondary;
+  color: $white;
+  padding: $regular-spacing;
+  @include clearfix;
+
+  h3 {
+    @include font-size(xl);
+    font-weight: 500;
+    margin: 0 0 $regular-spacing;
+    float: none;
+  }
+}
+
+.off-canvas__close {
+  @extend .button;
+  @extend .button--small;
+  background: none;
+  border-color: $white;
+  color: $white;
+  float: right;
+  margin: 0;
+}
+
+.off-canvas__navigation__item,
+.off-canvas__navigation__subitem {
+
+  a {
+    border-bottom: 1px solid $ghost-black;
+    display: block;
+    padding: $small-spacing $regular-spacing;
+    position: relative;
+    color: $secondary;
+
+  }
+
+  &.is-current > a {
+    border: 2px solid $secondary;
+    font-weight: 500;
+  }
+
+}
+
+.off-canvas__navigation__toggle {
+  @include font-size(lg);
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  border-left: 1px solid $ghost-black;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:before {
+    font-family: 'Material Icons';
+    content: 'add_circle_outline';
+  }
+
+}
+
+.off-canvas__navigation__sublist {
+  display: none;
+
+  a {
+    color: $primary;
+  }
+
+}
+
+.off-canvas__navigation__subitem {
+  background-color: $tertiary;
+
+  .off-canvas__navigation__sublist {
+
+    border: 2px solid $ghost-black;
+
+    a {
+      padding-left: $large-spacing;
+    }
+  }
+
+}

@@ -1,0 +1,56 @@
+.pagination {
+  margin: $large-spacing 0 ($large-spacing * 2);
+  text-align: center;
+  @include clearfix;
+
+  &.no-margin {
+    margin: 0;
+  }
+
+}
+
+.pagination__prev,
+.prev.page-numbers {
+  float: left;
+}
+
+.pagination__next,
+.next.page-numbers {
+  float: right;
+}
+
+.button.pagination__button {
+  font-weight: normal;
+  width: auto;
+  margin: auto;
+  display: inline-block;
+  background: #FFF;
+  @include shadow(1);
+  padding: $large-spacing/2 $large-spacing;
+  @include link-underline-span;
+  @include font-size(md);
+  @include link-arrow-after;
+}
+
+.button.pagination__button.icon-load {
+
+  &:before {
+    font-family: 'Material Icons';
+    content: '\E86A';
+    font-size: inherit;
+    color: inherit;
+    position: relative;
+    top: -0.1rem;
+    left: -0.2rem;
+  }
+  &:after {
+    display: none;
+  }
+}
+
+
+// the_posts_pagination()
+.pagination .navigation {
+  margin: 0;
+  background: transparent;
+}

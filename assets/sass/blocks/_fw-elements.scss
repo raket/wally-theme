@@ -1,0 +1,17 @@
+section.main {
+  *[class*="fw-"], .video-wrapper {
+    margin-bottom: $small-spacing;
+  }
+
+  .fw-flash-messages {
+    @include box;
+
+    ul,
+    .fw-flash-message {
+      margin-bottom: 1rem;
+    }
+  }
+  .fw-divider-line hr {
+    border-color: $ghost-black;
+  }
+}

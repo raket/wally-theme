@@ -1,0 +1,128 @@
+@each $key, $name in $fonts {
+  body.heading-font-#{$key} {
+    h1, h2, h3, h4, h5, h6 {
+      font-family: #{$name};
+    }
+  }
+  body.body-font-#{$key}, body.body-font-#{$key} button {
+    font-family: #{$name};
+    font-weight: 200;
+  }
+}
+
+body {
+  line-height: 1.6;
+  letter-spacing: 0.025rem;
+}
+
+// dlig 0 Removes the fugly ligatures
+*, h1, h2, h3, h4, h5, h6 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: 500;
+  line-height: 1.3;
+  font-style: normal;
+  @include typo-margin;
+  + p {
+    margin-top: 0;
+  }
+
+}
+
+
+h1 {
+  @include font-size(xl);
+}
+
+h2 {
+  @include font-size(lg);
+}
+
+h3 {
+  @include font-size(md);
+}
+
+h4 {
+  @include font-size(base);
+}
+
+h5, h6 {
+  @include font-size(sm);
+}
+
+p, blockquote {
+  @include font-size(sm);
+  @include typo-margin;
+}
+
+#site-content {
+  ul, ol {
+    margin-bottom: $regular-spacing;
+    li {
+      @include font-size(sm);
+      margin-bottom: $small-spacing;
+      line-height: 1.5;
+    }
+  }
+}
+
+.subtitle {
+  @include font-size(lg);
+}
+
+article {
+  li {
+    @include typo-margin;
+  }
+}
+
+p.preamble {
+  @include font-size(md);
+  margin-bottom: $regular-spacing;
+}
+
+p a {
+  padding: 0;
+  display: inline;
+  @include link-underline;
+}
+
+em, i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: $primary;
+
+  h1, h2, h3, h4, h5, h6, p, footer {
+    & {
+      border-bottom: solid 2px transparent;
+      transition: border 0.3s ease-out;
+    }
+  }
+}
+
+blockquote {
+  padding-left: $regular-spacing;
+  border-left: 3px solid $off-white;
+  margin: $large-spacing !important;
+  p {
+    @include font-size(md);
+  }
+  color: $dark-gray;
+}
+
+.is-highlighted {
+  background: $primary;
+  padding: $tiny-spacing;
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  max-width: 35rem;
+}

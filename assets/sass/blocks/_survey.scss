@@ -1,0 +1,60 @@
+.survey,
+.fw_form_fw_form {
+
+  @include border;
+  border: 1px solid $ghost-black;
+  padding: 0 $regular-spacing $regular-spacing;
+
+  fieldset,
+  .fw-row {
+    border: 0;
+    padding: 0;
+    margin: $regular-spacing 0 0;
+
+    [class*="fw-col-"] {
+      margin: $regular-spacing 0;
+    }
+
+  }
+}
+
+.survey__numbering {
+  @include font-size(sm);
+  font-weight: 500;
+  display: block;
+  margin: $large-spacing 0 $tiny-spacing;
+}
+
+.survey__group,
+.fw_form_fw_form .fw-row {
+  @include border;
+  border: 0;
+  overflow: visible;
+  background: $off-white;
+
+  textarea {
+    width: 100%;
+  }
+
+}
+
+.form-builder-item p {
+  margin: $small-spacing 0 0;
+  @include font-size(xs);
+}
+
+.survey__group__header {
+  @extend h3;
+  font-weight: 500;
+}
+
+.survey__next {
+  @include font-size(xs);
+}
+
+.fw_form_fw_form [type=submit],
+.survey__submit {
+  float: right;
+  @extend .button;
+  @extend .button--primary;
+}

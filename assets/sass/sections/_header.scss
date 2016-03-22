@@ -1,0 +1,105 @@
+.site-header {
+  background: $secondary;
+  color: $white;
+  padding: $small-spacing 0 0;
+  position: relative;
+
+  @include shadow(9);
+}
+
+.headroom--not-top {
+  @include media($tiny) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: 3rem;
+
+    .site-title {
+      transform: translateY(-2rem);
+      width: 80%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 3rem;
+
+      span {
+        font-size: 1rem;
+      }
+
+      p {
+        display: none;
+      }
+
+    }
+  }
+
+}
+
+.site-title {
+  body.high-header-height & {
+    padding-top: 5rem;
+  }
+  @include media($medium) {
+    padding-top: $regular-spacing;
+  }
+
+  margin-bottom: $small-spacing;
+
+  img {
+    margin-right: $regular-spacing;
+  }
+
+  color: #FFF;
+
+  span {
+    @extend h1;
+    margin: 0;
+  }
+  &.has-image span {
+    @include hide;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.site-header__tools {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: $regular-spacing;
+  right: $regular-spacing;
+  @include font-size(xs);
+
+  @include media($medium) {
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    margin-left: $regular-spacing;
+  }
+
+  a {
+    color: $white;
+    padding-bottom: 0.1rem;
+    border-bottom: solid 1px rgba($ghost-white, 0.4);
+  }
+
+  a:hover, a:focus {
+    border-bottom: solid 2px #FFF;
+  }
+  a:focus {
+    background: transparent;
+    color: #FFF;
+    border-color: #FFF;
+  }
+}

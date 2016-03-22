@@ -1,0 +1,109 @@
+.alert {
+  @include typo-margin;
+
+  background-color: $ghost-black;
+  border: 1px solid $ghost-black;
+  border-radius: 10rem;
+  display: block;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 $regular-spacing;
+  width: 100%;
+  white-space: nowrap;
+  p {
+    @include font-size(xs);
+    white-space: normal;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  i, &:before {
+    margin-right: $small-spacing;
+  }
+
+  @include media($tiny) {
+    height: auto;
+    border-radius: 5px;
+    white-space: normal;
+    padding: $regular-spacing;
+    line-height: 1.5;
+
+    p {
+      display: block;
+    }
+
+    i, &:before {
+      float: left;
+      display: inline-block;
+      line-height: 1;
+    }
+
+  }
+
+}
+
+.alert__action {
+  color: $black;
+  font-weight: 500;
+  text-decoration: underline;
+  display: inline-block;
+  float: right;
+  @include font-size(xs);
+
+  &:after {
+    display: none;
+  }
+
+  @include media($tiny) {
+    float: none;
+    height: auto;
+  }
+
+}
+
+.alert--info,
+.alert--warning,
+.alert--danger,
+.alert--success {
+  &:before {
+    @include icon;
+    vertical-align: middle;
+  }
+}
+
+.alert--clean {
+  background-color: $white;
+  &:before {
+    content: 'info'
+  }
+}
+
+.alert--info {
+  background-color: $light-blue;
+  &:before {
+    content: 'info'
+  }
+}
+
+.alert--warning {
+  background-color: $light-yellow;
+  &:before {
+    content: 'error'
+  }
+}
+
+.alert--danger {
+  background-color: $light-red;
+  &:before {
+    content: 'warning'
+  }
+}
+
+.alert--success {
+  background-color: $light-green;
+  &:before {
+    content: 'check_circle'
+  }
+}

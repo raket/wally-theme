@@ -1,0 +1,160 @@
+// NAVIGATION
+
+.primary-navigation {
+  @include span-columns(8);
+  min-height: $navigation-height;
+}
+
+.navigation {
+  min-height: $navigation-height;
+  background-color: $white;
+  display: none;
+  @include media($medium) {
+    display: block;
+  }
+}
+
+// NAVIGATION LIST
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+
+  @include clearfix;
+
+}
+
+// NAVIGATION ITEM
+.navigation__item {
+  float: left;
+  position: relative;
+
+  border-right: solid 2px $ghost-black;
+  &:first-child {
+    border-left: solid 2px $ghost-black;
+  }
+
+  &.is-current, a:hover, a:focus, a:active {
+    background-color: transparent;
+    span {
+      padding: 0 0 2px;
+      border-bottom-color: $secondary;
+    }
+  }
+  &.is-current,
+  //&.current-page-ancestor,
+  a:focus,
+  a:active {
+    outline: 2px solid $secondary;
+  }
+
+  a:hover, a:focus, a:active {
+    text-decoration: none;
+  }
+
+  a, button {
+    font-size: 1rem;
+    color: $secondary;
+    display: block;
+    background: transparent;
+    line-height: $navigation-height;
+    padding: 0 $regular-spacing;
+    transition: 0.1s ease-out;
+    text-decoration: none;
+    span {
+      border-bottom: solid 2px transparent;
+      transition: border-color 0.2s ease;
+    }
+  }
+
+  button {
+    border: 0;
+  }
+
+  .sub-menu {
+    display: none;
+  }
+
+}
+
+// NAVIGATION SUB-LIST
+.navigation__sublist {
+
+  @include box;
+  @include shadow(2);
+
+  background: $white;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 30;
+  top: $navigation-height;
+  left: -9999px;
+  opacity: 0;
+  width: auto;
+  min-width: 100%;
+  border-radius: 0 0 5px 5px;
+  overflow: visible;
+
+  &.is-open {
+    left: 0;
+    opacity: 1;
+  }
+
+
+
+}
+
+// NAVIGATION SUBITEM
+.navigation__subitem {
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.navigation__subitem:last-child a {
+  border-bottom: 0;
+}
+
+.navigation__subitem a {
+
+  border-bottom: 1px solid $light-gray;
+  color: $secondary;
+  padding: $regular-spacing $regular-spacing;
+  line-height: 1;
+
+  &:hover,
+  &:focus {
+    &:before {
+    }
+  }
+  &.current {
+    &:before {
+    }
+  }
+}
+
+
+.internal-navigation {
+  @include media($tiny) {
+    display: none;
+  }
+}
+
+nav.subpages {
+  // Only display pages in the currente page tree
+  .list-group > li {
+    display: none;
+
+    &.current_page_ancestor,
+    &.is-current {
+      display: block;
+    }
+
+  }
+}

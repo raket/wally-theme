@@ -1,0 +1,231 @@
+// DEFAULTS
+
+html, body {
+  font-size: $base-font-size;
+}
+
+body {
+  background-color: #FFF;
+  -webkit-overflow-scrolling: touch;
+  &.lock { overflow:hidden; }
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+i.material-icons {
+  font-size: 1.25em;
+  vertical-align: text-bottom;
+}
+
+// ACCESIBILITY
+
+*:focus {
+  border-radius: 1px;
+  outline: 2px solid $primary;
+  .list-group__item & {
+    outline: 2px solid $primary;
+  }
+  #site-navigation & {
+    outline-color: $secondary;
+  }
+
+}
+
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.screen-reader-text {
+  @include hide;
+  color: #000;
+}
+
+// GRID
+.container {
+  @include outer-container;
+  padding: 0 $regular-spacing;
+  max-width: 60rem;
+}
+
+body {
+  .fw-page-builder-content {
+    *[class*="fw-col-"] {
+      padding-left: $regular-spacing;
+      padding-right: $regular-spacing;
+    }
+  }
+
+  .fw-container {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fw-row {
+    margin-left: $regular-spacing * -1;
+    margin-right: $regular-spacing * -1;
+  }
+  .fw-container {
+    max-width: 100%;
+  }
+}
+
+.row {
+  @include row;
+}
+
+// TABLES
+
+table {
+  width: 100%;
+
+  @include media($tiny) {
+    display: block;
+    overflow-x: scroll;
+    border-right: 1px solid $gray;
+    border-left: 1px solid $gray;
+    font-size: 0.75rem;
+  }
+
+  th {
+    background: $ghost-black;
+    padding: $small-spacing;
+
+    @include media($tiny) {
+      padding: $tiny-spacing;
+    }
+
+  }
+
+  tr {
+    border-bottom: 1px solid $gray;
+  }
+
+  td {
+    padding: $small-spacing;
+  }
+
+}
+
+// BUTTONS
+
+.button {
+  @include box;
+  @include font-size(sm);
+
+  box-shadow: none;
+  font-family: $headings-font-family;
+  margin: 0;
+  color: $black;
+  font-weight: 600;
+  border: solid 1px $gray;
+  cursor: pointer;
+  display: inline-block;
+  padding: $small-spacing $regular-spacing;
+  text-decoration: none;
+  transition: background, color, opacity;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25) inset;
+    opacity: 0.8;
+  }
+
+  &::before { // For icons
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @include media($tiny) {
+    width: 100%;
+  }
+
+}
+
+.button--primary {
+  background-color: $primary;
+  border: 0;
+  color: $white;
+}
+
+.button--secondary {
+  background-color: $secondary;
+  border: 0;
+  color: $white;
+}
+
+.button--large {
+  padding: $regular-spacing $large-spacing;
+}
+
+.button--small {
+  padding: $small-spacing;
+  @include font-size(xs);
+}
+
+body.logged-in {
+  .article-box {
+    position: relative;
+  }
+  .edit-btn {
+    @include shadow();
+    padding: $small-spacing;
+    outline: solid 1px $light-blue;
+    @include font-size(xs);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: auto;
+    background: #FFF;
+    color: $primary;
+    margin: 0 !important;
+    @include link-underline-span;
+    &:hover, &:focus {
+      outline: 2px solid $primary;
+    }
+  }
+}
+
+// INPUTS
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"] {
+  @include border;
+  box-shadow: 1px 1px 4px rgba($black, 0.15) inset;
+  border: 1px solid $light-gray;
+  padding: $small-spacing $regular-spacing;
+}
+
+textarea {
+  padding: $regular-spacing;
+  @include font-size(sm);
+
+  @include media($tiny) {
+    padding: $tiny-spacing;
+    width: 100%;
+  }
+
+}
+
+.anchor {
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+  display: inline;
+}

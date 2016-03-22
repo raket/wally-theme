@@ -1,0 +1,152 @@
+.site-footer {
+  overflow: hidden;
+  background-color: #FFF;
+  color: $black;
+  padding: 0;
+  @include font-size(xs);
+
+  a {
+    color: $primary;
+    @include link-underline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    @include font-size(xs);
+    @include caps;
+    color: $dark-gray;
+  }
+
+  p, li {
+    @include font-size(sm);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 0;
+      a {
+        padding-left: 1.2rem;
+      }
+    }
+
+    i {
+      position: absolute;
+      left: 0;
+      margin-right: $small-spacing;
+    }
+
+    li + li {
+      margin-top: $small-spacing;
+    }
+
+  }
+
+  .menu__list {
+    margin-bottom: $large-spacing;
+    .menu__item {
+      display: block;
+    }
+    &.horizontal {
+      margin-bottom: 0;
+      li {
+        display: inline-block;
+        width: 45%;
+        padding: $small-spacing $small-spacing;
+        @include media($tiny) {
+          display: block;
+          a {
+            padding: $small-spacing 0;
+          }
+        }
+        padding-left: 0;
+        margin: 0;
+        a {
+          padding-left: 0;
+
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+.site-footer__section {
+  @include span-columns(12);
+  padding: $regular-spacing 0 0;
+  @include media($medium) {
+    padding: $large-spacing/3 0 $large-spacing;
+    @include span-columns(8);
+  }
+}
+.site-footer__subsection {
+  @include span-columns(12);
+  margin-bottom: $regular-spacing;
+  @include media($medium) {
+    margin-bottom: 0;
+    @include span-columns(6);
+  }
+}
+
+.site-footer__section__last-child {
+  @include span-columns(12);
+  @include media($medium) {
+    @include span-columns(4);
+  }
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -$regular-spacing;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: $ghost-black;
+  }
+}
+
+.site-footer__rights {
+  position: relative;
+  @include span-columns(12);
+  //border-top: solid 1px $ghost-black;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background: $ghost-black;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  > div {
+    padding: $regular-spacing;
+  }
+  img, p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  p {
+    display: inline;
+    @include font-size(sm);
+    @include media($tiny) {
+      display: block;
+      @include font-size(xs);
+    }
+    color: $dark-gray;
+  }
+  img {
+    margin: 0 $regular-spacing $regular-spacing 0;
+  }
+}

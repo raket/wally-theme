@@ -1,0 +1,42 @@
+.form__group {
+  display: block;
+  white-space: pre-line;
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  & + .form__group {
+    margin-top: $regular-spacing;
+  }
+
+}
+
+.form__label {
+  @include font-size(xs);
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: $tiny-spacing;
+}
+
+.form__label--required {
+  &:after {
+    content: '(obligatoriskt)';
+    opacity: .5;
+    font-size: .625rem;
+    margin-left: $small-spacing;
+    vertical-align: text-top;
+  }
+}
+
+.form__control {
+  display: inline-block;
+  width: 100%;
+}
+
+.post-password-form {
+
+  input[type=submit] {
+    @extend .button;
+  }
+
+}

@@ -1,0 +1,93 @@
+.list-group {
+  @include box;
+  margin-top: 0;
+  overflow: visible;
+  padding: 0;
+  list-style: none;
+}
+
+.list-group__sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.list-group__item {
+  a {
+    @include font-size(md);
+    position: relative;
+    display: block;
+    border-bottom: 1px solid $ghost-black;
+    padding: $small-spacing $regular-spacing;
+
+    @include link-underline-span;
+
+    span {
+      border-bottom: none;
+      @include link-arrow-before;
+    }
+
+    &:hover, &:focus, &:active  {
+      //text-decoration: underline;
+    }
+  }
+  &.current {
+    border: solid 2px transparent;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    border-left: solid 1px $ghost-black;
+    padding: 0;
+    width: 3rem;
+    &:before {
+      @include font-size(md);
+      font-family: "Material Icons";
+      speak: none;
+      content: "add_circle_outline";
+      line-height: 2.5rem;
+    }
+    &:hover {
+      border-color: $primary;
+    }
+
+  }
+
+  a.is-open {
+    button:before {
+      content: "remove_circle_outline";
+    }
+  }
+
+}
+
+.list-group__sublist {
+  display: none;
+  border-top: 3px solid $ghost-black;
+
+  &.is-open, .list-group__item.current_page_ancestor &.is-open {
+    display: block;
+  }
+
+}
+
+.list-group__subitem .list-group__subitem a{
+  padding-left: $regular-spacing*3;
+}
+
+.list-group__subitem a {
+  padding-left: $regular-spacing*2;
+}
+
+.list-group__item.is-current > a,
+.list-group__subitem.is-current > a {
+  background-color: $tertiary;
+  border: 2px solid $primary;
+}

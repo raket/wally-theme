@@ -1,0 +1,18 @@
+.main {
+  @include span-columns(12);
+  @include media($medium) {
+    @include span-columns(8);
+  }
+}
+
+.sidebar {
+  @include span-columns(12);
+  @include media($medium) {
+    @include span-columns(4);
+  }
+}
+
+
+.page-template-full {
+  .main { @include span-columns(12); }
+}

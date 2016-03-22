@@ -1,0 +1,7 @@
+@import '../base/settings';
+.color-theme-blue {
+  $primary: $blue;
+  $secondary: $dark-blue;
+  $tertiary: $light-blue;
+  @import 'theme';
+}

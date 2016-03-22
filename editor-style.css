@@ -1,0 +1,25 @@
+/*body {*/
+    /*background: #f5f5f5;*/
+/*}*/
+
+/*.content-col-main {*/
+    /*float:left;*/
+    /*width:66%;*/
+    /*padding:1%;*/
+    /*border: 1px dotted #ccc;*/
+    /*background: #fff;*/
+/*}*/
+
+/*.content-col-side {*/
+    /*float:right;*/
+    /*width:29%;*/
+    /*padding:1%;*/
+    /*border: 1px dotted #ccc;*/
+    /*background: #fff;*/
+/*}*/
+
+/*img { /!* Makes sure your images stay within their columns *!/*/
+    /*max-width: 100%;*/
+    /*width: auto;*/
+    /*height: auto;*/
+/*}*/

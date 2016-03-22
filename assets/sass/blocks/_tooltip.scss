@@ -1,0 +1,83 @@
+[data-tooltip] {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  padding: 2px 4px;
+  border: 1px dotted $light-gray;
+
+  &:hover {
+    border-color: $gray;
+    cursor: help;
+  }
+
+}
+
+.tooltip {
+  @include box;
+  @include shadow(2);
+  overflow: visible;
+  position: absolute;
+  white-space: pre-wrap;
+  padding: $regular-spacing $small-spacing $small-spacing;
+  top: calc(-100% - 0.5rem);
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 20;
+  animation: tooltipIn .125s;
+
+  &:hover {
+    cursor: initial;
+  }
+
+  &::before {
+    @include triangle($white, 8px, down);
+    bottom: -10px;
+    border-bottom-color: $white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:after {
+    @include triangle($light-gray, 8px, down);
+    z-index: 1;
+    bottom: -11px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  &.is-open {
+    animation: none;
+  }
+
+}
+
+.tooltip__close {
+  position: absolute;
+  top: $small-spacing;
+  right: $small-spacing;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-size: 0.75rem;
+  line-height: 1;
+
+  &:before {
+    font-family: "Material Icons";
+    speak: none;
+    content: 'close';
+  }
+
+}
+
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -125%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}

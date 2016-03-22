@@ -1,0 +1,49 @@
+.widget {
+  @include no-box;
+  overflow: visible !important;
+  margin: 0 0 $regular-spacing;
+}
+
+.widget__title {
+  @include font-size(sm);
+  font-weight: 500;
+  margin: 0;
+  padding: $small-spacing 0;
+  border-bottom: none;
+}
+
+.widget {
+  ul {
+    @include box;
+    overflow: visible;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      position: relative;
+    }
+  }
+}
+
+.widget_text {
+  .textwidget {
+    @include font-size(xs);
+    @include typo-margin;
+    padding: 0 $regular-spacing;
+  }
+}
+
+.facebook-feed,
+.twitter-timeline {
+  @include box;
+}
+
+.widget_categories {
+  ul.pills .cat-item .pills__link {
+    padding: 0.25rem 0.5rem;
+  }
+  ul.pills .cat-item {
+    display: block;
+    float: none;
+  }
+}

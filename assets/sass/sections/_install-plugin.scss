@@ -1,0 +1,71 @@
+$wally-color: #5564D7;
+$text-color: #222;
+body.install-plugin {
+  color: $text-color;
+  background: $off-white;
+  svg {
+    width: 10rem;
+    display: block;
+    margin: auto;
+    #logo {
+      fill: $wally-color;
+    }
+  }
+  *:hover span, *:focus span {
+    border-color: $wally-color;
+  }
+}
+.install-plugin__header {
+  background: #FFF;
+  padding: 1rem;
+}
+
+.install-plugin__wrapper {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: 0 auto;
+  > h1 {
+    color: $wally-color;
+    font-weight: 500;
+    margin: $large-spacing*2 0 $regular-spacing;
+    text-align: center;
+  }
+  h1, p {
+    max-width: none;
+  }
+}
+
+.install-plugin__link {
+  &:hover, &:focus {
+    outline-color: $wally-color;
+  }
+  display: block;
+  padding: $regular-spacing;
+  @include box;
+  margin: $large-spacing 0;
+  h2 {
+    line-height: 1.3;
+    color: $text-color;
+    @include font-size(sm);
+    margin: $small-spacing 0 0;
+    pre {
+      display: inline-block;
+      margin: 0;
+      background: rgba($wally-color, 0.1);
+    }
+  }
+  h1 {
+    font-weight: 500;
+    @include font-size(lg);
+    margin: 0;
+    color: $wally-color;
+    @include link-underline-span;
+    @include link-arrow-after;
+    span {
+      border-color: $wally-color;
+    }
+    &:after {
+      top: 0.2rem;
+    }
+  }
+}

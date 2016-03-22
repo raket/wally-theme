@@ -1,0 +1,274 @@
+.wp-video {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.wp-video[data-title]:after {
+  content: attr(data-title);
+  line-height: 2rem; // 3rem - padding
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  border: 1px solid $ghost-black;
+  height: 3rem;
+  padding: .5rem;
+}
+
+.mejs-container.mejs-video {
+
+  margin-bottom: 3rem;
+
+  .mejs-captions-position {
+    bottom: 1rem !important;
+  }
+
+  .mejs-captions-position-hover {
+    //bottom: 3rem + 1rem !important;
+    bottom: 1rem !important;
+  }
+
+
+  .mejs-controls {
+    background: $white;
+    border: 1px solid rgba( 0, 0, 0, 0.1);
+    height: 3rem;
+    white-space: nowrap;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    bottom: -3rem;
+    // GENERAL
+
+    .mejs-button {
+      height: 3rem;
+      width: 3rem;
+      padding: 0;
+      display: inline-block;
+      float: none;
+      button {
+        height: 3rem;
+        width: 3rem;
+
+        background: none;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    // PLAY/PAUSE
+
+    .mejs-playpause-button {
+      display: block;
+      float: left;
+    }
+
+    .mejs-play button {
+
+      &:before {
+        @include icon('play_arrow');
+        line-height: 3rem;
+        font-size: 2rem;
+      }
+    }
+
+    .mejs-pause button {
+      &:before {
+        @include icon('pause');
+        font-size: 2rem;
+      }
+    }
+
+
+    // TIME
+
+    .mejs-time.mejs-currenttime-container,
+    .mejs-time.mejs-duration-container {
+      color: $black;
+      padding: 0;
+      margin-top: 3px;
+      @include center-vertically;
+      position: relative;
+      margin-right: 1rem;
+      width: 2rem;
+    }
+
+    .mejs-time.mejs-duration-container {
+      margin-right: 0;
+      width: 3rem;
+    }
+
+    .mejs-duration {
+      margin-left: 1rem;
+    }
+
+    .mejs-time-rail {
+      @include center-vertically;
+      padding: 0;
+      position: relative;
+      height: 0.75rem;
+      box-sizing: content-box;
+      border-radius: 0.75rem;
+
+      .mejs-time-float {
+        background: transparent;
+        border-color: transparent;
+        top: -1.5rem;
+      }
+
+      span.mejs-time-float-current
+      {
+        background: $white;
+        margin: 0;
+        border: 1px solid $ghost-black;
+        padding: 4px;
+      }
+
+      span.mejs-time-float-corner {
+        border-top-color: $ghost-black;
+        top: 1rem;
+      }
+
+    }
+
+    .mejs-time-total.mejs-time-slider {
+      margin: 0;
+      padding: 0;
+      height: 0.75rem;
+      border: 1px solid $ghost-black;
+      border-radius: 0.75rem;
+    }
+
+    .mejs-time-buffering,
+    .mejs-time-loaded,
+    .mejs-time-current {
+      height: 0.75rem;
+      border-radius: 0.75rem;
+    }
+
+    .mejs-time-loaded,
+    .mejs-time-buffering {
+      background: $ghost-black;
+    }
+
+    .mejs-time-current {
+      background: $blue;
+    }
+
+    .mejs-time-handle {
+      background: $white;
+      border: 1px solid $ghost-black;
+      box-shadow: 1px 1px 2px $ghost-black;
+      height: 1rem;
+      width: 1rem;
+      margin-top: -0.125rem;
+      margin-left: 0 !important;
+      display: block;
+      border-radius: 100%;
+    }
+
+    // CAPTIONS
+    .mejs-captions-button button {
+      &:before {
+        @include icon('closed_caption');
+        font-size: 2rem;
+      }
+    }
+
+    .mejs-captions-button .mejs-captions-selector {
+      background: $white;
+      padding: 0;
+      border: none;
+      z-index: 20;
+      bottom: 3rem;
+      left: .5rem;
+      @include shadow;
+
+      ul {
+        margin: 0 !important;
+      }
+
+      li {
+        margin: 0 !important;
+        white-space: nowrap;
+        padding: .25rem;
+
+        input {
+          margin: 0;
+          display: inline-block;
+          float: none;
+          clear: none;
+        }
+
+        label {
+          color: $black;
+          display: inline-block;
+          float: none;
+          padding: 0;
+          margin-left: 0.5rem;
+        }
+
+      }
+
+
+
+    }
+
+
+    // VOLUME
+
+    .mejs-mute button {
+      &:before {
+        @include icon('volume_up');
+        font-size: 2rem;
+      }
+    }
+
+    .mejs-unmute button {
+      &:before {
+        @include icon('volume_off');
+        font-size: 2rem;
+      }
+    }
+
+    .mejs-volume-button .mejs-volume-slider {
+      background: $ghost-white;
+      left: 0.75rem;
+      @include shadow;
+
+      .mejs-volume-total {
+        background: $ghost-black;
+      }
+
+      .mejs-volume-current {
+        background: $blue;
+      }
+
+      .mejs-volume-handle {
+        background: $blue;
+      }
+
+    }
+
+
+    // FULLSCREEN
+    .mejs-fullscreen-button button {
+      &:before {
+        @include icon('fullscreen');
+        font-size: 2rem;
+      }
+    }
+
+    .mejs-fullscreen-button.mejs-unfullscreen button {
+      &:before {
+        @include icon('fullscreen_exit');
+        font-size: 2rem;
+      }
+    }
+
+
+  }
+
+}

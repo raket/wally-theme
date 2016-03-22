@@ -1,0 +1,37 @@
+.share {
+  padding: 0;
+  @include border();
+
+  .share__title {
+    @include font-size(xs);
+  }
+  .button--fb,
+  .button--twitter{
+    font-weight: normal;
+    border: none;
+    border-bottom: solid 1px $ghost-black;
+
+    span:before {
+      content: none;
+      display: none;
+    }
+  }
+
+  .button--fb {
+    background: #FFF;
+    color: $facebook-blue !important;
+    border-color: $ghost-black;
+    span {
+      border-color: $facebook-blue;
+    }
+  }
+
+  .button--twitter {
+    background: #FFF;
+    color: $twitter-blue !important;
+    border-color: $ghost-black;
+    span {
+      border-color: $twitter-blue;
+    }
+  }
+}

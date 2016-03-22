@@ -1,0 +1,27 @@
+.stickies {
+
+  @include row;
+
+  border-bottom: solid 1px $ghost-black;
+  padding-bottom: $large-spacing;
+  margin-bottom: $large-spacing;
+
+  > h2 {
+    @include font-size(md);
+    margin: $large-spacing 0 $regular-spacing;
+  }
+  h2 {
+    @include font-size(lg);
+  }
+
+  .article-box {
+    @include media($small-up) {
+      @include span-columns(6);
+    }
+  }
+
+  .thumbnail {
+    @include figure-height;
+  }
+
+}

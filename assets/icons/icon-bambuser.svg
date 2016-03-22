@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="14px" viewBox="0 0 21 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-bambuser</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artikel" sketch:type="MSArtboardGroup" transform="translate(-589.000000, -4246.000000)" fill="#1183D3">
+            <g id="Footer" sketch:type="MSLayerGroup" transform="translate(-145.000000, 3949.000000)">
+                <g id="Shape-+-YouTube-kanal" transform="translate(734.000000, 292.000000)" sketch:type="MSShapeGroup">
+                    <path d="M16.3333333,10.25 L16.3333333,6.16666667 C16.3333333,5.52233446 15.8109989,5 15.1666667,5 L1.16666667,5 C0.522334459,5 0,5.52233446 0,6.16666667 L0,17.8333333 C0,18.4776655 0.522334459,19 1.16666667,19 L15.1666667,19 C15.8109989,19 16.3333333,18.4776655 16.3333333,17.8333333 L16.3333333,13.75 L21,18.4166667 L21,5.58333333 L16.3333333,10.25 L16.3333333,10.25 Z" id="icon-bambuser"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

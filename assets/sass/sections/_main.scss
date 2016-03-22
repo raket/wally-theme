@@ -1,0 +1,43 @@
+#site-content .widget__title {
+  @include font-size(lg);
+  padding: 0;
+  margin: $small-spacing 0 $regular-spacing;
+}
+
+h1.page-title {
+  @include font-size(xxxl);
+}
+
+section.main {
+  position: relative;
+  z-index: 1;
+  > h1:first-child {
+    margin-top: 0;
+  }
+}
+
+.sticky-wrapper {
+  position: relative;
+}
+
+.sidebar {
+  &.stuck {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    max-width: 1160px;
+    @include media(max-width 1240px) {
+      left: 0;
+      padding: 0 1rem;
+    }
+    > * {
+      @include media($medium) {
+        @include span-columns(4);
+      }
+      margin: 0 !important;
+      float: right !important;
+      clear: both !important;
+    }
+  }
+}

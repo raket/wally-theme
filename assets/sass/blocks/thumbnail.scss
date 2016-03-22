@@ -1,0 +1,88 @@
+.thumbnail {
+  @include border;
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  max-height: $figure-height;
+  height: 10rem;
+  img {
+    max-width: none;
+    width: 100%;
+    @include media($tiny) {
+      display: none;
+    }
+  }
+}
+
+.high-images {
+  .thumbnail {
+    height: 20rem;
+    max-height:20rem;
+  }
+}
+
+&.sticky .thumbnail--small {
+  width: 50%;
+  padding-top: $large-spacing;
+
+  .image__caption {
+    top: $large-spacing + $small-spacing;
+  }
+
+}
+
+.thumbnail--small {
+  @include media($small) {
+    background-image: none !important;
+    width: 100%;
+    @include figure-height;
+    height: 14rem;
+    margin: 0 auto;
+    border-radius: 0;
+    float: none;
+    position: relative;
+    padding: $large-spacing 0;
+    border-bottom: solid 1px $ghost-black;
+    img {
+      display: block;
+      max-width: none;
+      width: auto;
+      height: 80%;
+      @include center-horizontally-vertically;
+    }
+    &.thumbnail--single {
+      padding-top: $large-spacing;
+    }
+
+    & + a {
+      border-top: solid 1px $ghost-black;
+    }
+  }
+
+}
+
+.thumbnail--small__wrapper {
+  @include media($small) {
+    display: table;
+    padding: $regular-spacing;
+
+    & > * {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .thumbnail--small {
+      width: 25%;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+  }
+
+}

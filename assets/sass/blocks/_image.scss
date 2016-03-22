@@ -1,0 +1,208 @@
+.image {
+  position: relative;
+  transition: background-size 0.4s ease-out;
+  background: $off-white no-repeat url('../images/spinner.svg') center center;
+  background-size: 10% auto;
+  img {
+    display: none;
+  }
+
+  &.loaded {
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  &:hover, &:focus, &:active {
+    .image__button {
+      opacity: 1;
+    }
+  }
+
+  &--small,
+  &--regular,
+  &--large {
+    margin: 2rem auto;
+  }
+
+  &--small {
+    height: 15rem;
+    max-width: 15rem;
+    img {
+      display: block;
+    }
+  }
+
+  &--regular {
+    height: 0;
+    padding-bottom: 50%;
+    max-width: 30rem;
+  }
+
+  &--large {
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  &--regular, &--large {
+
+    html.no-js & {
+      overflow: hidden;
+      img {
+        display: block;
+      }
+    }
+  }
+  &.fit-width {
+    background-size: 90% auto;
+    background-position: 50% 50%;
+  }
+  &.fit-height {
+    background-size: auto 90%;
+    background-position: 50% 50%;
+  }
+
+}
+
+.image__caption {
+  @include font-size(sm);
+  background: rgba(130,130,130,.45);
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  color: $white;
+  font-weight: 500;
+  padding: $small-spacing $regular-spacing;
+  position: absolute;
+  top: $small-spacing;
+  margin: 0 .5rem;
+  display: inline-block;
+}
+
+.image__caption--below {
+  position: absolute;
+  margin: 0;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  border-bottom: 1px solid $ghost-black;
+  background: $white;
+  color: $black;
+  font-weight: normal;
+  @include font-size(sm);
+}
+
+.image__button {
+  @include font-size(sm);
+  background: $white;
+  @include shadow(1);
+  border: none;
+  border-radius: 5px;
+  color: $primary;
+  font-weight: 500;
+  margin: 0;
+  padding: $small-spacing;
+
+  //FX
+  transition: opacity 0.3s 0.8s ease-out, background 0.2s 0.8s ease-out !important;
+  opacity: 0;
+
+  &:focus, &:hover {
+    background: $light-blue;
+    outline: 2px solid $primary;
+  }
+
+}
+
+.image__buttons {
+  @include center-horizontally-vertically;
+  bottom: auto;
+  right: auto;
+
+}
+
+.image__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  span {
+    @include hide;
+  }
+
+}
+
+// MAGNIFIC POPUP
+
+button.mfp-close {
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 1 !important;
+  right: 0px !important;
+  border-radius: 0px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.mfp-container, .mfp-wrap, .mfp-bg {
+  &:focus {
+    background: transparent;
+  }
+}
+
+  .mfp-preloader {
+    @include border;
+    display: inline-block;
+    height: 4rem !important;
+    width: 4rem !important;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.75) no-repeat url('../images/spinner.svg') center center;
+  }
+
+  .mfp-title {
+    margin-top: 1rem;
+    text-align: center !important;
+  }
+
+  // Backdrop
+  .mfp-fade.mfp-bg {
+    opacity: 0;
+    transition: all 0.15s ease-out;
+  }
+
+  .mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+  }
+
+  .mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+  }
+
+  // Content
+  .mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.25s cubic-bezier(0.000, 0.405, 0.000, 1.285);
+  }
+
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+    transform: scale(0.95);
+
+  }
+
+  // Shows a hand instead of magnifying glass on close button hover
+  .mfp-zoom-out-cur .mfp-image-holder .mfp-close:hover {
+    cursor: pointer;
+  }

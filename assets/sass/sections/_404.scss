@@ -1,0 +1,22 @@
+.four-oh-four {
+
+  margin: 0 auto;
+  padding: $large-spacing 0;
+
+  h1, p, img {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  img {
+    opacity: .1;
+    display: block;
+    margin-bottom: $large-spacing;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: $large-spacing;
+  }
+
+}

@@ -1,0 +1,115 @@
+.tabs__titles {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include row;
+  margin-bottom: 0 !important;
+  
+}
+
+.tabs__title {
+  @include border;
+  @include shadow(1);
+  background: $white;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  overflow: visible;
+  border-bottom: none;
+  margin-bottom: 0 !important;
+
+  float: left;
+  margin-right: $small-spacing;
+  position: relative;
+  top: 2px;
+
+  &.is-active {
+    z-index: 20;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      background: #FFF;
+    }
+    a {
+      color: $primary;
+      //outline: solid 2px $primary;
+      span {
+        border-bottom: solid 2px $primary;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: -5px;
+      bottom: -7px;
+      height: 10px;
+      background: $white;
+      z-index: 1337;
+    }
+
+    &:not(:first-child):after {
+      left: -2px;
+    }
+
+  }
+
+  a {
+    color:$primary;
+    padding: $small-spacing $large-spacing;
+    @include link-underline-span;
+    &:after {
+      display: none;
+    }
+  }
+
+  //@include media($tiny) {
+  //  width: 100%;
+  //  border-radius: 5px;
+  //  border-bottom: 1px solid $ghost-black;
+  //  margin-right: 0;
+  //  margin-bottom: $small-spacing;
+  //
+  //  &.is-active {
+  //    border-bottom: 1px solid $light-gray;
+  //  }
+  //
+  //}
+
+}
+
+.tabs__panels {
+  @include row;
+  position: relative;
+  z-index: 19;
+}
+
+.tabs__panel {
+  @include border;
+  background: $white;
+  border-top-left-radius: 0;
+  float: left;
+  margin-top: -1px;
+  padding: $regular-spacing;
+  position: relative;
+  width: 100%;
+
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
+html.no-js .tabs__title {
+  display: none;
+}
+
+html.no-js .tabs__panel {
+  display: block;
+}

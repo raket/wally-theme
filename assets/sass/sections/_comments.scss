@@ -1,0 +1,286 @@
+.comments__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  ul, ol {
+    list-style: none;
+    margin: 0;
+  }
+
+  li + li,
+  li > ul {
+    margin-top: $large-spacing;
+  }
+
+}
+
+.comment__metadata {
+  @include clearfix;
+  padding-bottom: $regular-spacing;
+  line-height: 2.5rem;
+}
+.comment-meta {
+  padding-bottom: $regular-spacing;
+  @include font-size(sm);
+
+  .says {
+    display: none;
+  }
+
+  .url {
+    font-weight: normal;
+  }
+
+  time {
+    color: $black;
+    @include font-size(xs);
+  }
+
+}
+
+.comment__image {
+  border-radius: 100%;
+  float: left;
+  margin-right: $regular-spacing;
+  border: 1px solid $light-gray;
+
+  height: 2.5rem;
+  width: 2.5rem;
+
+  position: relative;
+  overflow: hidden;
+
+  img {
+    right: 0;
+    left: 0;
+    height: auto;
+    position: absolute;
+    border-radius: 100%;
+  }
+
+}
+
+.comment__emotion {
+  position: absolute;
+  top: $regular-spacing;
+  left: $regular-spacing;
+  width: 2rem;
+  height: 2rem;
+}
+
+.comment__author {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+
+  a, time {
+    display: inline-block;
+  }
+
+  a {
+    @include font-size(sm);
+    &:after {
+      display: none;
+    }
+  }
+
+  time {
+    @include font-size(xs);
+    color: $gray;
+  }
+
+}
+
+.comment__text {
+  @include border;
+  @include font-size(sm);
+
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: $off-white;
+  padding: $regular-spacing $regular-spacing $regular-spacing $huge-spacing;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+
+  &:before {
+    @include triangle($off-white, 0.5rem);
+    top: -1rem;
+    left: 6rem;
+  }
+
+  &.has-emotion {
+    min-height: 4rem;
+  }
+
+}
+
+// Reply
+.comment__reply {
+  @extend .comment;
+
+  margin-top: $regular-spacing;
+
+  .comment__image,
+  .comment__author {
+    float: right;
+  }
+
+  .comment__image {
+    margin-right: 0;
+    margin-left: $regular-spacing;
+
+  }
+
+  .comment__text {
+
+    overflow: visible;
+
+    &::before {
+      right: 6rem;
+      left: auto;
+      border-bottom-color: $white;
+    }
+
+
+
+  }
+
+}
+
+.comment__reply--author {
+  @extend .comment__reply;
+
+  .comment__text {
+
+    @include border;
+    background: transparent;
+    border: 1px solid $light-gray;
+
+    q {
+      &::before, &::after {
+        display: none;
+      }
+    }
+
+    &:after {
+      @include triangle($light-gray, 0.5rem + 0.05rem);
+      top: -1rem - 0.11rem;
+      right: 6rem - 0.05rem;
+      z-index: 1;
+    }
+
+  }
+
+}
+
+.comment__response__note {
+  @include font-size(xs);
+  display: block;
+  font-weight: 500;
+  margin-bottom: $regular-spacing;
+}
+
+.comment__actions {
+  text-align: right;
+  border: 1px solid $off-white;
+  border-top: 0;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+
+  & > a {
+    padding: $small-spacing;
+    border-left: 1px solid $off-white;
+  }
+
+}
+
+// Form
+
+.comment-form {
+
+  form {
+    @extend .form;
+  }
+
+}
+
+.comment-form__header {
+  padding-bottom: $large-spacing;
+  margin-bottom: $large-spacing;
+  border-bottom: 1px solid $light-gray;
+
+  h2 {
+    margin: 0;
+  }
+
+}
+
+.comment-form__emotion {
+
+  &:hover {
+    .emotion {
+      opacity: 0.75;
+    }
+  }
+
+  input {
+    @include hide;
+  }
+
+  .emotion {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    opacity: 0.5;
+    margin-right: $regular-spacing;
+    transition: opacity 0.15s, transform 0.15s;
+  }
+
+  .emotion:active,
+  input:focus + .emotion {
+    outline: solid 2px $primary;
+  }
+
+  .emotion:hover,
+  input:focus + .emotion,
+  input:checked + .emotion {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+    @extend %outline;
+  }
+
+}
+
+// Preview
+
+.comment-form__preview {
+  padding-top: $large-spacing;
+  margin-top: $large-spacing;
+  border-top: 1px solid $light-gray;
+}
+
+#commentFormPreviewEmotion {
+  display: none;
+}
+
+
+#comments {
+  margin-top: $large-spacing;
+  .tabs__panels {
+    @include box;
+    margin: 0;
+  }
+  .comments__title {
+    @include font-size(lg);
+    margin: $large-spacing 0 $regular-spacing;
+  }
+  .comment__text {
+    background: $off-white;
+    &:before {
+      border-bottom-color: $off-white;
+    }
+  }
+}

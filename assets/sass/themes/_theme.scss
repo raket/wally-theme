@@ -1,0 +1,269 @@
+%bgc-p { background-color: $primary; }
+%bgc-s { background-color: $secondary; }
+%bgc-t { background-color: $tertiary; }
+%bgc-white { background-color: #FFF; }
+
+%c-p { color: $primary; }
+%c-s { color: $secondary; }
+%c-t { color: $tertiary; }
+%c-white { color: #FFF; }
+
+
+%bc-p { border-color: $primary; }
+%bc-s { border-color: $secondary; }
+%bc-t { border-color: $tertiary; }
+
+%oc-p { outline-color: $primary; }
+
+
+// Site
+
+*:focus {
+  @extend %bc-p;
+  @extend %oc-p;
+}
+
+
+// Links
+a {
+  @extend %c-p;
+}
+
+.site-header {
+  @extend %bgc-p;
+  p, a {
+    @extend %c-white;
+  }
+}
+
+.fw_form_fw_form [type=submit], .survey__submit {
+  @extend %bgc-p;
+}
+
+// Navigation
+.site-header .navigation {
+  @extend %c-p;
+  a, button:not([type=submit]) {
+    @extend %c-p;
+  }
+  button[type="submit"] {
+    @extend %c-white;
+  }
+  .navigation__subitem a {
+    @extend %c-p;
+  }
+  a:hover {
+    @extend %oc-p;
+  }
+}
+
+.navigation__item {
+  &.is-current {
+  }
+}
+
+#site-navigation *:focus {
+  @extend %oc-p;
+}
+
+.navigation__item a:hover span {
+  @extend %bc-p;
+}
+
+.navigation__item.is-current,
+.navigation__item.current-page-ancestor,
+.navigation__item a:focus,
+.navigation__item a:active {
+  @extend%oc-p;
+}
+
+.navigation__item.is-current span,
+.navigation__item a:focus span,
+.navigation__item a:active span {
+  @extend%bc-p;
+}
+
+
+button[type="submit"] {
+  @extend %bgc-p;
+  @extend %c-white;
+}
+
+// Sidebar
+.subpages__item button:hover {
+  @extend %bc-p;
+}
+
+.list-group__item.is-current > a,
+.list-group__subitem.is-current > a {
+  background-color: #FFF;
+  @extend %bc-p;
+}
+
+.list-group__item button:hover {
+  @extend %bc-p;
+}
+
+.list-group__item a:hover span,
+.list-group__item a:focus span {
+  @extend %bc-p;
+}
+
+// Buttons
+
+a.button, a.button.button--primary, button.button--primary {
+  @extend %c-p;
+  &:hover, &:focus, &:active {
+    span {
+      @extend %bc-p;
+    }
+  }
+}
+
+.mejs-container.mejs-video .mejs-controls .mejs-time-current {
+  @extend %bgc-p;
+}
+
+
+[class*="fw-btn"] {
+  @extend %bgc-p;
+  @extend %c-white;
+  &:hover {
+    @extend %bgc-s;
+  }
+}
+
+.button--secondary {
+  @extend %bgc-s;
+}
+.button--s {
+  @extend %bgc-s;
+}
+
+// Off canvas
+.off-canvas__navigation__header {
+  @extend %bgc-p;
+}
+
+.off-canvas__navigation__item,
+.off-canvas__navigation__subitem {
+
+  &.is-current > a {
+    @extend %bgc-t;
+    @extend %bc-p;
+  }
+
+}
+
+.off-canvas__navigation__subitem {
+  @extend %bgc-t;
+}
+
+// Comments
+
+
+.recent__item a:hover,
+.recent__item a:focus {
+  @extend %bc-p;
+}
+
+// Pills
+.pills__link,
+.pills__link:before {
+  @extend %c-p;
+  @extend %bc-p;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @extend %c-p;
+    @extend %bc-p;
+  }
+
+}
+
+.pills__link:hover span {
+  @extend %bc-p;
+}
+
+// Articles
+.article-box__footer__col--meta a {
+  @extend %c-p;
+
+  &:hover,
+  &:focus {
+    @extend %bc-p;
+  }
+
+}
+
+.article-box__header--above-figure:hover span,
+.article-box__header--above-figure:focus span,
+.article-box__header--below-figure:hover span,
+.article-box__header--below-figure:focus span {
+  @extend %bc-p;
+}
+
+
+// Pagination
+.button.pagination__button:hover span {
+  @extend %bc-p;
+}
+
+// Search
+button.button.search__submit {
+  @extend %bc-p;
+}
+
+// Edit button
+a.edit-btn {
+
+  @extend %bc-p;
+  @extend %oc-p;
+  @extend %c-p;
+
+  &:hover,
+  &:hover span,
+  &:focus
+  &:focus span {
+    @extend %bc-p;
+    @extend %oc-p;
+    @extend %c-p;
+  }
+
+}
+
+//.mejs-container.mejs-video .mejs-controls .mejs-time-current {
+//  @extend %bgc-p;
+//}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  @extend %bc-p;
+}
+
+// Breadcrumbs
+ul.breadcrumbs a:focus {
+  @extend %oc-p;
+}
+
+// Tabs
+.tabs__title.is-active a {
+  @extend %c-p;
+
+  span {
+    @extend %bc-p;
+  }
+}
+.tabs__title a:hover span {
+  @extend %bc-p;
+}
+
+// Related posts
+.related-posts .related-posts__post-title {
+  @extend %c-p;
+}
+
+.related-posts .related-posts__post:hover span, .related-posts .related-posts__post:focus span {
+  @extend %bc-p;
+}
