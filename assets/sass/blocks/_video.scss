@@ -3,6 +3,10 @@
   padding-bottom: 1.5rem;
 }
 
+.wp-video[data-title] {
+  padding-top: 3rem;
+}
+
 .wp-video[data-title]:after {
   content: attr(data-title);
   line-height: 2rem; // 3rem - padding

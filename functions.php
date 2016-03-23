@@ -1195,6 +1195,10 @@ function _w_video_shortcode($output, $atts, $video, $id) {
     foreach($extensions as $extension) {
         $urls[] = "'" . $atts[$extension] . "'";
     }
+    $src = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https:' : 'http:';
+    $src .= $atts['src'];
+    $urls[] = "'" . $src . "'";
+
     $urls = join(',', $urls);
 
     $titles = $wpdb->get_row("SELECT post_title FROM {$wpdb->posts} WHERE guid IN (" . $urls . ") LIMIT 1", ARRAY_N);

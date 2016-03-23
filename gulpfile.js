@@ -21,7 +21,7 @@ var errorLog  = chalk.red.bold,
 	changeLog = chalk.red;
 
 var themeName = 'wally';
-var themePath = '.';
+var themePath = '';
 
 var	SETTINGS = {
     app: {
