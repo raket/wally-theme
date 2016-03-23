@@ -1295,3 +1295,15 @@ function _w_comment_success_alert() {
         echo '<div class="alert alert--success">Kommentar skickad.</div>';
     }
 }
+
+/**
+ * @param FW_Form $form FW_Form
+ */
+add_action('fw_form_display_errors_frontend', function($form) {
+    echo '<div aria-live="assertive" aria-atomic="true">';
+    $errors = $form->get_errors();
+    foreach($errors as $nonce => $error) {
+        echo '<div class="alert alert--danger" data-input-name="' . $nonce . '">' . $error . '</div>';
+    }
+    echo '</ul>';
+});
