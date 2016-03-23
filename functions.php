@@ -1236,6 +1236,7 @@ function _w_video_shortcode($output, $atts, $video, $id) {
 
         $pq = phpQuery::newDocument($output);
         pq('video')->attr('title', $title)
+            ->append(__('Din webbläsare har inte stöd för HTML5-video.', 'wally'))
             ->parent('div')->attr('data-title', $title);
 
         $html = $pq->htmlOuter();
@@ -1264,3 +1265,22 @@ add_action( 'admin_enqueue_scripts', 'add_google_font' );
 function add_google_font() {
     wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,500' );
 }
+
+/**
+ * Remove the "empty" h3 in comments form
+ */
+function _w_comment_form_before() {
+    ob_start();
+}
+add_action( 'comment_form_before', '_w_comment_form_before' );
+
+function _w_comment_form_after() {
+    $html = ob_get_clean();
+    $html = preg_replace(
+        '/<h3 id="reply-title"(.*)>(.*)<\/h3>/',
+        '<p id="reply-title"\1>\2</p>',
+        $html
+    );
+    echo $html;
+}
+add_action( 'comment_form_after', '_w_comment_form_after' );
