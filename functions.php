@@ -1207,7 +1207,8 @@ function _w_video_shortcode($output, $atts, $video, $id) {
         $title = $titles[0];
 
         $pq = phpQuery::newDocument($output);
-        pq('video')->parent('div')->attr('data-title', $title);
+        pq('video')->attr('title', $title)
+            ->parent('div')->attr('data-title', $title);
 
         $html = $pq->htmlOuter();
         phpQuery::unloadDocuments();
