@@ -896,7 +896,14 @@ add_filter('mce_buttons', function($buttons) {
 });
 
 add_filter('mce_buttons_2', function($buttons) {
+
     unset($buttons[0]);
+
+    // Remove paste-as-text
+    if(($key = array_search('pastetext', $buttons)) !== false) {
+        unset($buttons[$key]);
+    }
+
     $buttons = array_values($buttons);
     return $buttons;
 });
@@ -1114,6 +1121,27 @@ function tiny_mce_remove_unused_formats($init) {
     return $init;
 }
 add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+
+/**
+ * Always paste text as plain text (and not formatted)
+ */
+function tiny_mce_force_paste_as_plain_text($init) {
+    $init[ 'paste_text_sticky' ] = true;
+    $init[ 'paste_text_sticky_default' ] = true;
+    $init[ 'paste_as_text' ] = true;
+
+    return $init;
+}
+add_filter('tiny_mce_before_init', 'tiny_mce_force_paste_as_plain_text', 1, 2);
+add_filter('teeny_mce_before_init', 'tiny_mce_force_paste_as_plain_text', 1, 2 );
+
+/**
+ * Load the paste plugin to teeny mce
+ */
+add_filter( 'teeny_mce_plugins', function($plugins) {
+    return array_merge( $plugins, (array) 'paste' );
+});
+
 
 /**
  * Register meta box(es).
