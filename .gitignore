@@ -7,6 +7,7 @@ map.xml
 map.xml.gz
 *.log
 *.map
-assets/bower/
-assets/css/
-assets/js/build/
+
+#assets/bower/
+#assets/css/
+#assets/js/build/
