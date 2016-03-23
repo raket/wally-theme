@@ -18,7 +18,7 @@
   },
   "version": "1.0.0",
   "authors": [
-    "Edvin Brobeck <edvin@raket.nu>"
+    "Raket Webbyrå <hello@raket.nu>"
   ],
   "description": "Dependencies for the stella framework",
   "license": "MIT",
