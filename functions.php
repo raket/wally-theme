@@ -1305,5 +1305,5 @@ add_action('fw_form_display_errors_frontend', function($form) {
     foreach($errors as $nonce => $error) {
         echo '<div class="alert alert--danger" data-input-name="' . $nonce . '">' . $error . '</div>';
     }
-    echo '</ul>';
+    echo '</div>';
 });
