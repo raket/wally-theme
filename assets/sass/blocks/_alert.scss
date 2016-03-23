@@ -47,6 +47,10 @@
 
   }
 
+  & + .alert {
+    margin-top: $small-spacing;
+  }
+
 }
 
 .alert__action {
