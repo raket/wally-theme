@@ -97,7 +97,12 @@ if ( post_password_required() ) {
 						<? }
 						));
 
-				else: ?>
+						?>
+						<div class="pagination">
+							<?php the_comments_pagination() ?>
+						</div>
+
+				<?php else: ?>
 
 					<p><?php _e('Inga kommentarer funna för detta inlägg') ?></p>
 

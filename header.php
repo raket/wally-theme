@@ -157,6 +157,11 @@ $turl = get_template_directory_uri();
 
 <?php do_action('before-site-content'); ?>
 
+<div class="alert-wrapper">
+    <div class="container">
+        <?php do_action('theme_alerts') ?>
+    </div>
+</div>
 
 <?php if (function_exists('fw_ext_breadcrumbs')): ?>
     <div class="breadcrumbs-wrapper">
@@ -167,7 +172,6 @@ $turl = get_template_directory_uri();
         </div>
     </div>
 <?php endif; ?>
-
 
     <main class="site-content" role="main" aria-labelledby="page-title">
 

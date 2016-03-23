@@ -1284,3 +1284,14 @@ function _w_comment_form_after() {
     echo $html;
 }
 add_action( 'comment_form_after', '_w_comment_form_after' );
+
+add_filter('comment_post_redirect', function($location) {
+    return add_query_arg('alert', 'comment_success', $location);
+}, 1, 1);
+
+add_action('theme_alerts', '_w_comment_success_alert');
+function _w_comment_success_alert() {
+    if(!empty($_GET['alert']) && $_GET['alert'] === 'comment_success') {
+        echo '<div class="alert alert--success">Kommentar skickad.</div>';
+    }
+}
