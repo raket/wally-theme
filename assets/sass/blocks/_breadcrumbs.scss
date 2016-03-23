@@ -3,40 +3,45 @@
   padding-top: $regular-spacing;
 }
 
-ul.breadcrumbs {
+div.breadcrumbs {
   @include box;
 
-  overflow: visible;
-  vertical-align: baseline;
-  position: relative;
-  padding: 0 $large-spacing 0 0;
-  list-style: none;
-  height: 2rem;
+  font-size: 0;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    overflow: visible;
+    vertical-align: baseline;
+    position: relative;
+    padding: 0 $large-spacing 0 0;
+    height: 2rem;
+  }
 
   @include media($tiny) {
     padding: 0;
     height: auto;
-
   }
 
   .first-item a {
     position: relative;
-    padding-left: $small-spacing*2;
-    &:before {
-      content: 'home';
-      font-family: "Material Icons";
-      line-height: 2rem;
-      display: inline-block;
-      margin-bottom: -5px;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      speak: none;
-      transform: translateY(-50%);
-    }
+    //padding-left: $small-spacing*2;
+    //&:before {
+    //  content: 'home';
+    //  font-family: "Material Icons";
+    //  line-height: 2rem;
+    //  display: inline-block;
+    //  margin-bottom: -5px;
+    //  position: absolute;
+    //  left: 0;
+    //  top: 50%;
+    //  speak: none;
+    //  transform: translateY(-50%);
+    //}
   }
 
-  li {
+  li, span {
     display: inline-block;
     height: 100%;
     line-height: 2rem;
@@ -89,6 +94,10 @@ ul.breadcrumbs {
     }
 
 
+  }
+
+  span:first-child {
+    margin-right: 0;
   }
 
   .separator {
