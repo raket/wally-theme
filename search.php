@@ -8,7 +8,6 @@
             <p>
                 <?php printf(__('Hittade %s sökresultat.', 'wally'), $wp_query->found_posts) ?>
                 <?php printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally'), $wp_query->max_num_pages) ?><br>
-                <?php _e('Använd sökrutan längst ned på sidan för att söka på nytt.', 'wally') ?>
             </p>
 
             <h2 class="subtitle">Sökresultat:</h2>
@@ -31,7 +30,7 @@
 
             <div class="row">
                 <div class="search-form search-form--boxed">
-                    <label for="search-form-2">Sök på nytt:</label>
+                    <h2>Sök på nytt:</h2>
                     <?php get_search_form() ?>
                 </div>
             </div>
