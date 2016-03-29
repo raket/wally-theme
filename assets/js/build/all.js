@@ -69,7 +69,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
             var target = $('[name="'+href+'"]');
             var offset = target.offset().top;
             var windowOffset = $(window).scrollTop();
-            console.log(windowOffset);
             $('html, body').animate({'scrollTop': offset - 50}, 600);
         });
     }
@@ -105,11 +104,11 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
         $('#search-form-1').focus();
     });
 
-    $('#commentform').submit(function(e) {
-        if($('#commentFormComment').val() === '') {
-            $('#commentFormComment').html($('input[name=commentFormEmotion]:checked').val());
-        }
-    });
+    //$('#commentform').submit(function(e) {
+    //    if($('#commentFormComment').val() === '') {
+    //        $('#commentFormComment').html($('input[name=commentFormEmotion]:checked').val());
+    //    }
+    //});
 
     // Allow :active despite removing -webkit-tab-highlight-color http://bit.ly/1WqdsZL
     document.addEventListener("touchstart", function(){}, true);
@@ -654,9 +653,6 @@ jQuery(document).ready(function($){
         $moreContentListItem.append($moreContentSubList);
 
         $moreContentButton.on('focusout', function(event) {
-
-            console.log(this);
-            console.log(event.target);
 
             if(!$(this).parent() == ($moreContentSubList.parent())) {
                 $moreContentSubList.close();
