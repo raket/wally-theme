@@ -185,9 +185,6 @@
 
         $moreContentButton.on('focusout', function(event) {
 
-            console.log(this);
-            console.log(event.target);
-
             if(!$(this).parent() == ($moreContentSubList.parent())) {
                 $moreContentSubList.close();
             }

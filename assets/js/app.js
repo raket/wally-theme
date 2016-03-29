@@ -39,7 +39,6 @@
             var target = $('[name="'+href+'"]');
             var offset = target.offset().top;
             var windowOffset = $(window).scrollTop();
-            console.log(windowOffset);
             $('html, body').animate({'scrollTop': offset - 50}, 600);
         });
     }
