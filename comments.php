@@ -99,7 +99,23 @@ if ( post_password_required() ) {
 
 						?>
 						<div class="pagination">
-							<?php the_comments_pagination() ?>
+							<?php
+
+								$pq = phpQuery::newDocumentHTML(get_the_comments_pagination());
+								$list = pq('.nav-links')->wrapInner('<ul class="page-numbers">');
+
+								foreach($list->find('a, span') as $li) {
+
+									$li = pq($li);
+
+									$li->wrap('<li>');
+								}
+
+								echo $list->htmlOuter();
+
+								phpquery::unloadDocuments();
+
+							?>
 						</div>
 
 				<?php else: ?>

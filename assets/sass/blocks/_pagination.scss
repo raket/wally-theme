@@ -1,6 +1,7 @@
 .pagination {
   margin: $large-spacing 0 ($large-spacing * 2);
   text-align: center;
+  position: relative;
   @include clearfix;
 
   &.no-margin {
@@ -13,14 +14,31 @@
 
 }
 
+#site-content ul.page-numbers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+
+}
+
 .pagination__prev,
 .prev.page-numbers {
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .pagination__next,
 .next.page-numbers {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .button.pagination__button {

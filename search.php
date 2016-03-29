@@ -13,7 +13,7 @@
             <h2 class="subtitle">Sökresultat:</h2>
 
             <div class="pagination no-margin">
-                <?php the_posts_pagination() ?>
+                <?php the_posts_pagination(array('type' => 'list')) ?>
             </div>
 
             <?php do_action('before-post-loop');
@@ -25,7 +25,7 @@
             do_action('after-post-loop') ?>
 
             <div class="pagination no-margin">
-                <?php the_posts_pagination() ?>
+                <?php the_posts_pagination(array('type' => 'list')) ?>
             </div>
 
             <div class="row">

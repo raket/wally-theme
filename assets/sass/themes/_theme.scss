@@ -209,9 +209,6 @@ a.button, a.button.button--primary, button.button--primary {
 .button.pagination__button:hover span {
   @extend %bc-p;
 }
-.pagination a:hover {
-  @extend %bc-p;
-}
 
 // Search
 button.button.search__submit {
