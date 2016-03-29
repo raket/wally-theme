@@ -78,6 +78,10 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('bower', get_template_directory_uri() . '/assets/bower/_bower.js', false, false, true);
     wp_enqueue_script('wally', get_template_directory_uri() . '/assets/js/build/all.js', array('bower'), false, true);
 
+    if(is_user_logged_in()) {
+        wp_enqueue_script('tota11y', 'https://cdnjs.cloudflare.com/ajax/libs/tota11y/0.1.3/tota11y.js', false, false, true);
+    }
+
     wp_localize_script('wally', 'ajax', array(
         'url' => admin_url('admin-ajax.php')
    ));
