@@ -176,17 +176,17 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
                     right: '0'
                 });
 
-                $backdrop.on('click', function(e){
-                    $backdrop.remove();
-                    dd.removeClass('open');
-                    $trigger.focus();
-                });
+                //$backdrop.on('click', function(e){
+                //    $backdrop.remove();
+                //    dd.removeClass('open');
+                //    $trigger.focus();
+                //});
 
-                $( "body" ).append($backdrop);
+                //$( "body" ).append($backdrop);
                 dd.addClass('open');
             });
             dd.on('close', function(){
-                $backdrop.remove();
+                //$backdrop.remove();
                 dd.removeClass('open');
                 $trigger.focus();
             });

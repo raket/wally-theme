@@ -1,6 +1,7 @@
 .dropdown {
   position: relative;
   display:inline-block;
+  min-width: 20rem;
 
   @include media($tiny) {
     width: 100%;
@@ -8,8 +9,8 @@
 
   .dropdown__drawer {
     display: none;
-    
-    header {
+
+    .dropdown__note {
       @include font-size(xs);
       padding: $small-spacing;
       background-color: $off-white;
@@ -54,8 +55,11 @@
 
       }
     }
-    @include media($small){
-      width: 350px;
-    }
   }
+}
+
+.dropdown__list {
+  padding: $small-spacing;
+  margin: 0;
+  list-style: none
 }
