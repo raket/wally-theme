@@ -175,12 +175,16 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
                     left: '0',
                     right: '0'
                 });
-
                 //$backdrop.on('click', function(e){
                 //    $backdrop.remove();
                 //    dd.removeClass('open');
                 //    $trigger.focus();
                 //});
+                $('body').on('click', function(e) {
+                    if(!$(e.target).parents('.dropdown').first().is(dd)) {
+                        dd.removeClass('open');
+                    }
+                });
 
                 //$( "body" ).append($backdrop);
                 dd.addClass('open');
@@ -190,7 +194,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
                 dd.removeClass('open');
                 $trigger.focus();
             });
-
 
             $trigger.on('click', function(e){
                 e.preventDefault();

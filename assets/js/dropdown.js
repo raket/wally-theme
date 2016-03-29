@@ -17,12 +17,16 @@
                     left: '0',
                     right: '0'
                 });
-
                 //$backdrop.on('click', function(e){
                 //    $backdrop.remove();
                 //    dd.removeClass('open');
                 //    $trigger.focus();
                 //});
+                $('body').on('click', function(e) {
+                    if(!$(e.target).parents('.dropdown').first().is(dd)) {
+                        dd.removeClass('open');
+                    }
+                });
 
                 //$( "body" ).append($backdrop);
                 dd.addClass('open');
@@ -32,7 +36,6 @@
                 dd.removeClass('open');
                 $trigger.focus();
             });
-
 
             $trigger.on('click', function(e){
                 e.preventDefault();
