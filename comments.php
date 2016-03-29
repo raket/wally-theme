@@ -137,7 +137,7 @@ if ( post_password_required() ) {
 							'comment_field' =>
 									'<div class="comment-form__comment form__group">' .
 									'<label class="form__label form__label--required" for="commentFormComment">' . __( 'Kommentar', 'wally' ) . ':</label>' .
-									'<textarea id="commentFormComment" placeholder="'. __( 'Skriv din kommentar här...', 'wally' ) .'" class="form__control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
+									'<textarea id="commentFormComment" placeholder="'. __( 'Skriv din kommentar här...', 'wally' ) .'" value="&nbsp;" class="form__control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
 							'comment_notes_after' => '',
 							'fields' => apply_filters('comment_form_default_fields', array(
 											'author' =>

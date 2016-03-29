@@ -880,19 +880,21 @@ function _w_comment_form_save($comment_id) {
 /**
  * A somewhat hacky way to allow empty comments if an emotion is set.
  */
-add_action('pre_comment_on_post', '_w_pre_comment_on_post');
+add_action('pre_comment_on_post', '_w_pre_comment_on_post', 1);
 function _w_pre_comment_on_post($post_id) {
 
-    if($_POST['comment'] == '') {
+    if($_POST['comment'] === '') {
 
         // Check if the comment has got an emotion.
-        if((isset($_POST['commentFormEmotion'])) && $_POST['commentFormEmotion'] != '' && strpos($_POST['commentFormEmotion'], 'emotion') !== false) {
+        if((isset($_POST['commentFormEmotion'])) && $_POST['commentFormEmotion'] !== '' && strpos($_POST['commentFormEmotion'], 'emotion') !== false) {
             $emotion = wp_filter_nohtml_kses($_POST['commentFormEmotion']);
             $_POST['comment'] = $emotion;
         }
 
     }
 }
+
+
 
 add_filter('mce_buttons', function($buttons) {
     array_unshift($buttons, 'formatselect');

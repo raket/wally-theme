@@ -105,6 +105,11 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
         $('#search-form-1').focus();
     });
 
+    $('#commentform').submit(function(e) {
+        if($('#commentFormComment').val() === '') {
+            $('#commentFormComment').html($('input[name=commentFormEmotion]:checked').val());
+        }
+    });
 
     // Allow :active despite removing -webkit-tab-highlight-color http://bit.ly/1WqdsZL
     document.addEventListener("touchstart", function(){}, true);
