@@ -171,15 +171,19 @@
     &:not(&:first-child) {
       @include hide-mobile;
     }
+
+    a {
+      @include link-underline;
+    }
+
   }
 
   .article-box__footer__col--meta--comments {
 
     a {
       text-align: right;
-      @include link-underline;
-
     }
+
     i {
       @include font-size(md);
       vertical-align: middle;
