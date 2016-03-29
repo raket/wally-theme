@@ -883,12 +883,15 @@ function _w_comment_form_save($comment_id) {
 add_action('pre_comment_on_post', '_w_pre_comment_on_post', 1);
 function _w_pre_comment_on_post($post_id) {
 
+    global $comment_content;
+
     if($_POST['comment'] === '') {
 
         // Check if the comment has got an emotion.
         if((isset($_POST['commentFormEmotion'])) && $_POST['commentFormEmotion'] !== '' && strpos($_POST['commentFormEmotion'], 'emotion') !== false) {
             $emotion = wp_filter_nohtml_kses($_POST['commentFormEmotion']);
             $_POST['comment'] = $emotion;
+            $comment_content = $emotion;
         }
 
     }
