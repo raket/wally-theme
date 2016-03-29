@@ -35,7 +35,7 @@ $turl = get_template_directory_uri();
 
     <div class="overlay" role="presentation" id="overlay"></div>
 
-    <?php if (wp_is_mobile() && has_nav_menu('mobile_primary_navigation')): ?>
+    <?php if (has_nav_menu('mobile_primary_navigation')): ?>
     <div class="off-canvas" role="menu" id="off-canvas">
         <nav class="off-canvas__navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally') ?>">
             <header class="off-canvas__navigation__header">
