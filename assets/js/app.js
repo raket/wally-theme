@@ -74,11 +74,12 @@
         $('#search-form-1').focus();
     });
 
-    //$('#commentform').submit(function(e) {
-    //    if($('#commentFormComment').val() === '') {
-    //        $('#commentFormComment').html($('input[name=commentFormEmotion]:checked').val());
-    //    }
-    //});
+    // WordPress doesn't offer a way of posting empty comments since 4.4, so we fix this with JS.
+    $('#commentform').submit(function(e) {
+        if($('#commentFormComment').val() === '') {
+            $('#commentFormComment').html($('input[name=commentFormEmotion]:checked').val());
+        }
+    });
 
     // Allow :active despite removing -webkit-tab-highlight-color http://bit.ly/1WqdsZL
     document.addEventListener("touchstart", function(){}, true);
