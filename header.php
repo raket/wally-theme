@@ -33,27 +33,6 @@ $turl = get_template_directory_uri();
     $body_class = (get_post_meta($post->ID, 'boxed_columns', true)) ? 'appearance-column-boxes' : '';
     body_class($body_class) ?>>
 
-    <div class="overlay" role="presentation" id="overlay"></div>
-
-    <?php if (has_nav_menu('mobile_primary_navigation')): ?>
-    <div class="off-canvas" role="menu" id="off-canvas">
-        <nav class="off-canvas__navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally') ?>">
-            <header class="off-canvas__navigation__header">
-                <h3>Meny</h3>
-                <button class="off-canvas__close" tabindex="-1">Stäng</button>
-            </header>
-
-            <?php echo apply_filters('w_mobile_navigation',
-                    wp_nav_menu(array(
-                            'theme_location' => 'mobile_primary_navigation',
-                            'container' => '',
-                            'echo' => false,
-                        )
-                    )) ?>
-        </nav>
-    </div>
-    <?php endif; ?>
-
     <a href="#site-navigation" class="skiplink" tabindex="1">
         <div class="container">
             <div class="col-6"><i class="material-icons" aria-label="<?php _e('Nedåtpil', 'wally') ?>"

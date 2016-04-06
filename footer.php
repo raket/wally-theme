@@ -7,6 +7,27 @@
 	$wssm = get_option('wally_settings_social_media');
 ?>
 
+<div class="overlay" role="presentation" id="overlay"></div>
+
+<?php if (has_nav_menu('mobile_primary_navigation')): ?>
+	<div class="off-canvas" role="menu" id="off-canvas">
+		<nav class="off-canvas__navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally') ?>">
+			<header class="off-canvas__navigation__header">
+				<h3>Meny</h3>
+				<button class="off-canvas__close" tabindex="-1">Stäng</button>
+			</header>
+
+			<?php echo apply_filters('w_mobile_navigation',
+				wp_nav_menu(array(
+						'theme_location' => 'mobile_primary_navigation',
+						'container' => '',
+						'echo' => false,
+					)
+				)) ?>
+		</nav>
+	</div>
+<?php endif; ?>
+
 <footer id="site-footer" class="site-footer" role="contentinfo" aria-label="<?php _e('Sidfot', 'wally') ?>">
 	<div class="container">
 		<div class="row">

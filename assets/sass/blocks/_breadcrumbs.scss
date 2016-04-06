@@ -42,6 +42,18 @@ div.breadcrumbs {
     //}
   }
 
+  li {
+    border-right: 1px solid $ghost-black;
+    &:last-child {
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+    }
+    a {
+      padding-left: $small-spacing;
+      padding-right: $small-spacing;
+    }
+  }
+
   li, span {
     display: inline-block;
     height: 100%;
@@ -61,44 +73,21 @@ div.breadcrumbs {
         border-bottom: solid 1px $ghost-black;
       }
     }
-    &:nth-child(1n+3):before {
-      @include triangle($black, .25rem, right);
-      border-left-color: $primary;
-      position: relative;
-      display: inline-block;
-      content: '';
-      border-left: 1px solid $ghost-black;
-      vertical-align: top;
-      height: 1.9rem;
-      width: 1px;
-      margin-left: $small-spacing;
-      margin-right: $small-spacing;
-      @include media($tiny) {
-        display: none;
-      }
-    }
 
     &:first-child {
       border-top-left-radius: .25rem;
       border-bottom-left-radius: .25rem;
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
-      text-transform: uppercase;
-      background: $off-white;
-      border-right: 1px solid $ghost-black;
-      font-size: .625rem;
-      margin-right:$small-spacing;
     }
-
-    a {
-      padding: 0;
-    }
-
-
   }
 
   span:first-child {
     margin-right: 0;
+    background: #FFF;
+    text-transform: uppercase;
+    font-size: .625rem;
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+    border-right: 1px solid $ghost-black;
   }
 
   .separator {
@@ -136,6 +125,7 @@ div.breadcrumbs {
 
   .last-item {
     color:  $dark-gray;
+    border-right: none;
     @include media($tiny) {
       padding: $small-spacing;
     }
