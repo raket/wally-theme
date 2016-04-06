@@ -20,7 +20,7 @@ var errorLog  = chalk.red.bold,
 	hintLog   = chalk.blue,
 	changeLog = chalk.red;
 
-var themeName = 'wally';
+var themeName = 'wally-theme';
 var themePath = '';
 
 var	SETTINGS = {
@@ -33,7 +33,7 @@ var	SETTINGS = {
 		js:         themePath + 'assets/js/',
 		images:     themePath + 'assets/images/',
 		fonts:      themePath + 'assets/fonts/',
-		bower:      'bower_components/'
+		bower:      themePath + 'assets/bower/'
 	},
 	build: {
 		app:        themePath,
