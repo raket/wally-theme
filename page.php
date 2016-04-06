@@ -25,8 +25,8 @@
                             </a>
                         <?php endif; ?>
                     </div>
+                    <?php  get_template_part('parts/media/thumbnail'); ?>
                     <div class="article-box__content">
-                        <?php  get_template_part('parts/media/thumbnail'); ?>
                         <?php
                             do_action('page-before-content');
                             the_content();

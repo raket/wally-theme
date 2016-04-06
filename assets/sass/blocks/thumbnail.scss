@@ -1,12 +1,14 @@
 .thumbnail {
   @include border;
   position: relative;
-  background: no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   max-height: $figure-height;
-  height: 10rem;
+  height: 0;
+  padding-bottom: 40%;
   img {
     max-width: none;
     width: 100%;
@@ -18,8 +20,8 @@
 
 .high-images {
   .thumbnail {
-    height: 20rem;
-    max-height:20rem;
+    height: 0;
+    padding-bottom: 60%;
   }
 }
 

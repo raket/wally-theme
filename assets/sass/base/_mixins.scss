@@ -48,7 +48,7 @@
 }
 
 @mixin box {
-  background: $white;
+  background-color: $white;
   margin: $regular-spacing 0;
   @include border;
   @include shadow(1);
