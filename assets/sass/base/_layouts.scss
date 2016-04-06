@@ -6,6 +6,12 @@
 }
 
 .sidebar {
+  body.home & {
+    margin-top: 4.5rem;
+    @include media($tiny) {
+      margin-top: 0;
+    }
+  }
   @include span-columns(12);
   @include media($medium) {
     @include span-columns(4);
