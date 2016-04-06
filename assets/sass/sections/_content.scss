@@ -4,7 +4,7 @@
   padding-bottom: $large-spacing;
 }
 
-article.post, article.page {
+article.post, article.page, article.type-post {
   figure, img {
     &.alignright, &.right, &[align="right"] {
       float: right;
