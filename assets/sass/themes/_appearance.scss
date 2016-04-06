@@ -176,6 +176,10 @@ body.appearance-column-boxes {
     margin: -($regular-spacing);
   }
 
+  .article-box__header {
+    margin: $regular-spacing $small-spacing;
+  }
+
   .image.thumbnail {
     margin-bottom: -2rem;
     @include box;
