@@ -12,10 +12,10 @@
 <?php if (has_nav_menu('mobile_primary_navigation')): ?>
 	<div class="off-canvas" role="menu" id="off-canvas">
 		<nav class="off-canvas__navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally') ?>">
-			<header class="off-canvas__navigation__header">
+			<div class="off-canvas__navigation__header">
 				<h3>Meny</h3>
 				<button class="off-canvas__close" tabindex="-1">Stäng</button>
-			</header>
+			</div>
 
 			<?php echo apply_filters('w_mobile_navigation',
 				wp_nav_menu(array(

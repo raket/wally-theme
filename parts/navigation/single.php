@@ -16,7 +16,7 @@
 $facebook = "https://www.facebook.com/sharer/sharer.php?u=" . get_permalink(get_queried_object_id());
 
 $twitter_href = "https://twitter.com/intent/tweet?text=";
-$twitter_text = "Testing";
+$twitter_text = get_the_title(get_queried_object_id());
 $twitter_link = get_permalink(get_queried_object_id());
 
 $twitter = $twitter_href . $twitter_text . "%20" . $twitter_link;
