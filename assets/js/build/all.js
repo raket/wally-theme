@@ -377,6 +377,7 @@ jQuery(document).ready(function($){
 
             $subList.slideToggle();
             $subList.toggleClass('is-open');
+            $(e.target).toggleClass('is-open');
 
             return false;
 

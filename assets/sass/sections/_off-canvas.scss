@@ -136,6 +136,10 @@
     content: 'add_circle_outline';
   }
 
+  &.is-open:before {
+    content: 'remove_circle_outline';
+  }
+
 }
 
 .off-canvas__navigation__sublist {
