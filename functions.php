@@ -1155,10 +1155,11 @@ add_filter( 'teeny_mce_plugins', function($plugins) {
 /**
  * Register meta box(es).
  */
-function wpdocs_register_meta_boxes() {
+function _w_register_meta_boxes() {
     add_meta_box( 'wally_box-styling', __( 'Utseende', 'wally' ), '_w_column_styling_meta_box_content', 'page', 'side', 'default' );
+    add_meta_box( 'wally_exclude-page', __( 'Göm från navigation', 'wally' ), '_w_exclude_page_meta_box_content', 'page', 'side', 'default' );
 }
-add_action( 'add_meta_boxes', 'wpdocs_register_meta_boxes' );
+add_action( 'add_meta_boxes', '_w_register_meta_boxes' );
 
 /**
  * Meta box display callback.
@@ -1177,6 +1178,28 @@ function _w_column_styling_meta_box_content( $post ) {
             <label for="boxed_columns" style="padding-right: 15px">
                 <input type="checkbox" name="boxed_columns" id="boxed_columns" value="1"' . (empty($choice) ? '' : ' checked') . '>
                 Visa kolumner som lådor
+            </label>
+        </p>
+    ';
+}
+
+/**
+ * Meta box display callback.
+ *
+ * @param WP_Post $post Current post object.
+ */
+function _w_exclude_page_meta_box_content( $post ) {
+
+    wp_nonce_field( 'wally_exclude_page', 'wally_exclude_page_nonce' );
+    $choice = get_post_meta($post->ID, 'exclude_page', true);
+    echo '
+
+        <p><strong>Göm från navigation</strong></p>
+        <p>Välj om sidan ska gömmas från alla navigationsmenyer.</p>
+        <p>
+            <label for="boxed_columns" style="padding-right: 15px">
+                <input type="checkbox" name="exclude_page" id="exclude_page" value="1"' . (empty($choice) ? '' : ' checked') . '>
+                Göm sida från navigation
             </label>
         </p>
     ';
@@ -1212,13 +1235,51 @@ function _w_column_styling_meta_box_save( $post_id ) {
         }
     }
 
-    if(!empty($_POST['boxed_columns'])) {
+    if(isset($_POST['boxed_columns'])) {
         $data = (int)sanitize_text_field($_POST['boxed_columns']);
         update_post_meta( $post_id, 'boxed_columns', $data );
     }
 
 }
 add_action( 'save_post', '_w_column_styling_meta_box_save' );
+
+/**
+ * Save meta box content.
+ *
+ * @param int $post_id Post ID
+ */
+function _w_exclude_page_meta_box_save( $post_id ) {
+
+    if ( ! isset( $_POST['wally_exclude_page_nonce'])) {
+        return $post_id;
+    }
+
+    $nonce = $_POST['wally_exclude_page_nonce'];
+
+    if ( ! wp_verify_nonce( $nonce, 'wally_exclude_page')) {
+        return $post_id;
+    }
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return $post_id;
+    }
+
+    if ('page' == $_POST['post_type'] ) {
+        if (!current_user_can( 'edit_page', $post_id)) {
+            return $post_id;
+        }
+    } else {
+        if (!current_user_can( 'edit_post', $post_id)) {
+            return $post_id;
+        }
+    }
+
+    if(isset($_POST['exclude_page'])) {
+        $data = (int)sanitize_text_field($_POST['exclude_page']);
+        update_post_meta( $post_id, 'exclude_page', $data );
+    }
+
+}
+add_action( 'save_post', '_w_exclude_page_meta_box_save' );
 
 add_filter( 'wp_video_shortcode', '_w_video_shortcode', 10, 4);
 function _w_video_shortcode($output, $atts, $video, $id) {
