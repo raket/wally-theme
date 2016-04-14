@@ -779,6 +779,7 @@ jQuery(document).ready(function($){
 
             $tabs.find('a').each(function() {
                 $(this).on('click', function(e) {
+
                     e.preventDefault();
 
                     var $panel = $($(this).attr('href'));
@@ -795,10 +796,17 @@ jQuery(document).ready(function($){
                     $panel.attr('aria-hidden', 'false');
                     $panel.addClass('is-active');
 
+                    var s = $(window).scrollTop();
+                    window.location.hash = $(this).attr('href');
+                    $(window).scrollTop(s);
+
                 });
             });
 
         });
+
+        var active = $('[href=' + window.location.hash + ']');
+        if(active.length) active.click();
 
     });
 
