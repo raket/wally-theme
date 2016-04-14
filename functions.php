@@ -1197,7 +1197,7 @@ function _w_exclude_page_meta_box_content( $post ) {
         <p><strong>Göm från navigation</strong></p>
         <p>Välj om sidan ska gömmas från alla navigationsmenyer.</p>
         <p>
-            <label for="boxed_columns" style="padding-right: 15px">
+            <label for="exclude_page" style="padding-right: 15px">
                 <input type="checkbox" name="exclude_page" id="exclude_page" value="1"' . (empty($choice) ? '' : ' checked') . '>
                 Göm sida från navigation
             </label>
@@ -1235,10 +1235,8 @@ function _w_column_styling_meta_box_save( $post_id ) {
         }
     }
 
-    if(isset($_POST['boxed_columns'])) {
-        $data = (int)sanitize_text_field($_POST['boxed_columns']);
-        update_post_meta( $post_id, 'boxed_columns', $data );
-    }
+    $value = isset($_POST['boxed_columns']) ? 1 : 0;
+    update_post_meta( $post_id, 'boxed_columns', $value );
 
 }
 add_action( 'save_post', '_w_column_styling_meta_box_save' );
@@ -1273,10 +1271,8 @@ function _w_exclude_page_meta_box_save( $post_id ) {
         }
     }
 
-    if(isset($_POST['exclude_page'])) {
-        $data = (int)sanitize_text_field($_POST['exclude_page']);
-        update_post_meta( $post_id, 'exclude_page', $data );
-    }
+    $value = isset($_POST['exclude_page']) ? 1 : 0;
+    update_post_meta( $post_id, 'exclude_page', $value );
 
 }
 add_action( 'save_post', '_w_exclude_page_meta_box_save' );
