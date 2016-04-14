@@ -1277,6 +1277,34 @@ function _w_exclude_page_meta_box_save( $post_id ) {
 }
 add_action( 'save_post', '_w_exclude_page_meta_box_save' );
 
+function _w_add_title_to_embed($atts, $content) {
+    extract(shortcode_atts(array(
+        'title' => 'En video till inlägget'
+    ), $atts));
+
+    //save shortcode output in $return
+    $return = "";
+
+    //insert code to modify $return
+
+    echo $return;
+}
+add_shortcode('wally_embed','_w_add_title_to_embed');
+
+function w_add_title_to_video($title, $html) {
+
+    $pq = phpQuery::newDocumentHTML($html);
+
+    pq('iframe')->attr('title', $title);
+    pq('video')->attr('title', $title)
+        ->parent('div')->attr('data-title', $title);;
+
+    $html = $pq->htmlOuter();
+    phpQuery::unloadDocuments();
+    return $html;
+
+}
+
 add_filter( 'wp_video_shortcode', '_w_video_shortcode', 10, 4);
 function _w_video_shortcode($output, $atts, $video, $id) {
 
@@ -1307,7 +1335,6 @@ function _w_video_shortcode($output, $atts, $video, $id) {
 
         $html = $pq->htmlOuter();
         phpQuery::unloadDocuments();
-
         return $html;
 
     }

@@ -34,8 +34,11 @@
 
         });
 
-        var active = $('[href=' + window.location.hash + ']');
-        if(active.length) active.click();
+        if(!_.isEmpty(window.location.hash)) {
+            var active = $('[href=' + window.location.hash + ']');
+            if(active.length) active.click();
+        }
+
 
     });
 
