@@ -193,13 +193,15 @@ body.appearance-column-boxes {
   a.image {
     margin-left: -($regular-spacing);
     margin-right: -($regular-spacing);
-    margin: -($regular-spacing);
     height: 0;
     padding-bottom: 75%;
     &--small,
     &--regular,
     &--large {
-      margin: -($regular-spacing) !important;
+      margin-left: -($regular-spacing) !important;
+      margin-right: -($regular-spacing) !important;
+      margin-top: 0;
+      margin-bottom: 0;
       max-width: none;
     }
     &--regular {
@@ -210,6 +212,10 @@ body.appearance-column-boxes {
     }
     + * {
       margin-top: $large-spacing;
+    }
+    &:first-child {
+      margin-top: -($regular-spacing) !important;
+      margin-bottom: -($regular-spacing) !important;
     }
   }
   * + figure.image {
