@@ -1,5 +1,4 @@
 <?php
-/* Template Name: Artiklar */
 get_header() ?>
 
 <div class="container">

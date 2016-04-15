@@ -5,7 +5,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<?php $is_replying = !empty($_GET['replytocom']) ? true : false ?>
+<?php $is_replying = !empty($_GET['tab']) && $_GET['tab'] === 'writeComment' ? true : false ?>
 
 	<div id="comments" class="comments">
 	<a name="kommentarer" class="anchor"></a>

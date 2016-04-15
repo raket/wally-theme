@@ -41,7 +41,7 @@ add_action('admin_init', 'hide_plugin_updates');
 
 // Custom Backend Footer
 function stella_custom_admin_footer() {
-    _e('<span id="footer-thankyou">Developed by <a href="http://www.raketwebbyra.se" target="_blank">Raket webbyrå</a></span>.', 'stella_theme');
+    _e('<span class="wally__byline"><img src="'.get_bloginfo('url').'/wp-content/plugins/wally-plugin/static/img/logo.svg" alt="">Läs mer om Wally på <a href="http://www.wally-wp.se" target="_blank">Wallys webbplats</a>.</span>', 'stella_theme');
 }
 add_filter('admin_footer_text', 'stella_custom_admin_footer');
 

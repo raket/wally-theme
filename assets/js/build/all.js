@@ -242,7 +242,7 @@ jQuery(document).ready(function($){
             $parent = $iframe.parents('article, section').first(),
             $text   = $parent.find('h1, h2, h3').first().text();
 
-        $iframe.attr('title', 'Ett videoklipp till inlägget ' + $text);
+        //$iframe.attr('title', 'Ett videoklipp till inlägget ' + $text);
 
     });
 
@@ -779,6 +779,7 @@ jQuery(document).ready(function($){
 
             $tabs.find('a').each(function() {
                 $(this).on('click', function(e) {
+
                     e.preventDefault();
 
                     var $panel = $($(this).attr('href'));
@@ -795,10 +796,20 @@ jQuery(document).ready(function($){
                     $panel.attr('aria-hidden', 'false');
                     $panel.addClass('is-active');
 
+                    var s = $(window).scrollTop();
+                    window.location.hash = $(this).attr('href');
+                    $(window).scrollTop(s);
+
                 });
             });
 
         });
+
+        if(!_.isEmpty(window.location.hash)) {
+            var active = $('[href=' + window.location.hash + ']');
+            if(active.length) active.click();
+        }
+
 
     });
 

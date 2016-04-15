@@ -58,6 +58,19 @@ $subpages = get_posts($args);
 <nav class="subpages" role="navigation" aria-label="<?php _e('Undersidor', 'wally') ?>">
 	<ul class="list-group">
 		<?php
+
+		// Do new query to get the pages to exclude
+		$excludes = (new WP_Query(array(
+			'fields' => 'ids',
+			'post_type' => 'page',
+			'meta_query' => array(
+				array(
+					'key'     => 'exclude_page',
+					'value'   => TRUE
+				)
+			)
+		)))->posts;
+
 		$args = array(
 			'depth'        => 1300,
 			'echo'         => 0,
@@ -65,6 +78,7 @@ $subpages = get_posts($args);
 			'post_status'  => 'publish',
 			'sort_column'  => 'menu_order, post_title',
 			'title_li'     => false,
+			'exclude'      => join(',', $excludes)
 		);
 		echo apply_filters('w_list_group', wp_list_pages($args)); ?>
 	</ul>

@@ -10,7 +10,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background: rgba(0, 0, 0, 0.025);
 }
 
 .list-group__item {
@@ -18,6 +17,7 @@
     @include font-size(md);
     position: relative;
     display: block;
+    background: rgba(0, 0, 0, 0.025);
     border-bottom: 1px solid $ghost-black;
     padding: $small-spacing $regular-spacing;
 
@@ -33,6 +33,7 @@
     }
   }
   &.current {
+    background: $white;
     border: solid 2px transparent;
     font-weight: 500;
     text-decoration: none;

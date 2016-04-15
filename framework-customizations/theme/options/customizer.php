@@ -17,6 +17,7 @@ $options = array(
                     'green' => __('Grön', 'wally'),
                     'purple' => __('Lila', 'wally'),
                     'pink' => __('Rosa', 'wally'),
+                    'cobalt' => __('Gråblå', 'wally'),
                 ),
                 /**
                  * Allow save not existing choices
