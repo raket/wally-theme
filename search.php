@@ -6,11 +6,19 @@
 
             <?php global $wp_query ?>
             <p>
-                <?php printf(__('Hittade %s sökresultat.', 'wally'), $wp_query->found_posts) ?>
-                <?php printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally'), $wp_query->max_num_pages) ?><br>
-            </p>
+                <?php
+                if($wp_query->found_posts > 0):
+                    printf(__('Hittade %s sökresultat.', 'wally'), $wp_query->found_posts);
+                    printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally'), $wp_query->max_num_pages);
+                else:
+                    printf(__('Hittade inga sökresultat', 'wally'));
+                endif;
+                ?><br>
 
+            </p>
+            <?php if($wp_query->found_posts > 0): ?>
             <h2 class="subtitle">Sökresultat:</h2>
+            <?php endif; ?>
 
             <div class="pagination no-margin">
                 <?php the_posts_pagination(array('type' => 'list')) ?>

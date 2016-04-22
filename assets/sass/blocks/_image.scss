@@ -21,6 +21,9 @@
   &--regular,
   &--large {
     margin: 2rem auto;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &--small {
