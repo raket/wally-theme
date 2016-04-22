@@ -18,8 +18,10 @@ if(has_post_thumbnail() || $thumbnail_type == 'video'):
 	<?php else:
 
 		$thumbnail_id = get_post_thumbnail_id();
-		$thumbnail_small = wp_get_attachment_image_src( $thumbnail_id, 'large' )[0];
-		$thumbnail_large = wp_get_attachment_image_src( $thumbnail_id, 'full' )[0];
+		$thumbnail_small = wp_get_attachment_image_src( $thumbnail_id, 'large' );
+		$thumbnail_small = $thumbnail_small[0];
+		$thumbnail_large = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+		$thumbnail_large = $thumbnail_large[0];
 		$caption = get_post_meta($post->ID, 'thumbnail_text', true) ? get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true) : false;
 		$display_size = get_post_meta($post->ID, 'thumbnail_size', true); ?>
 
