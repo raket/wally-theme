@@ -398,7 +398,8 @@ add_action('fw_ext_forms_frontend_submit', function($form) {
 
     global $wpdb;
     global $post;
-    $form_fields = (json_decode($form['instance']->get_form_builder_value($form['id'])['json']));
+    $form_builder_value = $form['instance']->get_form_builder_value($form['id']);
+    $form_fields = json_decode($form_builder_value['json']);
     $data = "";
 
     foreach($form_fields as $field) {
@@ -1313,7 +1314,7 @@ function _w_video_shortcode($output, $atts, $video, $id) {
 
     $extensions = (wp_get_video_extensions());
 
-    $urls = [];
+    $urls = array();
     foreach($extensions as $extension) {
         $urls[] = "'" . $atts[$extension] . "'";
     }
