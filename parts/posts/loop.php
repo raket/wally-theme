@@ -40,8 +40,7 @@ $sticky = is_sticky($post->ID) ? ' sticky' : '';
 					<?php echo get_the_author_posts_link(); ?>
 				</div>
 				<div class="article-box__footer__col article-box__footer__col--meta article-box__footer__col--meta--comments">
-					<a href="<?php the_permalink() ?>#comments"><i class="material-icons" aria-label="<?php _e('Kommentar', 'wally') ?>" aria-hidden="true">insert_comment</i> <?php echo get_comment_count($post->ID)['approved']; ?> <?php _e('kommentarer', 'wally') ?></a>
-				</div>
+					<a href="<?php the_permalink() ?>#comments"><i class="material-icons" aria-label="<?php _e('Kommentar', 'wally') ?>" aria-hidden="true">insert_comment</i> <?php $comment_count = get_comment_count($post->ID); echo $comment_count['approved']; ?> <?php _e('kommentarer', 'wally') ?></a>				</div>
 			<?php endif ?>
 		</div>
 	</article>
