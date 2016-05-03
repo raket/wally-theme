@@ -30,7 +30,7 @@ $turl = get_template_directory_uri();
     </head>
 
 <body <?php
-    $body_class = (get_post_meta($post->ID, 'boxed_columns', true)) ? 'appearance-column-boxes' : '';
+    $body_class = get_post_meta(get_queried_object_id(), 'boxed_columns', true) ? 'appearance-column-boxes' : '';
     body_class($body_class) ?>>
 
     <a href="#site-navigation" class="skiplink" tabindex="1">

@@ -60,7 +60,7 @@ $subpages = get_posts($args);
 		<?php
 
 		// Do new query to get the pages to exclude
-		$excludes = (new WP_Query(array(
+		$exclude_query = new WP_Query(array(
 			'fields' => 'ids',
 			'post_type' => 'page',
 			'meta_query' => array(
@@ -69,7 +69,8 @@ $subpages = get_posts($args);
 					'value'   => TRUE
 				)
 			)
-		)))->posts;
+		));
+		$excludes = $exclude_query->posts;
 
 		$args = array(
 			'depth'        => 1300,
