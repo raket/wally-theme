@@ -213,8 +213,6 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-
-
 @mixin triangle($color: $black, $size: 1rem, $direction: 'up') {
 
   content: '';

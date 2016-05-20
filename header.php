@@ -48,8 +48,6 @@ $turl = get_template_directory_uri();
         </div>
     </a>
 
-<div id="site-document" class="site-document">
-
 <?php do_action('before-site-header'); ?>
     <header id="site-header" class="site-header">
 
@@ -152,7 +150,6 @@ $turl = get_template_directory_uri();
     </div>
 <?php endif; ?>
 
-    <main class="main" role="main" aria-labelledby="page-title">
-
+<main class="main" role="main" aria-labelledby="page-title">
 
 <?php do_action('prepend-site-content'); ?>

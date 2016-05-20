@@ -5,8 +5,7 @@
   overflow: visible;
   background: $white;
   @include media($tiny) {
-    padding: 0 !important;
-
+    padding: 0;
   }
 
   &:first-child {
@@ -17,10 +16,6 @@
 
   > a {
     width: 100%;
-  }
-
-  @include media($tiny) {
-    padding: $small-spacing;
   }
 
   > *:first-child,
@@ -53,6 +48,16 @@
   overflow: auto; // Disabled collapsing margins
   padding: $regular-spacing;
 
+  padding: $regular-spacing;
+  h1, h2, h3, h4 {
+    margin-top: 0;
+  }
+  a {
+    h1, h2, h3, h4 {
+      @include link-arrow-after;
+    }
+  }
+
   h1, h2, h3, h4 {
     @include font-size(xl);
     @include media($tiny) {
@@ -70,18 +75,6 @@
     margin-bottom: 0;
   }
 
-}
-
-.article-box__header {
-  padding: $regular-spacing;
-  h1, h2, h3, h4 {
-    margin-top: 0;
-  }
-  a {
-    h1, h2, h3, h4 {
-      @include link-arrow-after;
-    }
-  }
 }
 
 .article-box__header--above-figure,
@@ -204,5 +197,37 @@
       }
     }
 
+  }
+}
+
+.article-box.post {
+
+  figure {
+    padding: 1rem;
+    background: $off-white;
+    figcaption {
+      margin-bottom: -0.5rem;
+    }
+  }
+
+  p span {
+    color: $black !important;
+  }
+
+  img.alignright {
+    float: right;
+  }
+}
+
+article.post, article.page, article.type-post {
+  figure, img {
+    &.alignright, &.right, &[align="right"] {
+      float: right;
+      margin: 0 0 $regular-spacing*1.5 $regular-spacing*1.5;
+    }
+    &.alignleft, &.left, &[align="left"] {
+      float: left;
+      margin: 0 $regular-spacing*1.5 $regular-spacing*1.5 0;
+    }
   }
 }

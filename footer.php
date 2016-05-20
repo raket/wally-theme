@@ -1,10 +1,8 @@
 </main>
-</div> <?php // div.container ?>
-
 
 <?php
-	$wsdt = get_option('wally_settings_contact_details');
-	$wssm = get_option('wally_settings_social_media');
+$wsdt = get_option('wally_settings_contact_details');
+$wssm = get_option('wally_settings_social_media');
 ?>
 
 <div class="overlay" role="presentation" id="overlay"></div>
@@ -28,6 +26,43 @@
 	</div>
 <?php endif; ?>
 
+<div class="bottom">
+	<div class="container">
+		<div class="bottom__row">
+			<div class="bottom__box">
+				<h4>Använd tjänsten</h4>
+				<p>
+					SIP: tolk@tolk.sip.nu
+				</p>
+			</div>
+			<div class="bottom__box">
+				<h4>Texttelefoni.net</h4>
+				<p>
+					Texttelefoni är en kostnadsfri förmedlingstjänst från PTS som levereras av Eniro 118 118.
+				</p>
+			</div>
+			<div class="bottom__box">
+				<h4>Teletal.se</h4>
+				<p>
+					Teletal är en kostnadsfri förmedlingstjänst från PTS som levereras av Riksfärdtjänsten Sverige.
+				</p>
+			</div>
+			<div class="bottom__box">
+				<h4>118400.se</h4>
+				<p>
+					118 400 är en kostnadsfri nummerupplysningstjänst från PTS som levereras av Eniro 118 118.
+				</p>
+			</div>
+			<div class="bottom__box is-purple">
+				<p>
+					Tjänsten utförs av Evantia Group på uppdrag av Post- och telestyrelsen (PTS).
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+</div>
 <footer id="site-footer" class="site-footer" role="contentinfo" aria-label="<?php _e('Sidfot', 'wally') ?>">
 	<div class="container">
 		<div class="row">
@@ -36,31 +71,31 @@
 
 					<?php if(!empty($wsdt)): ?>
 
-					<h2><?php _e('Kontakt', 'wally') ?></h2>
-					<div class="menu__list">
-						<?php echo @$wsdt['phone'] ? '<span class="menu__item"><a href="tel:' . $wsdt['phone'] . '"> ' . $wsdt['phone'] . '</a></span>' : '' ?>
-						<?php echo @$wsdt['email'] ? '<span class="menu__item"><a href="mailto:' . $wsdt['email'] . '"> ' . $wsdt['email'] . '</a></span>' : '' ?>
-						<?php echo @$wsdt['fax'] ? '<span class="menu__item"><a href="#">' . $wsdt['fax'] . '</a></span>' : '' ?>
-						<?php echo @$wsdt['address'] ? '<span class="menu__item">' . $wsdt['address'] . '</a></span>' : '' ?>
+						<h2><?php _e('Kontakt', 'wally') ?></h2>
+						<div class="menu__list">
+							<?php echo @$wsdt['phone'] ? '<span class="menu__item"><a href="tel:' . $wsdt['phone'] . '"> ' . $wsdt['phone'] . '</a></span>' : '' ?>
+							<?php echo @$wsdt['email'] ? '<span class="menu__item"><a href="mailto:' . $wsdt['email'] . '"> ' . $wsdt['email'] . '</a></span>' : '' ?>
+							<?php echo @$wsdt['fax'] ? '<span class="menu__item"><a href="#">' . $wsdt['fax'] . '</a></span>' : '' ?>
+							<?php echo @$wsdt['address'] ? '<span class="menu__item">' . $wsdt['address'] . '</a></span>' : '' ?>
 
-						<?php if($wsdt['zip_code'] || $wsdt['city']): ?>
-							<span class="menu__item">
+							<?php if($wsdt['zip_code'] || $wsdt['city']): ?>
+								<span class="menu__item">
 								<?php echo $wsdt['zip_code'] ? $wsdt['zip_code'] : '' ?>
 								<?php echo $wsdt['city'] ? $wsdt['city'] : '' ?>
 							</span>
-						<?php endif ?>
-					</div>
+							<?php endif ?>
+						</div>
 
 					<?php endif ?>
 					<?php if(!empty($wssm)): ?>
 
-					<h2><?php _e('Sociala Medier', 'wally') ?></h2>
-					<ul class="menu__list horizontal">
-						<?php echo @$wssm['facebook'] ? '<li><a target="_blank" href="'.$wssm['facebook'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Facebook</span></a></li>' : '' ?>
-						<?php echo @$wssm['twitter'] ? '<li><a target="_blank" href="'.$wssm['twitter'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Twitter</span></a></li>' : '' ?>
-						<?php echo @$wssm['youtube'] ? '<li><a target="_blank" href="'.$wssm['youtube'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-youtube.svg" alt="Ikon för Youtube"> Youtube</span></a></li>' : '' ?>
-						<?php echo @$wssm['bambuser'] ? '<li><a target="_blank" href="'.$wssm['bambuser'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-bambuser.svg" alt="Ikon för Bambuser"> Bambuser</span></a></li>' : '' ?>
-					</ul>
+						<h2><?php _e('Sociala Medier', 'wally') ?></h2>
+						<ul class="menu__list horizontal">
+							<?php echo @$wssm['facebook'] ? '<li><a target="_blank" href="'.$wssm['facebook'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Facebook</span></a></li>' : '' ?>
+							<?php echo @$wssm['twitter'] ? '<li><a target="_blank" href="'.$wssm['twitter'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Twitter</span></a></li>' : '' ?>
+							<?php echo @$wssm['youtube'] ? '<li><a target="_blank" href="'.$wssm['youtube'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-youtube.svg" alt="Ikon för Youtube"> Youtube</span></a></li>' : '' ?>
+							<?php echo @$wssm['bambuser'] ? '<li><a target="_blank" href="'.$wssm['bambuser'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-bambuser.svg" alt="Ikon för Bambuser"> Bambuser</span></a></li>' : '' ?>
+						</ul>
 
 					<?php endif ?>
 

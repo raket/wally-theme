@@ -7,11 +7,10 @@ html, body {
 body {
   background-color: #FFF;
   -webkit-overflow-scrolling: touch;
-  &.lock { overflow:hidden; }
 }
 
-* {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+body.lock {
+  overflow: hidden;
 }
 
 i.material-icons {
@@ -19,24 +18,14 @@ i.material-icons {
   vertical-align: text-bottom;
 }
 
-// ACCESIBILITY
-
 *:focus {
-  border-radius: 1px;
   outline: 2px solid $primary;
-  .list-group__item & {
-    outline: 2px solid $primary;
-  }
-  #site-navigation & {
-    outline-color: $secondary;
-  }
 }
 
 img,
 figure {
   max-width: 100%;
   height: auto;
-
 }
 
 .screen-reader-text {
@@ -66,8 +55,8 @@ body {
   }
 
   .fw-row {
-    margin-left: $regular-spacing * -1;
-    margin-right: $regular-spacing * -1;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
   .fw-container {
     max-width: 100%;
@@ -172,28 +161,28 @@ table {
   @include font-size(xs);
 }
 
-body.logged-in {
-  .article-box {
-    position: relative;
-  }
-  .edit-btn {
-    @include shadow();
-    padding: $small-spacing;
-    outline: solid 1px $light-blue;
-    @include font-size(xs);
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: auto;
-    background: #FFF;
-    color: $primary;
-    margin: 0 !important;
-    @include link-underline-span;
-    &:hover, &:focus {
-      outline: 2px solid $primary;
-    }
+
+.article-box {
+  position: relative;
+}
+
+.edit-btn {
+  @include shadow();
+  padding: $small-spacing;
+  outline: solid 1px $light-blue;
+  @include font-size(xs);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: auto;
+  background: #FFF;
+  color: $primary;
+  margin: 0 !important;
+  @include link-underline-span;
+  &:hover, &:focus {
+    outline: 2px solid $primary;
   }
 }
 

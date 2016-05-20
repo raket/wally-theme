@@ -1,0 +1,43 @@
+.appearance-boxes {
+
+}
+
+.appearance-border {
+
+}
+
+.appearance-flat {
+
+}
+
+.appearance-column-boxes {
+
+  .article-box {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+  }
+
+  .article-box__header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .box-wrapper {
+    @include box;
+    margin: 0 0 $regular-spacing*1.5;
+    padding: $regular-spacing;
+    overflow: visible;
+    background: $white;
+    @include media($tiny) {
+      padding: 0;
+    }
+  }
+
+  .fw-row {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+}

@@ -1,18 +1,13 @@
-.site-content {
+.main {
   background: $off-white;
   padding-top: $regular-spacing;
   padding-bottom: $large-spacing;
+  width: 100%;
 }
 
-article.post, article.page, article.type-post {
-  figure, img {
-    &.alignright, &.right, &[align="right"] {
-      float: right;
-      margin: 0 0 $regular-spacing*1.5 $regular-spacing*1.5;
-    }
-    &.alignleft, &.left, &[align="left"] {
-      float: left;
-      margin: 0 $regular-spacing*1.5 $regular-spacing*1.5 0;
-    }
-  }
+.site-content {
+  @include span-columns(8);
+}
+.site-content:only-child {
+  @include span-columns(12);
 }
