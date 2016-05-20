@@ -6,7 +6,7 @@
         $sidebar_location = fw_get_db_customizer_option('sidebar_setting');
 
         if($sidebar_location === 'left') {get_sidebar();} ?>
-        <section class="main" role="region" aria-labelledby="page-title-sitemap">
+        <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-sitemap">
             <?php while (have_posts()) : the_post(); ?>
                 <div <?php post_class('article-box') ?> id="post-<?php the_ID(); ?>">
                     <header class="article-box__header">

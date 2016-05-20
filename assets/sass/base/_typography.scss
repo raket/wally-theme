@@ -61,7 +61,7 @@ p, blockquote {
   @include typo-margin;
 }
 
-#site-content {
+.site-content {
   ul, ol {
     margin-bottom: $regular-spacing;
     li {

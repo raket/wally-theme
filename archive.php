@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="container">
         <div class="row">
-            <section id="site-content" class="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>" data-paginate>
+            <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>" data-paginate>
                 <?php the_archive_title('<h1 class="page-title" id="page-title-' . $post->ID .'">', '</h1>') ?>
                 <h2><?php _e('Artiklar', 'wally') ?></h2>
                 <?php

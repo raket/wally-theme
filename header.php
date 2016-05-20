@@ -152,7 +152,7 @@ $turl = get_template_directory_uri();
     </div>
 <?php endif; ?>
 
-    <main class="site-content" role="main" aria-labelledby="page-title">
+    <main class="main" role="main" aria-labelledby="page-title">
 
 
 <?php do_action('prepend-site-content'); ?>

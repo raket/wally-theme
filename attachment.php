@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="container">
         <div class="row">
-            <section id="site-content" class="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
+            <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
                 <?php
                 do_action('before-post-loop');
                 if(have_posts()):

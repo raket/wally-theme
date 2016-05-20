@@ -5,7 +5,7 @@ get_header() ?>
 
 	<div class="row">
 
-		<section id="site-content" class="main" aria-labelledby="page-title-start" role="region">
+		<section id="site-content" class="site-content" aria-labelledby="page-title-start" role="region">
 
 
 			<h1 class="page-title"><?php echo is_front_page() ? __('Start', 'wally') : __('Artiklar', 'wally') ?></h1>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container">
     <div class="row">
-        <section class="main" id="search-results" role="region" aria-labelledby="page-title-search-results">
+        <section class="site-content" id="search-results" role="region" aria-labelledby="page-title-search-results">
             <h1 id="page-title-search-results">Söker efter "<?php echo $s ?>":</h1>
 
             <?php global $wp_query ?>

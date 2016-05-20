@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="container">
         <div class="row">
-            <section class="main" role="region" aria-labelledby="page-title-articles" data-paginate>
+            <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-articles" data-paginate>
 
                 <h1 id="page-title-articles"><?php _e('Artiklar', 'wally') ?></h1>
 
