@@ -69,10 +69,10 @@ function _w_check_plugin() {
 
 add_action('wp_enqueue_scripts', function() {
 
-    wp_enqueue_style('wally', get_stylesheet_directory_uri() . '/assets/css/app.css');
+    wp_enqueue_style('wally', get_template_directory_uri() . '/assets/css/app.css');
 
     $theme = fw_get_db_customizer_option('color_theme');
-    wp_enqueue_style('wally_theme', get_stylesheet_directory_uri() . '/assets/css/themes/' . $theme . '.css');
+    wp_enqueue_style('wally_theme', get_template_directory_uri() . '/assets/css/themes/' . $theme . '.css');
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('bower', get_template_directory_uri() . '/assets/bower/_bower.js', false, false, true);

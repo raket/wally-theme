@@ -118,7 +118,6 @@
 
 // Reply
 .comment__reply {
-  @extend .comment;
 
   margin-top: $regular-spacing;
 
@@ -198,14 +197,6 @@
 
 // Form
 
-.comment-form {
-
-  form {
-    @extend .form;
-  }
-
-}
-
 .comment-form__header {
   padding-bottom: $large-spacing;
   margin-bottom: $large-spacing;
@@ -249,7 +240,6 @@
     opacity: 1;
     cursor: pointer;
     transform: scale(1.1);
-    @extend %outline;
   }
 
 }
