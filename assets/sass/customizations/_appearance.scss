@@ -1,15 +1,3 @@
-.appearance-boxes {
-
-}
-
-.appearance-border {
-
-}
-
-.appearance-flat {
-
-}
-
 .appearance-column-boxes {
 
   .article-box {
@@ -38,6 +26,26 @@
   .fw-row {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+}
+
+.appearance-boxes {
+
+}
+
+.appearance-border {
+
+}
+
+.appearance-flat {
+
+  .article-box,
+  .box-wrapper {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: none;
   }
 
 }

@@ -34,7 +34,8 @@ figure {
 }
 
 // GRID
-.container {
+.container,
+.fw-container {
   @include outer-container;
   padding: 0 $regular-spacing;
   max-width: 60rem;
@@ -47,20 +48,17 @@ body {
       padding-right: $regular-spacing;
     }
   }
+}
 
-  .fw-container {
-    width: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
+.fw-container {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+}
 
-  .fw-row {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
-  .fw-container {
-    max-width: 100%;
-  }
+.fw-row {
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .row {
