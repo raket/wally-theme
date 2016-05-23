@@ -19,7 +19,7 @@
     overflow: visible;
     background: $white;
     @include media($tiny) {
-      padding: 0;
+      margin-top: 1.5rem;
     }
   }
 
@@ -61,6 +61,17 @@
   .article-box__header {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .article-box__content--excerpt,
+  .article-box__tags {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .article-box__footer {
+    border-bottom: 1px solid $ghost-black;
+    border-right: 1px solid $ghost-black;
   }
 
 }

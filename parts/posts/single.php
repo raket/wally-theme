@@ -24,10 +24,12 @@
 			<?php echo wp_get_attachment_image($post->ID, '') ?>
 			<?php the_content() ?>
 		</div>
+		<?php if(wp_get_post_tags($post->ID)): ?>
 		<div class="article-box__tags">
 			<a name="taggar" class="anchor"></a>
 			<?php get_template_part('parts/meta/tags'); ?>
 		</div>
+		<?php endif ?>
 		<footer class="article-box__footer">
 			<div class="article-box__footer__col article-box__footer__col--meta">
 				<time datetime="<?php echo get_the_date('Y-m-d\TH:i:s'); ?>"><?php echo get_the_date('j F, Y H:i') ?></time>

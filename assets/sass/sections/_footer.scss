@@ -83,16 +83,16 @@
 }
 
 .site-footer__section {
+  padding-top: $regular-spacing;
   @include span-columns(12);
-  padding: $regular-spacing 0 0;
   @include media($medium) {
-    padding: $large-spacing/3 0 $large-spacing;
+    padding: 1.5rem 0;
     @include span-columns(8);
   }
 }
 .site-footer__subsection {
-  @include span-columns(12);
   margin-bottom: $regular-spacing;
+  @include span-columns(12);
   @include media($medium) {
     margin-bottom: 0;
     @include span-columns(6);
