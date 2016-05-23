@@ -7,14 +7,16 @@
             <?php global $wp_query ?>
             <p>
                 <?php
-                if($wp_query->found_posts > 0):
+                if($wp_query->found_posts > 0) {
                     printf(__('Hittade %s sökresultat.', 'wally'), $wp_query->found_posts);
-                    printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally'), $wp_query->max_num_pages);
-                else:
+                    if ($wp_query->max_num_pages > 1) {
+                        echo ' ';
+                        printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally'), $wp_query->max_num_pages);
+                    }
+                } else {
                     printf(__('Hittade inga sökresultat', 'wally'));
-                endif;
-                ?><br>
-
+                }
+                ?>
             </p>
             <?php if($wp_query->found_posts > 0): ?>
             <h2 class="subtitle">Sökresultat:</h2>

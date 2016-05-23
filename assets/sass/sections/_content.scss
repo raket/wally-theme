@@ -6,7 +6,10 @@
 }
 
 .site-content {
-  @include span-columns(8);
+  @include span-columns(12);
+  @include media($medium) {
+    @include span-columns(8);
+  }
 }
 .site-content:only-child {
   @include span-columns(12);
