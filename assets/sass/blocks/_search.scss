@@ -24,6 +24,7 @@
   .search__input {
     width: 100%;
     background: $white;
+    border-radius: .5rem;
   }
 
 }
@@ -34,6 +35,7 @@
   border: none;
   height: $navigation-height;
   vertical-align: top;
+  box-sizing: border-box;
   color: $black;
   @include font-size(sm);
   &:focus {

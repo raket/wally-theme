@@ -270,3 +270,7 @@ ul.breadcrumbs a:focus {
 .related-posts .related-posts__post:hover span, .related-posts .related-posts__post:focus span {
   @extend %bc-p;
 }
+
+.is-highlighted {
+  @extend %bgc-p;
+}

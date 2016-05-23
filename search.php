@@ -37,7 +37,7 @@
             </div>
 
             <div class="row">
-                <div class="search-form search-form--boxed" style="overflow: hidden">
+                <div class="search-form search-form--boxed">
                     <h2>Sök på nytt:</h2>
                     <?php get_search_form() ?>
                 </div>
