@@ -1028,7 +1028,7 @@ function _w_google_fonts() {
 
     $available_fonts = array(
         'roboto' => 'Roboto:400,500',
-        'source-sans-pro' => 'Source+Sans+Pro:400,700',
+        'source-sans-pro' => 'Source Sans Pro:400,700',
     );
 
     $wanted_fonts = array();
@@ -1044,8 +1044,11 @@ function _w_google_fonts() {
         'family' => implode('|', $wanted_fonts),
 		'subset' => 'latin,latin-ext',
 	);
-	wp_register_style('google_fonts', "//fonts.googleapis.com/css?" . http_build_query($query_args));
-    wp_enqueue_style('google_fonts');
+
+    if(!empty($wanted_fonts)) {
+        wp_enqueue_style('google_fonts', "//fonts.googleapis.com/css?" . http_build_query($query_args));
+    }
+
 }
 
 

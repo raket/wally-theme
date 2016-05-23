@@ -214,6 +214,10 @@ button.button--primary,
   @extend %bc-p;
 }
 
+.pagination a:hover,
+.pagination a:focus {
+  @extend %bc-p;
+}
 
 // Pagination
 .button.pagination__button {

@@ -49,8 +49,7 @@ $options = array(
                     'arial' => 'Arial',
                     'source-sans-pro' => 'Source Sans Pro',
                     'trebuchet-ms' => 'Trebuchet MS',
-                    'verdana' => 'Verdana',
-                    'creepster' => 'Creepster',
+                    'verdana' => 'Verdana'
                 ),
                 'no-validate' => false,
             ),
