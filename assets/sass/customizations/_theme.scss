@@ -28,6 +28,9 @@
 a {
   @extend %c-p;
 }
+a:hover {
+  @extend %bc-p;
+}
 
 .site-header {
   @extend %bgc-p;

@@ -118,10 +118,10 @@ $options = array(
                 'type' => 'select',
                 'value' => 'appearance-boxes',
                 'label' => 'Innehållets utseende',
-                'desc' => 'Välj om innehållet ska avskiljas i lådor, med linjer eller inte alls',
+                'desc' => 'Välj om innehållet ska avskiljas med lådor eller inte alls',
                 'choices' => array(
-                    'appearance-boxes' => 'Innehåll i lådor',
-                    'appearance-border' => 'Avskilj med linje',
+                    'appearance-boxes' => 'Avskilj med lådor',
+//                    'appearance-border' => 'Avskilj med linje',
                     'appearance-flat' => 'Avskilj inte alls',
                 ),
                 'no-validate' => false,

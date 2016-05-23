@@ -41,12 +41,10 @@ figure {
   max-width: 60rem;
 }
 
-body {
-  .fw-page-builder-content {
-    *[class*="fw-col-"] {
-      padding-left: $regular-spacing;
-      padding-right: $regular-spacing;
-    }
+.fw-page-builder-content {
+  *[class*="fw-col-"] {
+    padding-left: $regular-spacing;
+    padding-right: $regular-spacing;
   }
 }
 
@@ -56,13 +54,14 @@ body {
   margin: 0 auto;
 }
 
+.row,
+.fw-row {
+  @include row;
+}
+
 .fw-row {
   margin-left: -1rem;
   margin-right: -1rem;
-}
-
-.row {
-  @include row;
 }
 
 // TABLES

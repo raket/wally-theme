@@ -1,7 +1,4 @@
 section.site-content {
-  *[class*="fw-"], .video-wrapper {
-    margin-bottom: $small-spacing;
-  }
 
   .fw-flash-messages {
     @include box;

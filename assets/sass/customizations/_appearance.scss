@@ -1,4 +1,4 @@
-.appearance-column-boxes {
+.appearance-column-boxes.appearance-boxes {
 
   .article-box {
     background: transparent;
@@ -14,8 +14,8 @@
 
   .box-wrapper {
     @include box;
-    margin: 0 0 $regular-spacing*1.5;
     padding: $regular-spacing;
+    margin: 0 0 $regular-spacing*1.5;
     overflow: visible;
     background: $white;
     @include media($tiny) {
@@ -23,19 +23,17 @@
     }
   }
 
-  .fw-row {
-    margin-left: -2rem;
-    margin-right: -2rem;
+  .fw-main-row:last-child .box-wrapper {
+    margin-bottom: 0;
   }
 
 }
 
-.appearance-boxes {
-
-}
-
-.appearance-border {
-
+.appearance-column-boxes {
+  .fw-row {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 }
 
 .appearance-flat {
@@ -46,6 +44,18 @@
     box-shadow: none;
     padding: 0;
     border: none;
+  }
+
+  .box-wrapper {
+    margin: 0 0 $regular-spacing*1.5;
+  }
+  .fw-main-row:last-child .box-wrapper {
+    margin-bottom: 0;
+  }
+
+  .article-box__header {
+    padding-left: 0;
+    padding-right: 0;
   }
 
 }
