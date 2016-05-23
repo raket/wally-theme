@@ -99,17 +99,22 @@ button[type="submit"] {
 
 .list-group__item.is-current > a,
 .list-group__subitem.is-current > a {
-  background-color: #FFF;
-  @extend %bc-p;
+  &, &:hover {
+    background-color: $white;
+    @extend %bc-p;
+  }
 }
 
 .list-group__item button:hover {
   @extend %bc-p;
 }
 
-.list-group__item a:hover span,
-.list-group__item a:focus span {
-  @extend %bc-p;
+.list-group__item,
+.list-group__subitem {
+  a:hover,
+  a:focus {
+    border-color: $ghost-black;
+  }
 }
 
 // Buttons
