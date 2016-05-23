@@ -19,9 +19,7 @@
             $(element).matchHeight();
         });
 
-
         $('[data-fitvids]').fitVids();
-
 
     });
 
@@ -44,11 +42,6 @@
         });
     }
 
-    //if(Cookies.get('wally_contrast')) {
-    //    var $body = $('body');
-    //    $body.addClass('theme-contrast');
-    //    $('.increaseContrast').html('Minska kontrast');
-    //}
 
     // Shortcuts
     Mousetrap(document).bind(['S', 's'], function(e) {

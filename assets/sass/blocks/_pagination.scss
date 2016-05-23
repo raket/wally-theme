@@ -42,12 +42,12 @@
   top: 0;
 }
 
-.button.pagination__button {
+.pagination__button {
   font-weight: normal;
   width: auto;
   margin: auto;
   display: inline-block;
-  background: #FFF;
+  background: $white;
   @include shadow(1);
   padding: $large-spacing/2 $large-spacing;
   @include link-underline-span;

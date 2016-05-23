@@ -1,23 +1,21 @@
-body.logged-in {
-  .article-box {
-    position: relative;
-  }
-  .edit-btn {
-    padding: $small-spacing;
-    outline: solid 1px $light-blue;
-    @include font-size(xs);
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: auto;
-    background: #FFF;
-    color: $primary;
-    margin: 0 !important;
-    @include link-underline-span;
-    &:hover, &:focus {
-      outline: 2px solid $primary;
-    }
+.article-box {
+  position: relative;
+}
+.edit-btn {
+  padding: $small-spacing;
+  outline: solid 1px $light-blue;
+  @include font-size(xs);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: auto;
+  background: #FFF;
+  color: $primary;
+  margin: 0;
+  @include link-underline-span;
+  &:hover, &:focus {
+    outline: 2px solid $primary;
   }
 }

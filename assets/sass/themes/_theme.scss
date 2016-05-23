@@ -39,7 +39,8 @@ a:hover {
   }
 }
 
-.fw_form_fw_form [type=submit], .survey__submit {
+.fw_form_fw_form [type=submit],
+.survey__submit {
   @extend %bgc-p;
 }
 
@@ -86,7 +87,6 @@ a:hover {
   @extend%bc-p;
 }
 
-
 button[type="submit"] {
   @extend %bgc-p;
   @extend %c-white;
@@ -114,8 +114,11 @@ button[type="submit"] {
 
 // Buttons
 
-a.button, a.button.button--primary, button.button--primary {
-  @extend %c-p;
+a.button,
+a.button.button--primary,
+button.button--primary,
+.button--primary {
+  @extend %bgc-p;
   &:hover, &:focus, &:active {
     span {
       @extend %bc-p;
@@ -156,6 +159,10 @@ a.button, a.button.button--primary, button.button--primary {
     @extend %bc-p;
   }
 
+}
+
+.off-canvas__navigation__item a {
+  @extend %c-p;
 }
 
 .off-canvas__navigation__subitem {
@@ -209,7 +216,11 @@ a.button, a.button.button--primary, button.button--primary {
 
 
 // Pagination
-.button.pagination__button:hover span {
+.button.pagination__button {
+  background: $white;
+  @extend %c-p;
+}
+.pagination__button:hover span {
   @extend %bc-p;
 }
 
@@ -239,6 +250,9 @@ a.edit-btn {
 //.mejs-container.mejs-video .mejs-controls .mejs-time-current {
 //  @extend %bgc-p;
 //}
+.site-footer a {
+  @extend %c-p;
+}
 
 .site-footer a:hover,
 .site-footer a:focus {
@@ -251,6 +265,9 @@ a.edit-btn {
 }
 
 // Tabs
+.tabs__title a {
+  @extend %c-p;
+}
 .tabs__title.is-active a {
   @extend %c-p;
 }

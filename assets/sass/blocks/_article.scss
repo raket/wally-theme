@@ -131,59 +131,6 @@
     @include row;
   }
 
-  .article-box__footer__col {
-    @include font-size(xxs);
-    padding: $regular-spacing;
-    vertical-align: middle;
-    display: table-cell;
-    width: 9999rem;
-    * {
-      margin: 0;
-      font-size: inherit;
-      display: inline-block;
-    }
-  }
-
-  .article-box__footer__col--meta {
-    display: table-cell;
-    border-left: 1px solid $ghost-black;
-    text-align: right;
-    width: auto;
-
-    @include media($tiny) {
-      display: block;
-      text-align: center;
-      border-top: 1px solid $ghost-black;
-    }
-
-    a {
-      color: $primary;
-      font-size: inherit;
-    }
-  }
-  .article-box__footer__col {
-    &:not(&:first-child) {
-      @include hide-mobile;
-    }
-
-    a {
-      @include link-underline;
-    }
-
-  }
-
-  .article-box__footer__col--meta--comments {
-
-    a {
-      text-align: right;
-    }
-
-    i {
-      @include font-size(md);
-      vertical-align: middle;
-    }
-  }
-
   .button {
     margin: 0;
     &:after {
@@ -196,7 +143,60 @@
         content: '';
       }
     }
+  }
 
+}
+
+.article-box__footer__col {
+  @include font-size(xxs);
+  padding: $regular-spacing;
+  vertical-align: middle;
+  display: table-cell;
+  width: 9999rem;
+  * {
+    margin: 0;
+    font-size: inherit;
+    display: inline-block;
+  }
+}
+
+.article-box__footer__col--meta {
+  display: table-cell;
+  border-left: 1px solid $ghost-black;
+  text-align: right;
+  width: auto;
+
+  @include media($tiny) {
+    display: block;
+    text-align: center;
+    border-top: 1px solid $ghost-black;
+  }
+
+  a {
+    color: $primary;
+    font-size: inherit;
+  }
+}
+.article-box__footer__col {
+  &:not(&:first-child) {
+    @include hide-mobile;
+  }
+
+  a {
+    @include link-underline;
+  }
+
+}
+
+.article-box__footer__col--meta--comments {
+
+  a {
+    text-align: right;
+  }
+
+  i {
+    @include font-size(md);
+    vertical-align: middle;
   }
 }
 
@@ -219,7 +219,9 @@
   }
 }
 
-article.post, article.page, article.type-post {
+article.post,
+article.page,
+article.type-post {
   figure, img {
     &.alignright, &.right, &[align="right"] {
       float: right;
