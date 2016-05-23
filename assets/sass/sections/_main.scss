@@ -15,33 +15,3 @@ section.site-content {
     margin-top: 0;
   }
 }
-
-.sticky-wrapper {
-  position: relative;
-}
-
-.sidebar {
-  &.stuck {
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    width: 100%;
-    max-width: 1160px;
-    @include media(max-width 1240px) {
-      left: 0;
-      padding: 0 1rem;
-    }
-    > * {
-      @include media($medium) {
-        @include span-columns(4);
-      }
-      margin: 0 !important;
-      float: right !important;
-      clear: both !important;
-    }
-  }
-}
-
-div.site-document.site-document main.site-content section.site-content.site-content {
-
-}

@@ -4,9 +4,15 @@
       font-family: #{$name};
     }
   }
-  body.body-font-#{$key}, body.body-font-#{$key} button {
+  body.body-font-#{$key} {
     font-family: #{$name};
     font-weight: 200;
+
+    button, input {
+      font-family: #{$name};
+      font-weight: 200;
+    }
+
   }
 }
 

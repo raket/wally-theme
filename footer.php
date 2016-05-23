@@ -25,44 +25,7 @@ $wssm = get_option('wally_settings_social_media');
 		</nav>
 	</div>
 <?php endif; ?>
-
-<div class="bottom">
-	<div class="container">
-		<div class="bottom__row">
-			<div class="bottom__box">
-				<h4>Använd tjänsten</h4>
-				<p>
-					SIP: tolk@tolk.sip.nu
-				</p>
-			</div>
-			<div class="bottom__box">
-				<h4>Texttelefoni.net</h4>
-				<p>
-					Texttelefoni är en kostnadsfri förmedlingstjänst från PTS som levereras av Eniro 118 118.
-				</p>
-			</div>
-			<div class="bottom__box">
-				<h4>Teletal.se</h4>
-				<p>
-					Teletal är en kostnadsfri förmedlingstjänst från PTS som levereras av Riksfärdtjänsten Sverige.
-				</p>
-			</div>
-			<div class="bottom__box">
-				<h4>118400.se</h4>
-				<p>
-					118 400 är en kostnadsfri nummerupplysningstjänst från PTS som levereras av Eniro 118 118.
-				</p>
-			</div>
-			<div class="bottom__box is-purple">
-				<p>
-					Tjänsten utförs av Evantia Group på uppdrag av Post- och telestyrelsen (PTS).
-				</p>
-			</div>
-		</div>
-
-	</div>
-
-</div>
+<?php do_action('wally_before_footer') ?>
 <footer id="site-footer" class="site-footer" role="contentinfo" aria-label="<?php _e('Sidfot', 'wally') ?>">
 	<div class="container">
 		<div class="row">
@@ -121,8 +84,10 @@ $wssm = get_option('wally_settings_social_media');
 						$contrast = false;
 					} ?>
 
-					<li class="menu__item"><a href="<?php echo add_query_arg('toggle_contrast', 1) ?>"><i class="material-icons" aria-label="<?php _e('Kontrast', 'wally') ?>" aria-hidden="true">tonality</i>
-							<?php echo $contrast ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?></a>
+					<li><a href="<?php echo add_query_arg('toggle_contrast', 1) ?>"><i class="material-icons"
+					                                                                   aria-label="<?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?>"
+					                                                                   aria-hidden="true">tonality</i>
+							<span class="increaseContrast"><?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?></span></a>
 					</li>
 				</ul>
 			</div>

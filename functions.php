@@ -71,8 +71,17 @@ add_action('wp_enqueue_scripts', function() {
 
     wp_enqueue_style('wally', get_template_directory_uri() . '/assets/css/app.css', array('fw-ext-builder-frontend-grid'));
 
-    $theme = fw_get_db_customizer_option('color_theme');
-    wp_enqueue_style('wally_theme', get_template_directory_uri() . '/assets/css/themes/' . $theme . '.css');
+
+    if(isset($_COOKIE['wally_contrast'])) {
+        wp_enqueue_style('wally_contrast', get_template_directory_uri() . '/assets/css/themes/contrast.css');
+        add_filter('body_class', function($classes) {
+            $classes[] = 'theme-contrast';
+            return $classes;
+        });
+    } else {
+        $theme = fw_get_db_customizer_option('color_theme');
+        wp_enqueue_style('wally_theme', get_template_directory_uri() . '/assets/css/themes/' . $theme . '.css');
+    }
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('bower', get_template_directory_uri() . '/assets/bower/_bower.js', false, false, true);
@@ -1401,3 +1410,7 @@ add_action('fw_form_display_errors_frontend', function($form) {
     }
     echo '</div>';
 });
+
+function w_is_contrast() {
+    return isset($_COOKIE['wally_contrast']);
+}

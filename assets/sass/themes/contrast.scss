@@ -1,115 +1,21 @@
+@import '../base/settings';
 .theme-contrast {
-
-  $primary: #000;
-  $secondary: #555;
-  $tertiary: #FFF;
-
+  $primary: $black;
+  $secondary: $black;
+  $tertiary: $black;
   @import 'theme';
 
-  a {
-    color: #000 !important;
-  }
-  a:hover {
-    span {
-      border-bottom-color: #FFF !important;
-    }
-  }
-  .is-current {
-    border-right: 0 !important;
-    &:focus span {
-      border-bottom-color: #000;
-    }
-  }
-  a:focus {
-    background: #FFF !important;
-    outline: 2px #000 !important;
-    span {
-      border-bottom: solid 2px #000 !important;
-    }
-  }
-  a:hover, a:hover span {
-      border-bottom-color: #000 !important;
-  }
   .site-header {
-    a {
-      color: #FFF !important;
-      &:hover {
-        span {
-          border-bottom-color: #FFF !important;
-        }
-      }
-    }
-    a:focus, .is-current {
-      background: #FFF !important;
-      color: #000 !important;
-      a {
-        color: #000 !important;
-      }
-      span {
-        border-bottom-color: #000 !important;
-      }
-      outline: 2px solid #FFF !important;
-    }
+    background: $white;
   }
-  .site-header {
-    button.button.search__submit {
-      background: #000;
-      color: #FFF;
-      border-color: #000;
-    }
+
+  .site-navigation {
+    border-top: 1px solid $ghost-black;
   }
-  .pills__link {
-    border-color: #000 !important;
-    &:before {
-      border-color: #000 !important;
-    }
-  }
-  .site-header__tools {
-    a {
-      color: #FFF;
-      &:focus {
-        border-bottom: none;
-      }
-    }
-  }
-  .search__input:focus {
-    background: #FFF;
-    outline-color: #000 !important;
-  }
-  button.button.search__submit {
-    background: #000;
-    color: #FFF;
-    outline-color: #000 !important;
-  }
-  .pagination__button {
-    background: #FFF;
-    color: #000;
-  }
-  .site-footer {
-    background: #000;
-    * {
-      color: #FFF;
-    }
-    a:hover {
-      border-bottom-color: #FFF !important;
-    }
-    .menu__list {
-      .menu__item a {
-        color: #FFF !important;
-      }
-      img {
-        display: none;
-      }
-    }
-    .site-footer__rights {
-      img {
-        display: none;
-      }
-    }
-  }
-  button.button--primary {
-    background: #FFF !important;
-    color: #000 !important;;
+
+  .site-header__tools a {
+    color: $black;
+    border-color: $black;
   }
 
 }

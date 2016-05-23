@@ -246,28 +246,28 @@ a.edit-btn {
 }
 
 // Breadcrumbs
-ul.breadcrumbs a:focus {
+.breadcrumbs a:focus {
   @extend %oc-p;
 }
 
 // Tabs
 .tabs__title.is-active a {
   @extend %c-p;
-
-  span {
-    @extend %bc-p;
-  }
 }
+.tabs__title.is-active a span {
+  @extend %bc-p;
+}
+
 .tabs__title a:hover span {
   @extend %bc-p;
 }
 
-// Related posts
-.related-posts .related-posts__post-title {
+.related-posts__post-title {
   @extend %c-p;
 }
 
-.related-posts .related-posts__post:hover span, .related-posts .related-posts__post:focus span {
+.related-posts__post:hover span,
+.related-posts__post:focus span {
   @extend %bc-p;
 }
 

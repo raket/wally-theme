@@ -1,0 +1,36 @@
+.sidebar.is-stuck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+//.sidebar {
+//  &.stuck {
+//    position: fixed;
+//    z-index: 0;
+//    top: 0;
+//    width: 100%;
+//    max-width: 1160px;
+//    @include media(max-width 1240px) {
+//      left: 0;
+//      padding: 0 1rem;
+//    }
+//    > * {
+//      @include media($medium) {
+//        @include span-columns(4);
+//      }
+//      margin: 0 !important;
+//      float: right !important;
+//      clear: both !important;
+//    }
+//  }
+//}
+
+.sidebar,
+.sidebar__wrapper {
+  @include span-columns(12);
+  @include media($medium) {
+    @include span-columns(4);
+  }
+}

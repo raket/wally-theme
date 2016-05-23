@@ -91,9 +91,9 @@ $turl = get_template_directory_uri();
                         } ?>
 
                         <li><a href="<?php echo add_query_arg('toggle_contrast', 1) ?>"><i class="material-icons"
-                                                                                           aria-label="<?php _e('Kontrast', 'wally') ?>"
+                                                                                           aria-label="<?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?>"
                                                                                            aria-hidden="true">tonality</i>
-                                <span class="increaseContrast">Öka kontrast</span></a>
+                                <span class="increaseContrast"><?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?></span></a>
                         </li>
                     </ul>
                 </div>

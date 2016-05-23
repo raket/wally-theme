@@ -28,8 +28,9 @@
     if($('body').hasClass('single') && !isMobile()) {
 
         if($('body.single .sidebar').length) {
-            new Waypoint.Sticky({
-                element: $('body.single .sidebar')[0]
+            $('body.single .sidebar').stick_in_parent({
+                parent: $('.main'),
+                offset_top: 20
             });
         }
 
@@ -43,11 +44,11 @@
         });
     }
 
-    if(Cookies.get('wally_contrast')) {
-        var $body = $('body');
-        $body.addClass('theme-contrast');
-        $('.increaseContrast').html('Minska kontrast');
-    }
+    //if(Cookies.get('wally_contrast')) {
+    //    var $body = $('body');
+    //    $body.addClass('theme-contrast');
+    //    $('.increaseContrast').html('Minska kontrast');
+    //}
 
     // Shortcuts
     Mousetrap(document).bind(['S', 's'], function(e) {
