@@ -33,6 +33,8 @@ $turl = get_template_directory_uri();
     $body_class = get_post_meta(get_queried_object_id(), 'boxed_columns', true) ? 'appearance-column-boxes' : '';
     body_class($body_class) ?>>
 
+    <div class="print"></div>
+
     <a href="#site-navigation" class="skiplink" tabindex="1">
         <div class="container">
             <div class="col-6"><i class="material-icons" aria-label="<?php _e('Nedåtpil', 'wally') ?>"

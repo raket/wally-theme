@@ -1,3 +1,18 @@
 @media print {
+  .article-box,
+  .box-wrapper,
+  .article-box__content,
+  [class^=fw-col] {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
 
+  .site-header,
+  .site-footer,
+  .edit-btn,
+  iframe {
+    display: none !important;
+  }
 }
