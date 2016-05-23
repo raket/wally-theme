@@ -1,4 +1,4 @@
-<div class="sidebar" aria-label="<?php _e('Sidomeny', 'wally') ?>">
+<div class="sidebar fw-col-md-4" aria-label="<?php _e('Sidomeny', 'wally') ?>">
     <?php
     if(is_front_page() || is_home() || is_archive() || is_page_template('home.php')){
         ob_start();

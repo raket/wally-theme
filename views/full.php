@@ -11,7 +11,7 @@
 
 	<div class="container">
 		<div class="row">
-			<section id="site-content" class="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
+			<section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
 				<div <?php post_class('article-box') ?> id="post-<?php the_ID(); ?>">
 					<header class="article-box__header">
 						<?php do_action('page-before-title'); ?>

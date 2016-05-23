@@ -27,18 +27,15 @@
     margin-bottom: 0;
   }
 
-  .fw-row {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
+}
 
+.appearance-column-boxes {
+  .article-box__content {
+    padding: 0;
+  }
 }
 
 .appearance-boxes {
-  .fw-row {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
 }
 
 .appearance-flat {
@@ -56,6 +53,10 @@
   }
   .fw-main-row:last-child .box-wrapper {
     margin-bottom: 0;
+  }
+
+  .article-box__content {
+    padding: 0;
   }
 
   .article-box__header {

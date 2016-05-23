@@ -29,8 +29,12 @@
 
 .sidebar,
 .sidebar__wrapper {
+  position: relative;
   @include span-columns(12);
   @include media($medium) {
     @include span-columns(4);
   }
+}
+.sidebar__wrapper {
+  @include outer-container;
 }

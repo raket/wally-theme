@@ -34,35 +34,54 @@ figure {
 }
 
 // GRID
-.container,
-.fw-container {
+.container {
   @include outer-container;
-  padding: 0 $regular-spacing;
   max-width: 60rem;
-}
-
-.fw-page-builder-content {
-  *[class*="fw-col-"] {
-    padding-left: $regular-spacing;
-    padding-right: $regular-spacing;
-  }
+  padding: 0 $regular-spacing;
 }
 
 .fw-container {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto;
+  padding: 0;
   width: auto;
 }
 
 .row,
 .fw-row {
   @include row;
+  margin: 0;
 }
 
-.fw-row {
-  margin-left: -2rem;
-  margin-right: -2rem;
+@for $i from 1 through 12 {
+
+  @include media($tiny) {
+    .fw-col-xs-#{$i} {
+      @include span-columns($i);
+      padding: 0;
+    }
+  }
+
+  @include media($small) {
+    .fw-col-sm-#{$i},
+    .fw-col-md-#{$i},
+    .fw-col-lg-#{$i} {
+      @include span-columns($i);
+      padding: 0;
+    }
+  }
+  @include media($medium) {
+    .fw-col-md-#{$i},
+    .fw-col-lg-#{$i} {
+      @include span-columns($i);
+      padding: 0;
+    }
+  }
+  @include media($large) {
+    .fw-col-lg-#{$i} {
+      @include span-columns($i);
+      padding: 0;
+    }
+  }
+
 }
 
 // TABLES

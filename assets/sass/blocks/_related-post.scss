@@ -1,61 +1,60 @@
 .related-posts {
   @include row();
 
+}
+.related-posts__post {
+  @include box;
+  @include link-underline-span;
+  margin-top: 0;
 
-  .related-posts__post {
-    @include box;
-    @include link-underline-span;
-    margin-top: 0;
+  color: $dark-gray;
+  @include media($small) {
+    @include span-columns(4);
+  }
+}
 
-    color: $dark-gray;
-    @include media($small) {
-      @include span-columns(4);
-    }
+.related-posts__post-image {
+  margin: 0;
+  padding: 0;
+  @include figure-height;
+  height: ($figure-height / 1.5);
+
+  & > div {
+    height: 100%;
+    overflow: hidden;
   }
 
-  .related-posts__post-image {
-    margin: 0;
-    padding: 0;
-    @include figure-height;
-    height: ($figure-height / 1.5);
+}
 
-    & > div {
-      height: 100%;
-      overflow: hidden;
-    }
-
-  }
-
-  .related-posts__title {
-    @include font-size(lg);
-    margin: $large-spacing 0 $regular-spacing;
-  }
+.related-posts__title {
+  @include font-size(lg);
+  margin: $large-spacing 0 $regular-spacing;
+}
 
 
-  .related-posts__post-header {
-    padding: 0 $regular-spacing;
-    @include typo-padding;
-  }
-  .related-posts__post-footer {
-    padding: 0 $regular-spacing;
-    @include typo-padding;
-    background-color: $off-white;
-    @include font-size(xs);
-    color: $dark-gray;
-  }
+.related-posts__post-header {
+  padding: 0 $regular-spacing;
+  @include typo-padding;
+}
+.related-posts__post-footer {
+  padding: 0 $regular-spacing;
+  @include typo-padding;
+  background-color: $off-white;
+  @include font-size(xs);
+  color: $dark-gray;
+}
 
-  .related-posts__post-title {
-    @include font-size(md);
-    color: $primary;
-    margin: 0;
-    padding: 0;
-    @include font-size(lg);
-    @include link-arrow-after;
-  }
-  .related-posts__post-meta {
-    @include font-size(xs);
-    margin: $small-spacing/2 0 0;
-    color: $gray;
-    padding: 0;
-  }
+.related-posts__post-title {
+  @include font-size(md);
+  color: $primary;
+  margin: 0;
+  padding: 0;
+  @include font-size(lg);
+  @include link-arrow-after;
+}
+.related-posts__post-meta {
+  @include font-size(xs);
+  margin: $small-spacing/2 0 0;
+  color: $gray;
+  padding: 0;
 }

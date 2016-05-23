@@ -1028,7 +1028,7 @@ function _w_google_fonts() {
 
     $available_fonts = array(
         'roboto' => 'Roboto:400,500',
-        'source-sans-pro' => 'Source Sans Pro:400,700',
+        'source-sans-pro' => 'SourceSans+Pro:400,700',
     );
 
     $wanted_fonts = array();
