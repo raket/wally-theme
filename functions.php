@@ -118,8 +118,8 @@ function _w_init() {
 
     }
 
-	add_theme_support( 'clean-head' );
-	add_theme_support( 'relative-urls' );
+//	add_theme_support( 'clean-head' );
+//	add_theme_support( 'relative-urls' );
 	add_theme_support( 'pretty-search' );
     add_theme_support( 'post-thumbnails', array( 'post', 'page'));
 
