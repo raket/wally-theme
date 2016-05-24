@@ -1,3 +1,6 @@
+# Remove old (if any)
+rm -f wally-theme.zip
+
 # Compress files
 zip -r wally-theme.zip . -x \*.git\* \*node_modules\* \*bower_components\* gulpfile.js deploy.sh wally-theme.zip .jshintrc package.json \*.DS_Store\*
 
