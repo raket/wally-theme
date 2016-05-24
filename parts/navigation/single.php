@@ -27,10 +27,10 @@ $twitter = $twitter_href . $twitter_text . "%20" . $twitter_link;
     <h2 class="share-sidebar__title"><?php _e('Dela artikeln', 'wally') ?></h2>
     <ul class="share list-group">
         <li class="list-group__item">
-            <a target="_blank" href="<?php echo $facebook ?>" class="button button--regular button--fb"><span><img src="<?php echo get_template_directory_uri() ?>/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Dela på Facebook</span></a>
+            <a target="_blank" href="<?php echo $facebook ?>" class="button--fb"><span><img src="<?php echo get_template_directory_uri() ?>/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Dela på Facebook</span></a>
         </li>
         <li class="list-group__item">
-            <a target="_blank" href="<?php echo $twitter ?>" class="button button--regular button--twitter"><span><img src="<?php echo get_template_directory_uri() ?>/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Dela på Twitter</span></a>
+            <a target="_blank" href="<?php echo $twitter ?>" class="button--twitter"><span><img src="<?php echo get_template_directory_uri() ?>/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Dela på Twitter</span></a>
         </li>
     </ul>
 </div>

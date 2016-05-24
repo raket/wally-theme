@@ -11,8 +11,8 @@
 			<div class="article-box__content share">
 				<h2 class="share__title">Dela den här sidan</h2>
 				<p>
-					<a target="_blank" href="<?php echo $facebook ?>" class="button button--regular button--fb">Dela på Facebook</a>
-					<a target="_blank" href="<?php echo $twitter ?>" class="button button--regular button--twitter">Dela på Twitter</a>
+					<a target="_blank" href="<?php echo $facebook ?>" class="button--fb">Dela på Facebook</a>
+					<a target="_blank" href="<?php echo $twitter ?>" class="button--twitter">Dela på Twitter</a>
 				</p>
 			</div>
 		</div>
