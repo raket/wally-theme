@@ -1,4 +1,4 @@
-<?php do_action('before-post-loop-item'); ?>
+<?php do_action("wally_before-post-loop-item"); ?>
 <?php
 $display_size = get_post_meta($post->ID, 'thumbnail_size', true);
 $sticky = is_sticky($post->ID) ? ' sticky' : '';
@@ -44,4 +44,4 @@ $sticky = is_sticky($post->ID) ? ' sticky' : '';
 			<?php endif ?>
 		</div>
 	</article>
-<?php do_action('after-post-loop-item'); ?>
+<?php do_action("wally_after-post-loop-item"); ?>

@@ -1,18 +1,50 @@
+.print {
+  display: none;
+}
+
 @media print {
+
+  .print {
+    display: block;
+  }
+
+  body {
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
   .article-box,
   .box-wrapper,
   .article-box__content,
+  .container,
+  .row,
+  .fw-row,
+  .fw-container,
   [class^=fw-col] {
-    border: none !important;
+    border: none;
     box-shadow: none !important;
     padding: 0 !important;
     height: auto !important;
+    width: 100%;
+  }
+
+  .main {
+    background: white;
+  }
+
+  .off-canvas {
+    display: none;
   }
 
   .site-header,
   .site-footer,
   .edit-btn,
   iframe {
-    display: none !important;
+    display: none;
   }
 }

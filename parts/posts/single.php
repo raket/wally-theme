@@ -1,4 +1,4 @@
-<?php do_action('before-post-loop-item'); if(isset($post)): ?>
+<?php do_action("wally_before-post-loop-item"); if(isset($post)): ?>
 
 	<article <?php post_class('article-box'); ?> aria-labelledby="page-title-<?php echo $post->ID ?>">
 
@@ -40,4 +40,4 @@
 			</div>
 		</footer>
 	</article>
-	<?php do_action('after-post-loop-item'); endif ?>
+	<?php do_action("wally_after-post-loop-item"); endif ?>

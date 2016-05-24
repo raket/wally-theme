@@ -3,13 +3,13 @@
         <div class="row">
             <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
                 <?php
-                do_action('before-post-loop');
+                do_action("wally_before-post-loop");
                 if(have_posts()):
                     while(have_posts()): the_post();
                         get_template_part('parts/posts/attachment');
                     endwhile;
                 endif;
-                do_action('after-post-loop');
+                do_action("wally_after-post-loop");
                 ?>
             </section>
         </div>

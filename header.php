@@ -33,7 +33,9 @@ $turl = get_template_directory_uri();
     $body_class = get_post_meta(get_queried_object_id(), 'boxed_columns', true) ? 'appearance-column-boxes' : '';
     body_class($body_class) ?>>
 
-    <div class="print"></div>
+    <div class="print">
+        <?php do_action('wally_print_content') ?>
+    </div>
 
     <a href="#site-navigation" class="skiplink" tabindex="1">
         <div class="container">
@@ -50,7 +52,7 @@ $turl = get_template_directory_uri();
         </div>
     </a>
 
-<?php do_action('before-site-header'); ?>
+<?php do_action("wally_before_site_header"); ?>
     <header id="site-header" class="site-header">
 
         <div class="container">
@@ -75,7 +77,7 @@ $turl = get_template_directory_uri();
                              alt="<?php bloginfo('name'); ?>"/>
                     <?php endif; ?>
                     <span><?php bloginfo('name'); ?></span>
-                    <p><?php apply_filters('header_description', get_bloginfo('description')); ?></p>
+                    <p><?php apply_filters('wally_header_description', get_bloginfo('description')); ?></p>
                 </a>
                 <div class="site-header__tools">
                     <ul>
@@ -131,13 +133,13 @@ $turl = get_template_directory_uri();
             </div>
         </div>
     </header>
-<?php do_action('after-site-header'); ?>
+<?php do_action("wally_after_site_header"); ?>
 
-<?php do_action('before-site-content'); ?>
+<?php do_action("wally_before_site_content"); ?>
 
 <div class="alert-wrapper">
     <div class="container">
-        <?php do_action('theme_alerts') ?>
+        <?php do_action("wally_theme_alerts") ?>
     </div>
 </div>
 
@@ -153,4 +155,4 @@ $turl = get_template_directory_uri();
 
 <main class="main" role="main" aria-labelledby="page-title">
 
-<?php do_action('prepend-site-content'); ?>
+<?php do_action("wally_prepend_site_content"); ?>

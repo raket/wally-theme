@@ -13,7 +13,7 @@ get_header() ?>
 
 			<?php
 
-				do_action('before-post-loop');
+				do_action("wally_before-post-loop");
 
 				// Start the loop
 				if(have_posts()): while(have_posts()): the_post();
@@ -34,7 +34,7 @@ get_header() ?>
 
 				endif;
 
-				do_action('after-post-loop');
+				do_action("wally_after-post-loop");
 
 			?>
 

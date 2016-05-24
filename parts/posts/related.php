@@ -1,4 +1,4 @@
-<?php do_action('before-post-related-item'); ?>
+<?php do_action("wally_before-post-related-item"); ?>
 	<a <?php post_class('related-posts__post'); ?> href="<?php the_permalink() ?>" data-match="height">
 
 		<article role="article">
@@ -24,4 +24,4 @@
 		</article>
 
 	</a>
-<?php do_action('after-post-related-item'); ?>
+<?php do_action("wally_after-post-related-item"); ?>

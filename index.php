@@ -6,7 +6,7 @@
                 <h1 id="page-title-articles"><?php _e('Artiklar', 'wally') ?></h1>
 
                 <?php
-                    do_action('before-post-loop');
+                    do_action("wally_before-post-loop");
                     if(have_posts()):
                         while(have_posts()): the_post();
                             get_template_part('parts/posts/loop');
@@ -24,7 +24,7 @@
 
                         <?php
                     endif;
-                    do_action('after-post-loop');
+                    do_action("wally_after-post-loop");
                 ?>
             </section>
             <?php get_sidebar() ?>

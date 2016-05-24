@@ -11,9 +11,9 @@
                 <?php while (have_posts()) : the_post(); ?>
                 <div <?php post_class('article-box') ?> id="post-<?php the_ID(); ?>">
                     <div class="article-box__header">
-                        <?php do_action('page-before-title'); ?>
+                        <?php do_action("wally_page-before-title"); ?>
                         <h1 id="page-title-<?php echo $post->ID ?>"><?php the_title(); ?></h1>
-                        <?php do_action('page-after-title'); ?>
+                        <?php do_action("wally_page-after-title"); ?>
                         <?php //Show Edit in Backend button for logged in Editors and Admins
                         if(is_user_logged_in() && current_user_can('edit_posts')):
                             $url = get_bloginfo('url').'/wp-admin/post.php?post='.$post->ID.'&action=edit';
@@ -28,9 +28,9 @@
                     <?php  get_template_part('parts/media/thumbnail'); ?>
                     <div class="article-box__content">
                         <?php
-                            do_action('page-before-content');
+                            do_action("wally_page-before-content");
                             the_content();
-                            do_action('page-after-content');
+                            do_action("wally_page-after-content");
                         ?>
                     </div>
                 </div>

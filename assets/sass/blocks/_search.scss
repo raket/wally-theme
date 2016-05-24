@@ -44,12 +44,11 @@
 }
 @mixin placeholder {
   color: $dark-gray !important;
-  font-family: "Roboto";
+  //font-family: "Roboto";
 }
 .search__input:-moz-placeholder {
   @include placeholder;
 }
-
 .search__input:-ms-input-placeholder {
   @include placeholder;
 }

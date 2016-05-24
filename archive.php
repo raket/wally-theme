@@ -5,7 +5,7 @@
                 <?php the_archive_title('<h1 class="page-title" id="page-title-' . $post->ID .'">', '</h1>') ?>
                 <h2><?php _e('Artiklar', 'wally') ?></h2>
                 <?php
-                    do_action('before-post-loop');
+                    do_action("wally_before-post-loop");
                     if(have_posts()): while(have_posts()): the_post();
                             get_template_part('parts/posts/loop');
                     endwhile ?>
@@ -19,7 +19,7 @@
                         </div>
 
                     <?php endif;
-                    do_action('after-post-loop');
+                    do_action("wally_after-post-loop");
 
                 ?>
             </section>

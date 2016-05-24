@@ -3,13 +3,13 @@
         <div class="row">
             <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
                 <?php
-                do_action('before-post-loop');
+                do_action("wally_before-post-loop");
                 if(have_posts()):
                     while(have_posts()): the_post();
                         get_template_part('parts/posts/single');
                     endwhile;
                 endif;
-                do_action('after-post-loop');
+                do_action("wally_after-post-loop");
                 comments_template();
                 ?>
             </section>
@@ -46,7 +46,7 @@
                 <div class="related-posts">
                     <h2 class="related-posts__title"><?php _e('Relaterade artiklar', 'wally') ?></h2>
                     <?php
-                    do_action('before-related-loop');
+                    do_action("wally_before-related-loop");
                     while($related->have_posts()): $related->the_post();
 
                         $relation = false;
@@ -57,7 +57,7 @@
                         }
                         include(locate_template(('parts/posts/related.php')));
                     endwhile; wp_reset_postdata();
-                    do_action('after-related-loop');
+                    do_action("wally_after-related-loop");
                     ?>
                 </div>
             </div>

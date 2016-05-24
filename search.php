@@ -26,13 +26,13 @@
                 <?php the_posts_pagination(array('type' => 'list')) ?>
             </div>
 
-            <?php do_action('before-post-loop');
+            <?php do_action("wally_before-post-loop");
             if(have_posts()):
                 while(have_posts()): the_post();
                     get_template_part('parts/posts/loop');
                 endwhile;
             endif;
-            do_action('after-post-loop') ?>
+            do_action("wally_after-post-loop") ?>
 
             <div class="pagination no-margin">
                 <?php the_posts_pagination(array('type' => 'list')) ?>
