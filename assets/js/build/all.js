@@ -339,6 +339,7 @@ jQuery(document).ready(function($){
         $('figure[data-image]').each(function(){
             var bg = $(this).data('image');
             $(this).css('background-image', 'url(' + bg + ')').addClass('loaded');
+            $(this).append('<img src="' + bg +'" />');
         });
 
     });

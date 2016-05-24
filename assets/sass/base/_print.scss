@@ -37,7 +37,18 @@
     background: white;
   }
 
-  .off-canvas {
+  .image {
+    background: none !important;
+    padding: 0 !important;
+    height: auto;
+  }
+
+  .image img {
+    display: block !important;
+  }
+
+  .off-canvas,
+  .sidebar {
     display: none;
   }
 
