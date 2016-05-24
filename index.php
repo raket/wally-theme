@@ -1,12 +1,16 @@
 <?php get_header(); ?>
     <div class="container">
         <div class="row">
+            <?php
+            $sidebar_location = fw_get_db_customizer_option('sidebar_setting');
+            if($sidebar_location === 'left') {get_sidebar();}
+            ?>
             <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-articles" data-paginate>
 
                 <h1 id="page-title-articles"><?php _e('Artiklar', 'wally') ?></h1>
 
                 <?php
-                    do_action("wally_before-post-loop");
+                    do_action("wally_before_post_loop");
                     if(have_posts()):
                         while(have_posts()): the_post();
                             get_template_part('parts/posts/loop');
@@ -24,10 +28,10 @@
 
                         <?php
                     endif;
-                    do_action("wally_after-post-loop");
+                    do_action("wally_after_post_loop");
                 ?>
             </section>
-            <?php get_sidebar() ?>
+            <?php if($sidebar_location === 'right') {get_sidebar();} ?>
         </div>
     </div>
 <?php get_footer(); ?>

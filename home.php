@@ -5,6 +5,11 @@ get_header() ?>
 
 	<div class="row">
 
+		<?php
+		$sidebar_location = fw_get_db_customizer_option('sidebar_setting');
+		if($sidebar_location === 'left') {get_sidebar();}
+		?>
+
 		<section id="site-content" class="site-content" aria-labelledby="page-title-start" role="region">
 
 
@@ -13,7 +18,7 @@ get_header() ?>
 
 			<?php
 
-				do_action("wally_before-post-loop");
+				do_action("wally_before_post_loop");
 
 				// Start the loop
 				if(have_posts()): while(have_posts()): the_post();
@@ -34,13 +39,13 @@ get_header() ?>
 
 				endif;
 
-				do_action("wally_after-post-loop");
+				do_action("wally_after_post_loop");
 
 			?>
 
 		</section>
 
-		<?php get_sidebar() ?>
+		<?php if($sidebar_location === 'right') {get_sidebar();} ?>
 
 	</div>
 </div>

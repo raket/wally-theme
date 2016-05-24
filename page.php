@@ -3,17 +3,17 @@
         <div class="row">
 
             <?php
-            $sidebar_location = fw_get_db_customizer_option('sidebar_setting');
-
-            if($sidebar_location === 'left') {get_sidebar();} ?>
+                $sidebar_location = fw_get_db_customizer_option('sidebar_setting');
+                if($sidebar_location === 'left') {get_sidebar();}
+            ?>
 
             <section id="site-content" class="site-content" id="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
                 <?php while (have_posts()) : the_post(); ?>
                 <div <?php post_class('article-box') ?> id="post-<?php the_ID(); ?>">
                     <div class="article-box__header">
-                        <?php do_action("wally_page-before-title"); ?>
+                        <?php do_action("wally_page_before_title"); ?>
                         <h1 id="page-title-<?php echo $post->ID ?>"><?php the_title(); ?></h1>
-                        <?php do_action("wally_page-after-title"); ?>
+                        <?php do_action("wally_page_after_title"); ?>
                         <?php //Show Edit in Backend button for logged in Editors and Admins
                         if(is_user_logged_in() && current_user_can('edit_posts')):
                             $url = get_bloginfo('url').'/wp-admin/post.php?post='.$post->ID.'&action=edit';
@@ -28,9 +28,9 @@
                     <?php  get_template_part('parts/media/thumbnail'); ?>
                     <div class="article-box__content">
                         <?php
-                            do_action("wally_page-before-content");
+                            do_action("wally_page_before_content");
                             the_content();
-                            do_action("wally_page-after-content");
+                            do_action("wally_page_after_content");
                         ?>
                     </div>
                 </div>
