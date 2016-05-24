@@ -3,57 +3,57 @@
   margin: 0;
   @include clearfix;
   padding: flex-gutter();
+}
 
-  .pills__item {
-    margin:0 .5rem 0.5rem 0;
-    padding: 0;
-    float: left;
-    display: inline-block;
-    &:first-child{ margin-left: 0; }
-  }
+.pills__item {
+  margin:0 .5rem 0.5rem 0;
+  padding: 0;
+  float: left;
+  display: inline-block;
+  &:first-child{ margin-left: 0; }
+}
 
-  .pills__link {
-    background-color: transparent;
+.pills__link {
+  background-color: transparent;
+  color: $primary;
+  padding: $small-spacing $regular-spacing;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+  border-radius: 99em;
+  @include font-size(xs);
+  border: solid 2px $primary;
+  vertical-align: middle;
+
+  &:hover, &:focus {
+    background: transparent;
+    border-color: $primary;
     color: $primary;
-    padding: $small-spacing $regular-spacing;
-    text-decoration: none;
-    transition: 0.3s ease-out;
-    border-radius: 99em;
-    @include font-size(xs);
-    border: solid 2px $primary;
-    vertical-align: middle;
-
-    &:hover, &:focus {
-      background: transparent;
-      border-color: $primary;
-      color: $primary;
-      span {
-        border-bottom: solid 2px $primary;
-      }
+    span {
+      border-bottom: solid 2px $primary;
     }
-    &:focus {
-      outline: 0;
-    }
-
-    &:after {
-      content: '';
-    }
-
-    &:before {
-      $width: 0.7rem;
-      vertical-align: middle;
-      content: '';
-      width: $width;
-      top: -0.1rem;
-      height: $width;
-      margin-right: 0.5rem;
-      border: solid 2px $primary;
-      border-radius: 99em;
-      position: relative;
-      display: inline-block;
-    }
-
   }
+  &:focus {
+    outline: 0;
+  }
+
+  &:after {
+    content: '';
+  }
+
+  &:before {
+    $width: 0.7rem;
+    vertical-align: middle;
+    content: '';
+    width: $width;
+    top: -0.1rem;
+    height: $width;
+    margin-right: 0.5rem;
+    border: solid 2px $primary;
+    border-radius: 99em;
+    position: relative;
+    display: inline-block;
+  }
+
 }
 
 .widget ul.pills {
