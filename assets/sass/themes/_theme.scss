@@ -114,6 +114,9 @@ button[type="submit"] {
   a:hover,
   a:focus {
     border-color: $ghost-black;
+    span {
+      border-color: $ghost-black;
+    }
   }
 }
 
