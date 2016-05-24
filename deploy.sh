@@ -1,0 +1,1 @@
+zip -r wally-theme.zip . -x \*.git\* \*node_modules\* \*bower_components\* gulpfile.js deploy.sh wally-plugin.zip .jshintrc package.json
