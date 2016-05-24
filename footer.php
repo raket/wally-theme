@@ -54,10 +54,10 @@ $wssm = get_option('wally_settings_social_media');
 
 						<h2><?php _e('Sociala Medier', 'wally') ?></h2>
 						<ul class="menu__list horizontal">
-							<?php echo @$wssm['facebook'] ? '<li><a target="_blank" href="'.$wssm['facebook'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Facebook</span></a></li>' : '' ?>
-							<?php echo @$wssm['twitter'] ? '<li><a target="_blank" href="'.$wssm['twitter'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Twitter</span></a></li>' : '' ?>
-							<?php echo @$wssm['youtube'] ? '<li><a target="_blank" href="'.$wssm['youtube'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-youtube.svg" alt="Ikon för Youtube"> Youtube</span></a></li>' : '' ?>
-							<?php echo @$wssm['bambuser'] ? '<li><a target="_blank" href="'.$wssm['bambuser'].'"><span><img src="'.get_stylesheet_directory_uri().'/assets/icons/icon-bambuser.svg" alt="Ikon för Bambuser"> Bambuser</span></a></li>' : '' ?>
+							<?php echo @$wssm['facebook'] ? '<li><a target="_blank" href="'.$wssm['facebook'].'"><span><img src="'.get_template_directory_uri().'/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Facebook</span></a></li>' : '' ?>
+							<?php echo @$wssm['twitter'] ? '<li><a target="_blank" href="'.$wssm['twitter'].'"><span><img src="'.get_template_directory_uri().'/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Twitter</span></a></li>' : '' ?>
+							<?php echo @$wssm['youtube'] ? '<li><a target="_blank" href="'.$wssm['youtube'].'"><span><img src="'.get_template_directory_uri().'/assets/icons/icon-youtube.svg" alt="Ikon för Youtube"> Youtube</span></a></li>' : '' ?>
+							<?php echo @$wssm['bambuser'] ? '<li><a target="_blank" href="'.$wssm['bambuser'].'"><span><img src="'.get_template_directory_uri().'/assets/icons/icon-bambuser.svg" alt="Ikon för Bambuser"> Bambuser</span></a></li>' : '' ?>
 						</ul>
 
 					<?php endif ?>
