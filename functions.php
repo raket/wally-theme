@@ -1417,3 +1417,18 @@ add_action('fw_form_display_errors_frontend', function($form) {
 function w_is_contrast() {
     return isset($_COOKIE['wally_contrast']);
 }
+
+/**
+ * Function for toggling the contrast cookie.
+ */
+add_action('init', function() {
+    if(isset($_GET['accept_cookies'])) {
+        setcookie('wally_cookies', 1, time() + (60 * 60 * 24 * 30), '/');
+        header("Location: " . remove_query_arg('accept_cookies'));
+        die();
+    }
+});
+
+function w_has_accepted_cookies() {
+    return isset($_COOKIE['wally_cookies']);
+}

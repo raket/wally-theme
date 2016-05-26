@@ -33,6 +33,19 @@ $turl = get_template_directory_uri();
     $body_class = get_post_meta(get_queried_object_id(), 'boxed_columns', true) ? 'appearance-column-boxes' : '';
     body_class($body_class) ?>>
 
+    <?php if(!w_has_accepted_cookies()) {
+        echo apply_filters('wally_cookiebar', '
+            <form class="cookiebar" method="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="cookiebar__text">' . __('Den här webbplatsen använder cookies för att förbättra användarupplevelsen.', 'wally') . '</div>
+                        <a href="' . add_query_arg('accept_cookies', 1) . '" class="button button--primary cookiebar__button">' . __('Jag förstår', 'wally') . '</a>
+                    </div>
+                </div>
+            </form>
+        ');
+    } ?>
+
     <div class="print">
         <?php do_action('wally_print_content') ?>
     </div>

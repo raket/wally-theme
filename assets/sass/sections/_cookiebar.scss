@@ -1,0 +1,18 @@
+.cookiebar {
+  font-size: .625rem;
+  line-height: 2rem;
+  padding: $small-spacing 0;
+}
+
+.cookiebar__text {
+  float: left;
+  vertical-align: middle;
+}
+
+.cookiebar__button {
+  font-weight: normal;
+  font-size: .625rem;
+  float: right;
+  padding-top: 0;
+  padding-bottom: 0;
+}
