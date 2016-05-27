@@ -17,15 +17,26 @@
     height: 3rem;
 
     .site-title {
-      transform: translateY(-2rem);
-      width: 80%;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      height: 3rem;
+
+      &,
+      body.high-header-height & {
+        transform: translateY(-2.5rem);
+        width: 80%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 2.5rem;
+        padding-top: 0;
+        margin-bottom: 0;
+      }
+
+      img {
+        height: 100%;
+      }
 
       span {
         font-size: 1rem;
+        line-height: 2.5rem;
       }
 
       p {

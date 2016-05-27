@@ -352,12 +352,12 @@ jQuery(document).ready(function($){
         if(isMobile()) {
             var headerHeight = $('#site-header').outerHeight();
             $("#site-header").headroom({
-                offset: headerHeight - 20,
+                offset: headerHeight,
                 onTop : function() {
-                    $('#site-document').css({'padding-top': 0})
+                    $('#site-content').css({'padding-top': 0})
                 },
                 onNotTop : function() {
-                    $('#site-document').css({'padding-top': headerHeight})
+                    $('#site-content').css({'padding-top': headerHeight})
                 }
             });
         }
