@@ -200,7 +200,7 @@
   }
 }
 
-.article-box.post {
+.article-box {
 
   figure {
     padding: 1rem;
@@ -211,7 +211,12 @@
   }
 
   p span {
-    color: $black !important;
+    color: $black;
+
+    &.is-highlighted {
+      color: $white;
+    }
+
   }
 
   img.alignright {

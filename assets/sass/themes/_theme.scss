@@ -304,4 +304,7 @@ a.edit-btn {
   @extend %bgc-p;
 }
 
-// Pills
+// Search
+.search__input:focus {
+  @extend %oc-p;
+}
