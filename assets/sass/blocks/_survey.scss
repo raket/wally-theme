@@ -25,7 +25,7 @@
 
 .survey__numbering {
   @include font-size(sm);
-  font-weight: 500;
+  font-weight: 400;
   display: block;
   margin: $large-spacing 0 $tiny-spacing;
 }
@@ -50,7 +50,7 @@
 
 .survey__group__header {
   @extend h3;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .survey__next {

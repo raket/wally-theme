@@ -1,9 +1,7 @@
 <?php
 /**
 * Template Name: Fullbredd
-* @package WordPress
-* @subpackage wally
-* @since Twenty Fourteen 1.0
+* @package Wally
 */
 ?>
 <?php get_header(); ?>
