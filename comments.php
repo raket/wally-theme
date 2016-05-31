@@ -130,8 +130,8 @@ if ( post_password_required() ) {
 				<div class="comment-form">
 
 					<?php if(!comments_open() && post_type_supports( get_post_type(), 'comments')): ?>
-						<p class="comment-form__note no-comments"><?php _e( 'Kommentarer är stängda för den här sidan.', 'wally' ); ?></p>
-					<?php endif; ?>
+						<p class="comment-form__note no-comments"><?php _e( 'Kommentarer är stängda för den här sidan.', 'wally' ) ?></p>
+					<?php endif ?>
 
 					<?php if(comments_open() && post_type_supports(get_post_type(), 'comments')): ?>
 
@@ -174,7 +174,7 @@ if ( post_password_required() ) {
 				</div>
 
 				<div class="comment-form__preview" id="commentFormPreview">
-					<h3><?php _e( 'Så här kommer din kommentar att se ut när du skickat den:', 'wally' ); ?></h3>
+					<h3><?php _e( 'Så här kommer din kommentar att se ut när du skickat den:', 'wally' ) ?></h3>
 
 					<div class="comment">
 
@@ -199,7 +199,7 @@ if ( post_password_required() ) {
 					</div>
 
 				</div>
-				<?php endif; ?>
+				<?php endif ?>
 
 			</section>
 		</div>

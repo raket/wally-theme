@@ -30,7 +30,7 @@ $subpages = get_posts($args);
 				<? $children = get_posts(array(
 					'post_parent' => $post->ID,
 					'post_type' => 'page'
-				)); ?>
+				)) ?>
 
 				<li class="list-group__item" data-collapsable>
 
@@ -81,7 +81,7 @@ $subpages = get_posts($args);
 			'title_li'     => false,
 			'exclude'      => join(',', $excludes)
 		);
-		echo apply_filters('w_list_group', wp_list_pages($args)); ?>
+		echo apply_filters('w_list_group', wp_list_pages($args)) ?>
 	</ul>
 </nav>
 

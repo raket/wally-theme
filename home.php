@@ -26,7 +26,7 @@ get_header() ?>
 				get_template_part('parts/posts/loop');
 
 				// End the loop
-				endwhile; ?>
+				endwhile ?>
 					<div class="pagination" id="pagination" data-pagination="<?php echo $post->ID ?>">
 						<?php the_posts_pagination(array(
 							'prev_text'          => __( 'Föregående sida', 'wally' ),
@@ -50,4 +50,4 @@ get_header() ?>
 	</div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer() ?>

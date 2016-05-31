@@ -24,7 +24,7 @@ $wssm = get_option('wally_settings_social_media');
 				)) ?>
 		</nav>
 	</div>
-<?php endif; ?>
+<?php endif ?>
 <?php do_action('wally_before_footer') ?>
 <footer id="site-footer" class="site-footer" role="contentinfo" aria-label="<?php _e('Sidfot', 'wally') ?>">
 	<div class="container">
@@ -96,6 +96,6 @@ $wssm = get_option('wally_settings_social_media');
 </footer>
 
 <!-- WP footer -->
-<?php wp_footer(); ?>
+<?php wp_footer() ?>
 </body>
 </html>

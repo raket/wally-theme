@@ -124,7 +124,7 @@ add_filter( 'image_save_pre','modify_image_before_saving', 15, 2 );
 * $thumb = get_post_thumbnail_id();
 * $image = vt_resize($thumb, '', 140, 110, true);
 * ?>
-* <img src="<?php echo $image[url]; ?>" width="<?php echo $image[width]; ?>" height="<?php echo $image[height]; ?>" />
+* <img src="<?php echo $image[url] ?>" width="<?php echo $image[width] ?>" height="<?php echo $image[height] ?>" />
 *
 * @param int $attach_id
 * @param string $img_url

@@ -1,5 +1,5 @@
 <?php /* Template Name: Webbplatskarta */ ?>
-<?php get_header(); ?>
+<?php get_header() ?>
 <div class="container">
     <div class="row">
         <?php
@@ -7,10 +7,10 @@
 
         if($sidebar_location === 'left') {get_sidebar();} ?>
         <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-sitemap">
-            <?php while (have_posts()) : the_post(); ?>
-                <div <?php post_class('article-box') ?> id="post-<?php the_ID(); ?>">
+            <?php while (have_posts()) : the_post() ?>
+                <div <?php post_class('article-box') ?> id="post-<?php the_ID() ?>">
                     <header class="article-box__header">
-                        <h1 id="page-title-sitemap"><?php the_title(); ?></h1>
+                        <h1 id="page-title-sitemap"><?php the_title() ?></h1>
                     </header>
                     <div class="article-box__content">
                         <?php wp_list_pages(array('title_li' => false)) ?>
@@ -21,5 +21,5 @@
         <?php if($sidebar_location === 'right') {get_sidebar();} ?>
     </div>
 </div>
-<?php get_footer(); ?>
+<?php get_footer() ?>
 

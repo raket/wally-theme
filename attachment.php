@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header() ?>
     <div class="container">
         <div class="row">
             <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
@@ -15,4 +15,4 @@
         </div>
 
     </div>
-<?php get_footer(); ?>
+<?php get_footer() ?>

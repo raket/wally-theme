@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 <div class="container">
     <div class="row">
         <section class="site-content" id="search-results" role="region" aria-labelledby="page-title-search-results">
@@ -20,7 +20,7 @@
             </p>
             <?php if($wp_query->found_posts > 0): ?>
             <h2 class="subtitle">Sökresultat:</h2>
-            <?php endif; ?>
+            <?php endif ?>
 
             <div class="pagination no-margin">
                 <?php the_posts_pagination(array('type' => 'list')) ?>
@@ -48,4 +48,4 @@
         </section>
     </div>
 </div>
-<?php get_footer(); ?>
+<?php get_footer() ?>

@@ -12,10 +12,10 @@ $turl = get_template_directory_uri();
     <!--[if gt IE 8]>	<!-->
     <html class="no-js" lang="sv">        <!--<![endif]-->
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
-        <title><?php wp_title('|', true, 'right'); ?></title>
+        <meta charset="<?php bloginfo('charset') ?>">
+        <title><?php wp_title('|', true, 'right') ?></title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="/">
+        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name') ?> Feed" href="/">
         <?php
         wp_head();
         ?>
@@ -23,8 +23,8 @@ $turl = get_template_directory_uri();
               rel="stylesheet">
 
         <!--[if lt IE 9]>
-        <script src="<?php echo $turl; ?>/assets/js/vendor/respond.min.js" type="text/javascript"></script>
-        <script src="<?php echo $turl; ?>/assets/js/vendor/selectivizr.min.js" type="text/javascript"></script>
+        <script src="<?php echo $turl ?>/assets/js/vendor/respond.min.js" type="text/javascript"></script>
+        <script src="<?php echo $turl ?>/assets/js/vendor/selectivizr.min.js" type="text/javascript"></script>
         <![endif]-->
 
     </head>
@@ -65,7 +65,7 @@ $turl = get_template_directory_uri();
         </div>
     </a>
 
-<?php do_action("wally_before_site_header"); ?>
+<?php do_action("wally_before_site_header") ?>
     <header id="site-header" class="site-header">
 
         <div class="container">
@@ -84,13 +84,13 @@ $turl = get_template_directory_uri();
 
             <div class="row">
                 <?php $logo = ($logo_img = fw_get_db_customizer_option('logo')) ? $logo_img : false ?>
-                <a href="<?php echo get_bloginfo('url') ?>" class="site-title <?php if ($logo) echo 'has-image'; ?>">
+                <a href="<?php echo get_bloginfo('url') ?>" class="site-title <?php if ($logo) echo 'has-image' ?>">
                     <?php if ($logo): ?>
                         <img src="<?php echo make_image($logo['attachment_id'], apply_filters('logotype_width', false), apply_filters('logotype_height', 80), true) ?>"
-                             alt="<?php bloginfo('name'); ?>"/>
+                             alt="<?php bloginfo('name') ?>"/>
                     <?php endif ?>
-                        <span><?php bloginfo('name'); ?></span>
-                        <p><?php apply_filters('wally_header_description', get_bloginfo('description')); ?></p>
+                        <span><?php bloginfo('name') ?></span>
+                        <p><?php apply_filters('wally_header_description', get_bloginfo('description')) ?></p>
                 </a>
                 <div class="site-header__tools">
                     <ul>
@@ -146,9 +146,9 @@ $turl = get_template_directory_uri();
             </div>
         </div>
     </header>
-<?php do_action("wally_after_site_header"); ?>
+<?php do_action("wally_after_site_header") ?>
 
-<?php do_action("wally_before_site_content"); ?>
+<?php do_action("wally_before_site_content") ?>
 
 <div class="alert-wrapper">
     <div class="container">
@@ -164,8 +164,8 @@ $turl = get_template_directory_uri();
             </div>
         </div>
     </div>
-<?php endif; ?>
+<?php endif ?>
 
 <main class="main" role="main" aria-labelledby="page-title">
 
-<?php do_action("wally_prepend_site_content"); ?>
+<?php do_action("wally_prepend_site_content") ?>
