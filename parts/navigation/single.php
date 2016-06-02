@@ -4,7 +4,7 @@
         <li class="list-group__item">
             <a href="#artikel" title="<?php _e('Artikel', 'wally') ?>"><?php _e('Artikel', 'wally') ?></a>
         </li>
-        <?php if(!empty(wp_get_post_tags($post->ID))): ?>
+        <?php $tags = wp_get_post_tags($post->ID); if(!empty($tags)): ?>
         <li class="list-group__item">
             <a href="#taggar" title="<?php _e('Taggar', 'wally') ?>"><?php _e('Taggar', 'wally') ?></a>
         </li>
