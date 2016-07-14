@@ -109,7 +109,21 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
     // Allow :active despite removing -webkit-tab-highlight-color http://bit.ly/1WqdsZL
     document.addEventListener("touchstart", function(){}, true);
+    
+    if(($( window ).width())<960){
+        $(".off-canvas__navigation__item > a").attr("tabindex", "0");}
+    else
+    {
+        $(".off-canvas__navigation__item > a").attr("tabindex", "-1");
+    }
 
+    $(window).bind("resize",function(){
+        if(($(window).width()) < 960){
+            $(".off-canvas__navigation__item > a").attr("tabindex", "0");}
+        else {
+            $(".off-canvas__navigation__item > a").attr("tabindex", "-1");
+        }
+    });
 
 })(jQuery);
 (function($) {
