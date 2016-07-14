@@ -59,18 +59,17 @@ function wally_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// This is an example of how to include a plugin bundled with a theme.
+		// This is an example of how to include a plugin from a GitHub repository in your theme.
+		// This presumes that the plugin code is based in the root of the GitHub repository
+		// and not in a subdirectory ('/src') of the repository.
 		array(
-			'name'               => 'Wally Plugin', // The plugin name.
-			'slug'               => 'wally-plugin', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/_framework/lib/TGM-Plugin-Activation/plugins/wally-plugin.zip', // The plugin source.
+			'name'      => 'Wally Plugin',
+			'slug'      => 'wally-plugin',
+			'source'    => 'https://github.com/raket/wally-plugin/archive/master.zip',
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
+
 
 	);
 
@@ -95,9 +94,10 @@ function wally_register_required_plugins() {
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 
+
 		/*
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'wally' ),
+			'page_title'                       => __( 'Install Required Plugins', 'wally' ),
 			'menu_title'                      => __( 'Install Plugins', 'wally' ),
 			/* translators: %s: plugin name. * /
 			'installing'                      => __( 'Installing Plugin: %s', 'wally' ),
