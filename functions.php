@@ -36,6 +36,14 @@ function load_module($file, $attributes = false){
 //---------------------------------------------------------------------------------
 include_once get_stylesheet_directory() . '/_framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php';
 
+//Initialize the update checker.
+require get_stylesheet_directory() . '/_framework/lib/theme-update-checker.php';
+new ThemeUpdateChecker(
+    'wally',
+    'https://raw.githubusercontent.com/raket/wally-theme/master/meta.json'
+);
+
+
 //---------------------------------------------------------------------------------
 //	Require Files and load Wally
 //---------------------------------------------------------------------------------
