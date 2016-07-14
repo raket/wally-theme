@@ -9,7 +9,7 @@ $wssm = get_option('wally_settings_social_media');
 
 <?php if (has_nav_menu('mobile_primary_navigation')): ?>
 	<div class="off-canvas" role="menu" id="off-canvas">
-		<nav class="off-canvas__navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally') ?>">
+		<nav class="off-canvas__navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally-theme') ?>">
 			<div class="off-canvas__navigation__header">
 				<h3>Meny</h3>
 				<button class="off-canvas__close" tabindex="-1">Stäng</button>
@@ -26,7 +26,7 @@ $wssm = get_option('wally_settings_social_media');
 	</div>
 <?php endif ?>
 <?php do_action('wally_before_footer') ?>
-<footer id="site-footer" class="site-footer" role="contentinfo" aria-label="<?php _e('Sidfot', 'wally') ?>">
+<footer id="site-footer" class="site-footer" role="contentinfo" aria-label="<?php _e('Sidfot', 'wally-theme') ?>">
 	<div class="container">
 		<div class="row">
 			<div class="site-footer__section" data-match-height>
@@ -34,7 +34,7 @@ $wssm = get_option('wally_settings_social_media');
 
 					<?php if(!empty($wsdt)): ?>
 
-						<h2><?php _e('Kontakt', 'wally') ?></h2>
+						<h2><?php _e('Kontakt', 'wally-theme') ?></h2>
 						<div class="menu__list">
 							<?php echo @$wsdt['phone'] ? '<span class="menu__item"><a href="tel:' . $wsdt['phone'] . '"> ' . $wsdt['phone'] . '</a></span>' : '' ?>
 							<?php echo @$wsdt['email'] ? '<span class="menu__item"><a href="mailto:' . $wsdt['email'] . '"> ' . $wsdt['email'] . '</a></span>' : '' ?>
@@ -52,7 +52,7 @@ $wssm = get_option('wally_settings_social_media');
 					<?php endif ?>
 					<?php if(!empty($wssm)): ?>
 
-						<h2><?php _e('Sociala Medier', 'wally') ?></h2>
+						<h2><?php _e('Sociala Medier', 'wally-theme') ?></h2>
 						<ul class="menu__list horizontal">
 							<?php echo @$wssm['facebook'] ? '<li><a target="_blank" href="'.$wssm['facebook'].'"><span><img src="'.get_template_directory_uri().'/assets/icons/icon-facebook.svg" alt="Ikon för Facebook"> Facebook</span></a></li>' : '' ?>
 							<?php echo @$wssm['twitter'] ? '<li><a target="_blank" href="'.$wssm['twitter'].'"><span><img src="'.get_template_directory_uri().'/assets/icons/icon-twitter.svg" alt="Ikon för Twitter"> Twitter</span></a></li>' : '' ?>
@@ -65,17 +65,17 @@ $wssm = get_option('wally_settings_social_media');
 				</div>
 				<?php if(!empty($wsdt['website_description'])): ?>
 					<div class="site-footer__subsection">
-						<h2><?php _e('Om denna webbplats', 'wally') ?></h2>
+						<h2><?php _e('Om denna webbplats', 'wally-theme') ?></h2>
 						<p><?php echo @$wsdt['website_description'] ?></p>
 					</div>
 				<?php endif ?>
 			</div>
 			<div class="site-footer__section site-footer__section__last-child" data-match-height>
-				<h2><?php _e('Hjälpmedel', 'wally') ?></h2>
+				<h2><?php _e('Hjälpmedel', 'wally-theme') ?></h2>
 				<ul class="menu__list">
 
 					<?php if(Wally_Sitemap::sitemap_exists()): ?>
-						<li class="menu__item"><a href="<?php echo get_the_permalink(get_page_by_path('sitemap')->ID) ?>"><i class="material-icons" aria-label="<?php _e('Karta', 'wally') ?>" aria-hidden="true">map</i> <?php _e('Webbplatskarta', 'wally') ?></a></li>
+						<li class="menu__item"><a href="<?php echo get_the_permalink(get_page_by_path('sitemap')->ID) ?>"><i class="material-icons" aria-label="<?php _e('Karta', 'wally-theme') ?>" aria-hidden="true">map</i> <?php _e('Webbplatskarta', 'wally-theme') ?></a></li>
 					<?php endif ?>
 
 					<?php if(isset($_COOKIE['wally_contrast']) && $_COOKIE['wally_contrast'] == true) {
@@ -85,9 +85,9 @@ $wssm = get_option('wally_settings_social_media');
 					} ?>
 
 					<li><a href="<?php echo add_query_arg('toggle_contrast', 1) ?>"><i class="material-icons"
-					                                                                   aria-label="<?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?>"
+					                                                                   aria-label="<?php echo w_is_contrast() ? __('Minska kontrast', 'wally-theme') : __('Öka kontrast', 'wally-theme') ?>"
 					                                                                   aria-hidden="true">tonality</i>
-							<span class="increaseContrast"><?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?></span></a>
+							<span class="increaseContrast"><?php echo w_is_contrast() ? __('Minska kontrast', 'wally-theme') : __('Öka kontrast', 'wally-theme') ?></span></a>
 					</li>
 				</ul>
 			</div>

@@ -13,10 +13,10 @@ if ( post_password_required() ) {
 	<div class="tabs">
 		<ul class="tabs__titles" data-tabs role="tablist">
 			<li data-tab class="tabs__title<?php echo !$is_replying ? ' is-active' : '' ?>" role="presentation"><a href="#readComments" role="tab" tabindex="0" aria-selected="<?php echo !$is_replying ? 'true' : 'false' ?>" aria-controls="readComments">
-					<span><?php echo wp_is_mobile() ? __('Läs', 'wally') : __('Läs kommentarer', 'wally') ?></span>
+					<span><?php echo wp_is_mobile() ? __('Läs', 'wally-theme') : __('Läs kommentarer', 'wally-theme') ?></span>
 			</a></li>
 			<li data-tab class="tabs__title<?php echo $is_replying ? ' is-active' : '' ?>" role="presentation"><a href="#writeComment" role="tab" tabindex="0" aria-selected="<?php echo $is_replying ? 'true' : 'false' ?>" aria-controls="writeComment">
-					<span><?php echo wp_is_mobile() ? __('Skriv', 'wally') : __('Skriv kommentar', 'wally') ?></span>
+					<span><?php echo wp_is_mobile() ? __('Skriv', 'wally-theme') : __('Skriv kommentar', 'wally-theme') ?></span>
 			</a></li>
 		</ul>
 		<div class="tabs__panels">
@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 				<?php if(have_comments()) : ?>
 
 					<h3 class="comments__title">
-						<?php _e('Kommentarer', 'wally') ?>
+						<?php _e('Kommentarer', 'wally-theme') ?>
 					</h3>
 
 					<?php $post_author_name = get_userdata($post->post_author)->user_login ?>
@@ -83,9 +83,9 @@ if ( post_password_required() ) {
 
 										<div class="comment__actions">
 											<?php
-											$link = sprintf( '<a rel="nofollow" class="comment__actions__reply" href="%s" aria-label="' . __('Svara på kommentar', 'wally') . '">%s</a>',
+											$link = sprintf( '<a rel="nofollow" class="comment__actions__reply" href="%s" aria-label="' . __('Svara på kommentar', 'wally-theme') . '">%s</a>',
 												esc_url(add_query_arg('replytocom', $comment->comment_ID, get_permalink($post->ID))) . "#" . $comment->comment_ID,
-												__('Svara', 'wally')
+												__('Svara', 'wally-theme')
 											);
 											echo $link;
 											?>
@@ -130,13 +130,13 @@ if ( post_password_required() ) {
 				<div class="comment-form">
 
 					<?php if(!comments_open() && post_type_supports( get_post_type(), 'comments')): ?>
-						<p class="comment-form__note no-comments"><?php _e( 'Kommentarer är stängda för den här sidan.', 'wally' ) ?></p>
+						<p class="comment-form__note no-comments"><?php _e( 'Kommentarer är stängda för den här sidan.', 'wally-theme') ?></p>
 					<?php endif ?>
 
 					<?php if(comments_open() && post_type_supports(get_post_type(), 'comments')): ?>
 
 					<div class="comment-form__header">
-						<h3><?php _e('Skriv kommentar eller välj symbol', 'wally') ?></h3>
+						<h3><?php _e('Skriv kommentar eller välj symbol', 'wally-theme') ?></h3>
 					</div>
 
 					<?php
@@ -148,21 +148,21 @@ if ( post_password_required() ) {
 
 					$comment_args = array(
 							'title_reply' => '',
-							'comment_notes_before' => __( 'Skriv in ditt namn och din e-postadress', 'wally' ) . ':',
-							'logged_in_as' => '<div class="alert alert--info"><p>' . __('Du är inloggad som', 'wally') . ' <strong>' . wp_get_current_user()->display_name . '</strong>.</p><a href="#" class="alert__action">Logga ut</a></div>',
+							'comment_notes_before' => __( 'Skriv in ditt namn och din e-postadress', 'wally-theme') . ':',
+							'logged_in_as' => '<div class="alert alert--info"><p>' . __('Du är inloggad som', 'wally-theme') . ' <strong>' . wp_get_current_user()->display_name . '</strong>.</p><a href="#" class="alert__action">Logga ut</a></div>',
 							'comment_field' =>
 									'<div class="comment-form__comment form__group">' .
-									'<label class="form__label form__label--required" for="commentFormComment">' . __( 'Kommentar', 'wally' ) . ':</label>' .
-									'<textarea id="commentFormComment" placeholder="'. __( 'Skriv din kommentar här...', 'wally' ) .'" class="form__control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
+									'<label class="form__label form__label--required" for="commentFormComment">' . __( 'Kommentar', 'wally-theme') . ':</label>' .
+									'<textarea id="commentFormComment" placeholder="'. __( 'Skriv din kommentar här...', 'wally-theme') .'" class="form__control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
 							'comment_notes_after' => '',
 							'fields' => apply_filters('comment_form_default_fields', array(
 											'author' =>
-													'<div class="comment-form__author form__group">' . '<label class="form__label' . $label_required . '" for="commentFormAuthor">' . __( 'Namn', 'wally' ) . ':</label><br>' .
-													'<input id="commentFormAuthor" class="form__control" placeholder="' . __( 'Fyll i ditt namn', 'wally' ) . '" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" ' . $aria_required . '></div>',
+													'<div class="comment-form__author form__group">' . '<label class="form__label' . $label_required . '" for="commentFormAuthor">' . __( 'Namn', 'wally-theme') . ':</label><br>' .
+													'<input id="commentFormAuthor" class="form__control" placeholder="' . __( 'Fyll i ditt namn', 'wally-theme') . '" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" ' . $aria_required . '></div>',
 											'email'  =>
 													'<div class="comment-form__email form__group">' .
-													'<label class="form__label' . $label_required . '" for="commentFormEmail">' . __( 'E-postadress', 'wally' ) . ':</label><br>' .
-													'<input class="form__control" id="commentFormEmail" placeholder="' . __( 'Fyll i din e-postadress', 'wally' ) . '" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" ' . $aria_required . '></div>',
+													'<label class="form__label' . $label_required . '" for="commentFormEmail">' . __( 'E-postadress', 'wally-theme') . ':</label><br>' .
+													'<input class="form__control" id="commentFormEmail" placeholder="' . __( 'Fyll i din e-postadress', 'wally-theme') . '" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" ' . $aria_required . '></div>',
 											'url'    => '' )
 							),
 							'class_submit' => 'button button--primary'
@@ -174,7 +174,7 @@ if ( post_password_required() ) {
 				</div>
 
 				<div class="comment-form__preview" id="commentFormPreview">
-					<h3><?php _e( 'Så här kommer din kommentar att se ut när du skickat den:', 'wally' ) ?></h3>
+					<h3><?php _e( 'Så här kommer din kommentar att se ut när du skickat den:', 'wally-theme') ?></h3>
 
 					<div class="comment">
 

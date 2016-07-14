@@ -12,9 +12,9 @@
 			if(is_user_logged_in() && current_user_can('edit_posts')):
 				$url = esc_url( home_url() ).'/wp-admin/post.php?post='.$post->ID.'&action=edit';
 				?>
-				<a href="<?php echo $url ?>" class="edit-btn" title="<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally') : __('Redigera sida', 'wally') ?>">
+				<a href="<?php echo $url ?>" class="edit-btn" title="<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally-theme') : __('Redigera sida', 'wally-theme') ?>">
 					<span>
-						<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally') : __('Redigera sida', 'wally') ?>
+						<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally-theme') : __('Redigera sida', 'wally-theme') ?>
 					</span>
 				</a>
 			<?php endif ?>
@@ -35,7 +35,7 @@
 				<time datetime="<?php echo get_the_date('Y-m-d\TH:i:s') ?>"><?php echo get_the_date('j F, Y H:i') ?></time>
 			</div>
 			<div class="article-box__footer__col article-box__footer__col--meta">
-				<?php _e('Författare', 'wally') ?>:
+				<?php _e('Författare', 'wally-theme') ?>:
 				<?php echo get_the_author_posts_link() ?>
 			</div>
 		</footer>

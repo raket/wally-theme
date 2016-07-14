@@ -8,13 +8,13 @@
             <p>
                 <?php
                 if($wp_query->found_posts > 0) {
-                    printf(__('Hittade %s sökresultat.', 'wally'), $wp_query->found_posts);
+                    printf(__('Hittade %s sökresultat.', 'wally-theme'), $wp_query->found_posts);
                     if ($wp_query->max_num_pages > 1) {
                         echo ' ';
-                        printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally'), $wp_query->max_num_pages);
+                        printf(__('Sökresultaten är uppdelade i  %s sidor.', 'wally-theme'), $wp_query->max_num_pages);
                     }
                 } else {
-                    printf(__('Hittade inga sökresultat', 'wally'));
+                    printf(__('Hittade inga sökresultat', 'wally-theme'));
                 }
                 ?>
             </p>

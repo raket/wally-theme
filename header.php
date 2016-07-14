@@ -38,8 +38,8 @@ $turl = get_template_directory_uri();
             <form class="cookiebar" method="post">
                 <div class="container">
                     <div class="row">
-                        <div class="cookiebar__text">' . __('Den här webbplatsen använder cookies för att förbättra användarupplevelsen.', 'wally') . '</div>
-                        <a href="' . add_query_arg('accept_cookies', 1) . '" class="button button--primary cookiebar__button">' . __('Jag förstår', 'wally') . '</a>
+                        <div class="cookiebar__text">' . __('Den här webbplatsen använder cookies för att förbättra användarupplevelsen.', 'wally-theme') . '</div>
+                        <a href="' . add_query_arg('accept_cookies', 1) . '" class="button button--primary cookiebar__button">' . __('Jag förstår', 'wally-theme') . '</a>
                     </div>
                 </div>
             </form>
@@ -52,15 +52,15 @@ $turl = get_template_directory_uri();
 
     <a href="#site-navigation" class="skiplink" tabindex="1">
         <div class="container">
-            <div class="col-6"><i class="material-icons" aria-label="<?php _e('Nedåtpil', 'wally') ?>"
-                                  aria-hidden="true">keyboard_arrow_down</i><?php _e('Gå till navigation', 'wally') ?>
+            <div class="col-6"><i class="material-icons" aria-label="<?php _e('Nedåtpil', 'wally-theme') ?>"
+                                  aria-hidden="true">keyboard_arrow_down</i><?php _e('Gå till navigation', 'wally-theme') ?>
             </div>
         </div>
     </a>
     <a href="#site-content" class="skiplink" tabindex="2" accesskey="s">
         <div class="container">
-            <div class="col-6"><i class="material-icons" aria-label="<?php _e('Nedåtpil', 'wally') ?>"
-                                  aria-hidden="true">keyboard_arrow_down</i><?php _e('Gå till huvudinnehåll', 'wally') ?>
+            <div class="col-6"><i class="material-icons" aria-label="<?php _e('Nedåtpil', 'wally-theme') ?>"
+                                  aria-hidden="true">keyboard_arrow_down</i><?php _e('Gå till huvudinnehåll', 'wally-theme') ?>
             </div>
         </div>
     </a>
@@ -72,7 +72,7 @@ $turl = get_template_directory_uri();
             <div class="row">
                 <?php if(has_nav_menu('mobile_primary_navigation')): ?>
                 <button class="off-canvas__open">
-                    <i class="material-icons" aria-label="<?php _e('Meny', 'wally') ?>"
+                    <i class="material-icons" aria-label="<?php _e('Meny', 'wally-theme') ?>"
                                                     aria-hidden="true">menu
                     </i>
                 </button>
@@ -97,8 +97,8 @@ $turl = get_template_directory_uri();
 
                         <?php if (Wally_Sitemap::sitemap_exists()): ?>
                             <li><a href="<?php echo get_the_permalink(get_page_by_path('sitemap')->ID) ?>"><i
-                                        class="material-icons" aria-label="<?php _e('Karta', 'wally') ?>"
-                                        aria-hidden="true">map</i> <?php _e('Webbplatskarta', 'wally') ?></a></li>
+                                        class="material-icons" aria-label="<?php _e('Karta', 'wally-theme') ?>"
+                                        aria-hidden="true">map</i> <?php _e('Webbplatskarta', 'wally-theme') ?></a></li>
                         <?php endif ?>
 
                         <?php if (isset($_COOKIE['wally_contrast']) && $_COOKIE['wally_contrast'] == true) {
@@ -108,9 +108,9 @@ $turl = get_template_directory_uri();
                         } ?>
 
                         <li><a href="<?php echo add_query_arg('toggle_contrast', 1) ?>"><i class="material-icons"
-                                                                                           aria-label="<?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?>"
+                                                                                           aria-label="<?php echo w_is_contrast() ? __('Minska kontrast', 'wally-theme') : __('Öka kontrast', 'wally-theme') ?>"
                                                                                            aria-hidden="true">tonality</i>
-                                <span class="increaseContrast"><?php echo w_is_contrast() ? __('Minska kontrast', 'wally') : __('Öka kontrast', 'wally') ?></span></a>
+                                <span class="increaseContrast"><?php echo w_is_contrast() ? __('Minska kontrast', 'wally-theme') : __('Öka kontrast', 'wally-theme') ?></span></a>
                         </li>
                     </ul>
                 </div>
@@ -123,7 +123,7 @@ $turl = get_template_directory_uri();
 
                 <div class="row">
 
-                    <nav class="primary-navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally') ?>">
+                    <nav class="primary-navigation" role="navigation" aria-label="<?php _e('Huvudmeny', 'wally-theme') ?>">
                         <?php if (has_nav_menu('primary_navigation')) {
                             echo apply_filters('w_desktop_navigation',
                                 wp_nav_menu(array(

@@ -50,11 +50,11 @@ new ThemeUpdateChecker(
 add_action('after_setup_theme', '_w_check_plugin_nopriv');
 function _w_check_plugin_nopriv() {
 
-    if(!class_exists('Wally') && !is_admin() && is_user_logged_in()) {
+    if(!class_exists('wally-theme') && !is_admin() && is_user_logged_in()) {
         //echo file_get_contents(get_stylesheet_directory() . '/install-plugin.php');
         load_template(get_stylesheet_directory() . '/install-plugin.php');
         die;
-        //die(__('Var god aktivera Wally-tilläget.', 'wally'));
+        //die(__('Var god aktivera Wally-tilläget.', 'wally-theme'));
     }
 
 }
@@ -70,7 +70,7 @@ function _w_check_plugin() {
 
         add_action( 'admin_notices', function() {
             $class = "update-nag";
-            $message = sprintf(__('Wally-tillägget är för närvarande inte aktiverat. <a href="%s">Klicka här</a> för att aktivera tillägget.', 'wally'), 'plugins.php');
+            $message = sprintf(__('Wally-tillägget är för närvarande inte aktiverat. <a href="%s">Klicka här</a> för att aktivera tillägget.', 'wally-theme'), 'plugins.php');
 
             if(get_current_screen()->base !== 'plugins') {
                 echo"<div class=\"$class\"><p>$message</p></div>";
@@ -149,17 +149,17 @@ function _w_init() {
 
     // Register navigation
     register_nav_menus(array(
-        'primary_navigation' => __('Huvudmeny','wally'),
-        'mobile_primary_navigation' => __('Mobilmeny', 'wally'),
+        'primary_navigation' => __('Huvudmeny','wally-theme'),
+        'mobile_primary_navigation' => __('Mobilmeny', 'wally-theme'),
    ));
 }
 
 // Register sidebars
 add_action( 'widgets_init', function(){
     register_sidebar( array(
-        'name' => __( 'Bloggmeny', 'wally' ),
+        'name' => __( 'Bloggmeny', 'wally-theme' ),
         'id' => 'blog-sidebar',
-        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'wally' ),
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'wally-theme' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget__title">',
@@ -389,7 +389,7 @@ function _w_build_latest_comments($output) {
                         $content = '<img src="' . get_template_directory_uri() . '/assets/icons/twemojis/' . get_emotion($emotion) . '.svg" alt="" class="recent__emotion">' . $content;
                     }
 
-                    $text = '<div class="recent__text">'.$author.' · '.$date. '<span class="recent__content">'. $content . '</span></div><a class="recent__link" href="' . get_comment_link($comment->comment_ID) . '">' . __("Läs kommentar om", 'wally') . ' ' . get_the_title($comment->comment_post_ID) . '</a>';
+                    $text = '<div class="recent__text">'.$author.' · '.$date. '<span class="recent__content">'. $content . '</span></div><a class="recent__link" href="' . get_comment_link($comment->comment_ID) . '">' . __("Läs kommentar om", 'wally-theme') . ' ' . get_the_title($comment->comment_post_ID) . '</a>';
 
                     $article = '<h3>Om artikeln: <a href="' . get_permalink($comment->comment_post_ID) . '" class="recent__article">' . get_the_title($comment->comment_post_ID) . '</a></h3> <br>';
 
@@ -451,7 +451,7 @@ add_action('fw_ext_forms_frontend_submit', function($form) {
     wp_insert_post(array(
         'post_content' => serialize($data),
         'post_type' => 'survey',
-        'post_title' => __('Svar till formulär', 'wally'),
+        'post_title' => __('Svar till formulär', 'wally-theme'),
         'post_status' => 'publish'
    ));
 
@@ -467,20 +467,20 @@ function _w_create_post_types() {
 				'public' => false,
                 'show_ui' => true,
 				'labels' => array(
-                    'name'               => _x( 'Enkätsvar', 'post type general name', 'wally' ),
-                    'singular_name'      => _x( 'Enkätsvar', 'post type singular name', 'wally' ),
-                    'menu_name'          => _x( 'Enkätsvar', 'admin menu', 'wally' ),
-                    'name_admin_bar'     => _x( 'Enkätsvar', 'add new on admin bar', 'wally' ),
-                    'add_new'            => _x( 'Skapa nytt', 'book', 'wally' ),
-                    'add_new_item'       => __( 'Skapa nytt enkätsvar', 'wally' ),
-                    'new_item'           => __( 'Nytt enkätsvar', 'wally' ),
-                    'edit_item'          => __( 'Redigera enkätsvar', 'wally' ),
-                    'view_item'          => __( 'Visa enkätsvar', 'wally' ),
-                    'all_items'          => __( 'Alla enkätsvar', 'wally' ),
-                    'search_items'       => __( 'Sök enkätsvar', 'wally' ),
-                    'parent_item_colon'  => __( 'Föräldra-enkätsvar:', 'wally' ),
-                    'not_found'          => __( 'Hittade inga enkätsvar.', 'wally' ),
-                    'not_found_in_trash' => __( 'Hittade inga enkätsvar i papperskorgen.', 'wally' )
+                    'name'               => _x( 'Enkätsvar', 'post type general name', 'wally-theme' ),
+                    'singular_name'      => _x( 'Enkätsvar', 'post type singular name', 'wally-theme' ),
+                    'menu_name'          => _x( 'Enkätsvar', 'admin menu', 'wally-theme' ),
+                    'name_admin_bar'     => _x( 'Enkätsvar', 'add new on admin bar', 'wally-theme' ),
+                    'add_new'            => _x( 'Skapa nytt', 'book', 'wally-theme' ),
+                    'add_new_item'       => __( 'Skapa nytt enkätsvar', 'wally-theme' ),
+                    'new_item'           => __( 'Nytt enkätsvar', 'wally-theme' ),
+                    'edit_item'          => __( 'Redigera enkätsvar', 'wally-theme' ),
+                    'view_item'          => __( 'Visa enkätsvar', 'wally-theme' ),
+                    'all_items'          => __( 'Alla enkätsvar', 'wally-theme' ),
+                    'search_items'       => __( 'Sök enkätsvar', 'wally-theme' ),
+                    'parent_item_colon'  => __( 'Föräldra-enkätsvar:', 'wally-theme' ),
+                    'not_found'          => __( 'Hittade inga enkätsvar.', 'wally-theme' ),
+                    'not_found_in_trash' => __( 'Hittade inga enkätsvar i papperskorgen.', 'wally-theme' )
                 ),
 				'has_archive' => false,
                 'menu_icon' => 'dashicons-format-status',
@@ -513,7 +513,7 @@ add_action( 'init', '_w_create_post_types' );
 function _w_survey_add_meta_box() {
     add_meta_box(
         'myplugin_sectionid',
-        __( 'Enkätsvar', 'wally' ),
+        __( 'Enkätsvar', 'wally-theme' ),
         '_w_survey_meta_box_callback',
         'survey',
         'normal',
@@ -614,29 +614,29 @@ function _w_post_thumbnail_options($html) {
 
     return $html . '
 
-        <p style="border-top: solid 1px rgb(238, 238, 238);padding-top: 1rem;"><strong>' . __('Storlek', 'wally') . '</strong></p>
-        <p>' . __('Välj i vilken storlek bilden ska visas.', 'wally') . '</p>
+        <p style="border-top: solid 1px rgb(238, 238, 238);padding-top: 1rem;"><strong>' . __('Storlek', 'wally-theme') . '</strong></p>
+        <p>' . __('Välj i vilken storlek bilden ska visas.', 'wally-theme') . '</p>
         <p>
             <label for="small_thumbnail" style="padding-right: 15px">
                 <input type="radio" name="thumbnail_size" id="small_thumbnail" value="small" '. $small .'>
-                ' . __('Liten', 'wally') . '
+                ' . __('Liten', 'wally-theme') . '
             </label>
             <label for="large_thumbnail">
                 <input type="radio" name="thumbnail_size" id="large_thumbnail" value="large" '. $large .'>
-                ' . __('Stor', 'wally') . '
+                ' . __('Stor', 'wally-theme') . '
             </label>
         </p>
 
-        <p><strong>' . __('Bildtext', 'wally') . '</strong></p>
-        <p>' . __('Välj om bildens bildtext ska visas.', 'wally') . '</p>
+        <p><strong>' . __('Bildtext', 'wally-theme') . '</strong></p>
+        <p>' . __('Välj om bildens bildtext ska visas.', 'wally-theme') . '</p>
         <p>
             <label for="thumbnail_text_off" style="padding-right: 15px">
                 <input type="radio" name="thumbnail_text" id="thumbnail_text_off" value="0" '. $no_text .'>
-                ' . __('Visa inte', 'wally') . '
+                ' . __('Visa inte', 'wally-theme') . '
             </label>
             <label for="thumbnail_text_on">
                 <input type="radio" name="thumbnail_text" id="thumbnail_text_on" value="1" '. $text .'>
-                ' . __('Visa', 'wally') . '
+                ' . __('Visa', 'wally-theme') . '
             </label>
         </p>
 ';
@@ -796,7 +796,7 @@ function _w_rename_post_menu() {
     global $menu;
 
     if ( isset( $menu[5])) {
-        $menu[5][0] = __( 'Blogginlägg', 'wally' );
+        $menu[5][0] = __( 'Blogginlägg', 'wally-theme' );
     }
 }
 
@@ -883,10 +883,10 @@ add_action( 'comment_form_after_fields', '_w_comment_form_emotions' );
 function _w_comment_form_emotions () {
 
         $emotions = get_emotions();
-        echo '<fieldset class="comment-form__emotion form__group">' . '<legend class="form__label">' . __( 'Välj en symbol för kommentaren:', 'wally' ) . '</legend><br>';
+        echo '<fieldset class="comment-form__emotion form__group">' . '<legend class="form__label">' . __( 'Välj en symbol för kommentaren:', 'wally-theme' ) . '</legend><br>';
         $i = 0;
         foreach($emotions as $key => $emotion):
-            echo '<input id="emotion' . $emotion . '" class="form__control" name="commentFormEmotion" type="radio" value="emotion' . $emotion . '"><label class="form__label emotion" for="emotion' . $emotion . '"><img src="' . get_template_directory_uri() .'/assets/icons/twemojis/' . $emotion . '.svg" alt="' . __($key, 'wally') .'"></label>';
+            echo '<input id="emotion' . $emotion . '" class="form__control" name="commentFormEmotion" type="radio" value="emotion' . $emotion . '"><label class="form__label emotion" for="emotion' . $emotion . '"><img src="' . get_template_directory_uri() .'/assets/icons/twemojis/' . $emotion . '.svg" alt="' . __($key, 'wally-theme') .'"></label>';
             $i++;
         endforeach;
          echo '</fieldset>';
@@ -1092,16 +1092,16 @@ function _wally_video_thumbnail($html) {
 
     return '
         <p>Utvald bild kan också kallas huvudbild.</p>
-        <p><strong>' . __('Använd', 'wally') . '</strong></p>
-        <p>' . __('Välj mellan att använda bild eller video.', 'wally') . '</p>
+        <p><strong>' . __('Använd', 'wally-theme') . '</strong></p>
+        <p>' . __('Välj mellan att använda bild eller video.', 'wally-theme') . '</p>
         <p>
             <label for="image_thumbnail" style="padding-right: 15px">
                 <input type="radio" name="thumbnail_type" id="image_thumbnail" value="image" '. $image .'>
-                ' . __('Bild', 'wally') . '
+                ' . __('Bild', 'wally-theme') . '
             </label>
             <label for="video_thumbnail">
                 <input type="radio" name="thumbnail_type" id="video_thumbnail" value="video" '. $video .'>
-                ' . __('Video', 'wally') . '
+                ' . __('Video', 'wally-theme') . '
             </label>
         </p>
 
@@ -1109,7 +1109,7 @@ function _wally_video_thumbnail($html) {
 ' . $html . '
 		</div>
 		<div id="thumbnail_type_video" ' . $hide_video . '>
-	        <p><strong>' . __('Video-URL', 'wally') . '</strong></p>
+	        <p><strong>' . __('Video-URL', 'wally-theme') . '</strong></p>
 			<input style="width: 100%" type="text" id="thumbnail-video-url" name="thumbnail_video" class="thumbnailvideo form-input-tip" size="16" autocomplete="off" value=" '. $url .'">
 
 		</div>
@@ -1184,8 +1184,8 @@ add_filter( 'teeny_mce_plugins', function($plugins) {
  * Register meta box(es).
  */
 function _w_register_meta_boxes() {
-    add_meta_box( 'wally_box-styling', __( 'Utseende', 'wally' ), '_w_column_styling_meta_box_content', 'page', 'side', 'default' );
-    add_meta_box( 'wally_exclude-page', __( 'Göm från navigation', 'wally' ), '_w_exclude_page_meta_box_content', 'page', 'side', 'default' );
+    add_meta_box( 'wally_box-styling', __( 'Utseende', 'wally-theme' ), '_w_column_styling_meta_box_content', 'page', 'side', 'default' );
+    add_meta_box( 'wally_exclude-page', __( 'Göm från navigation', 'wally-theme' ), '_w_exclude_page_meta_box_content', 'page', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', '_w_register_meta_boxes' );
 
@@ -1358,7 +1358,7 @@ function _w_video_shortcode($output, $atts, $video, $id) {
 
         $pq = phpQuery::newDocument($output);
         pq('video')->attr('title', $title)
-            ->append(__('Din webbläsare har inte stöd för HTML5-video.', 'wally'))
+            ->append(__('Din webbläsare har inte stöd för HTML5-video.', 'wally-theme'))
             ->parent('div')->attr('data-title', $title);
 
         $html = $pq->htmlOuter();
@@ -1447,3 +1447,9 @@ add_action('init', function() {
 function w_has_accepted_cookies() {
     return isset($_COOKIE['wally_cookies']);
 }
+
+
+
+add_action( 'after_setup_theme', function() {
+    load_theme_textdomain( 'wally-theme', get_template_directory() );
+}  );

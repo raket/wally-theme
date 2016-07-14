@@ -35,7 +35,7 @@ if(has_post_thumbnail() || $thumbnail_type == 'video'):
 
 			<?php if(is_page()): ?>
 				<div class="image__buttons">
-					<button class="image__button make-fullscreen" data-mfp-src="<?php echo $thumbnail_large ?>"><i class="material-icons" aria-label="<?php _e('Helskärm', 'wally') ?>" aria-hidden="true">&#xE5D0;</i> Visa i helskärm</button>
+					<button class="image__button make-fullscreen" data-mfp-src="<?php echo $thumbnail_large ?>"><i class="material-icons" aria-label="<?php _e('Helskärm', 'wally-theme') ?>" aria-hidden="true">&#xE5D0;</i> Visa i helskärm</button>
 				</div>
 			<?php endif ?>
 

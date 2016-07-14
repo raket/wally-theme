@@ -51,7 +51,7 @@
 
             <div class="row">
                 <div class="related-posts">
-                    <h2 class="related-posts__title"><?php _e('Relaterade artiklar', 'wally') ?></h2>
+                    <h2 class="related-posts__title"><?php _e('Relaterade artiklar', 'wally-theme') ?></h2>
                     <?php
                     do_action("wally_before_related_loop");
                     while($related->have_posts()): $related->the_post();

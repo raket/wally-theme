@@ -1,0 +1,1040 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wally\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Jul 14 2016 16:24:16 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Thu Jul 14 2016 16:45:30 GMT+0200 (CEST)\n"
+"Last-Translator: raket <daniel@raket.nu>\n"
+"Language-Team: \n"
+"Language: Swedish\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Loco-Target-Locale: sv_SE"
+
+#: 404.php:7
+msgid "Hoppsan - här var det tomt!"
+msgstr ""
+
+#: 404.php:9
+msgid "Innehållet du söker har troligtvis flyttats eller tagits bort."
+msgstr ""
+
+#: archive.php:10 /home.php:16 /index.php:10
+msgid "Artiklar"
+msgstr ""
+
+#: archive.php:19 /home.php:32 /index.php:23
+msgid "Föregående sida"
+msgstr ""
+
+#: archive.php:20 /home.php:33 /index.php:24
+msgid "Nästa sida"
+msgstr ""
+
+#: archive.php:21 /home.php:34 /index.php:25
+msgid "Sidnavigation"
+msgstr ""
+
+#: comments.php:12
+msgid "till artikeln"
+msgstr ""
+
+#: comments.php:16
+msgid "Läs"
+msgstr ""
+
+#: comments.php:16
+msgid "Läs kommentarer"
+msgstr ""
+
+#: comments.php:19
+msgid "Skriv"
+msgstr ""
+
+#: comments.php:19
+msgid "Skriv kommentar"
+msgstr ""
+
+#: comments.php:28 /parts/navigation/single.php:13 /parts/navigation/single.php:13
+msgid "Kommentarer"
+msgstr ""
+
+#: comments.php:86
+msgid "Svara på kommentar"
+msgstr ""
+
+#: comments.php:88
+msgid "Svara"
+msgstr ""
+
+#: comments.php:123
+msgid "Inga kommentarer funna för detta inlägg"
+msgstr ""
+
+#: comments.php:133
+msgid "Kommentarer är stängda för den här sidan."
+msgstr ""
+
+#: comments.php:139
+msgid "Skriv kommentar eller välj symbol"
+msgstr ""
+
+#: comments.php:151
+msgid "Skriv in ditt namn och din e-postadress"
+msgstr ""
+
+#: comments.php:152
+msgid "Du är inloggad som"
+msgstr ""
+
+#: comments.php:155 /parts/posts/loop.php:43
+msgid "Kommentar"
+msgstr ""
+
+#: comments.php:156
+msgid "Skriv din kommentar här..."
+msgstr ""
+
+#: comments.php:160
+msgid "Namn"
+msgstr ""
+
+#: comments.php:161
+msgid "Fyll i ditt namn"
+msgstr ""
+
+#: comments.php:164
+msgid "E-postadress"
+msgstr ""
+
+#: comments.php:165
+msgid "Fyll i din e-postadress"
+msgstr ""
+
+#: comments.php:177
+msgid "Så här kommer din kommentar att se ut när du skickat den:"
+msgstr ""
+
+#: footer.php:12 /functions.php:152 /header.php:126
+msgid "Huvudmeny"
+msgstr ""
+
+#: footer.php:29
+msgid "Sidfot"
+msgstr ""
+
+#: footer.php:37
+msgid "Kontakt"
+msgstr ""
+
+#: footer.php:55
+msgid "Sociala Medier"
+msgstr ""
+
+#: footer.php:68
+msgid "Om denna webbplats"
+msgstr ""
+
+#: footer.php:74
+msgid "Hjälpmedel"
+msgstr ""
+
+#: footer.php:78 /header.php:100
+msgid "Karta"
+msgstr ""
+
+#: footer.php:78 /header.php:101
+msgid "Webbplatskarta"
+msgstr ""
+
+#: footer.php:88 /footer.php:90 /header.php:111 /header.php:113
+msgid "Minska kontrast"
+msgstr ""
+
+#: footer.php:88 /footer.php:90 /header.php:111 /header.php:113
+msgid "Öka kontrast"
+msgstr ""
+
+#: functions.php:73
+#, php-format
+msgid ""
+"Wally-tillägget är för närvarande inte aktiverat. <a href=\"%s\">Klicka "
+"här</a> för att aktivera tillägget."
+msgstr ""
+
+#: functions.php:153
+msgid "Mobilmeny"
+msgstr ""
+
+#: functions.php:160
+msgid "Bloggmeny"
+msgstr ""
+
+#: functions.php:162
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: functions.php:392
+msgid "Läs kommentar om"
+msgstr ""
+
+#: functions.php:454
+msgid "Svar till formulär"
+msgstr ""
+
+#: functions.php:470
+msgctxt "post type general name"
+msgid "Enkätsvar"
+msgstr ""
+
+#: functions.php:471
+msgctxt "post type singular name"
+msgid "Enkätsvar"
+msgstr ""
+
+#: functions.php:472
+msgctxt "admin menu"
+msgid "Enkätsvar"
+msgstr ""
+
+#: functions.php:473
+msgctxt "add new on admin bar"
+msgid "Enkätsvar"
+msgstr ""
+
+#: functions.php:474
+msgctxt "book"
+msgid "Skapa nytt"
+msgstr ""
+
+#: functions.php:475
+msgid "Skapa nytt enkätsvar"
+msgstr ""
+
+#: functions.php:476
+msgid "Nytt enkätsvar"
+msgstr ""
+
+#: functions.php:477
+msgid "Redigera enkätsvar"
+msgstr ""
+
+#: functions.php:478
+msgid "Visa enkätsvar"
+msgstr ""
+
+#: functions.php:479
+msgid "Alla enkätsvar"
+msgstr ""
+
+#: functions.php:480
+msgid "Sök enkätsvar"
+msgstr ""
+
+#: functions.php:481
+msgid "Föräldra-enkätsvar:"
+msgstr ""
+
+#: functions.php:482
+msgid "Hittade inga enkätsvar."
+msgstr ""
+
+#: functions.php:483
+msgid "Hittade inga enkätsvar i papperskorgen."
+msgstr ""
+
+#: functions.php:516
+msgid "Enkätsvar"
+msgstr ""
+
+#: functions.php:568
+msgid "Den här sidan används som webbplatskarta och går därför inte att redigera."
+msgstr ""
+
+#: functions.php:617
+msgid "Storlek"
+msgstr ""
+
+#: functions.php:618
+msgid "Välj i vilken storlek bilden ska visas."
+msgstr ""
+
+#: functions.php:622
+msgid "Liten"
+msgstr ""
+
+#: functions.php:626
+msgid "Stor"
+msgstr ""
+
+#: functions.php:630
+msgid "Bildtext"
+msgstr ""
+
+#: functions.php:631
+msgid "Välj om bildens bildtext ska visas."
+msgstr ""
+
+#: functions.php:635
+msgid "Visa inte"
+msgstr ""
+
+#: functions.php:639
+msgid "Visa"
+msgstr ""
+
+#: functions.php:704
+msgid "&laquo;"
+msgstr ""
+
+#: functions.php:705
+msgid "&raquo;"
+msgstr ""
+
+#: functions.php:799
+msgid "Blogginlägg"
+msgstr ""
+
+#: functions.php:886
+msgid "Välj en symbol för kommentaren:"
+msgstr ""
+
+#: functions.php:1095
+msgid "Använd"
+msgstr ""
+
+#: functions.php:1096
+msgid "Välj mellan att använda bild eller video."
+msgstr ""
+
+#: functions.php:1100
+msgid "Bild"
+msgstr ""
+
+#: functions.php:1104
+msgid "Video"
+msgstr ""
+
+#: functions.php:1112
+msgid "Video-URL"
+msgstr ""
+
+#: functions.php:1187
+msgid "Utseende"
+msgstr ""
+
+#: functions.php:1188
+msgid "Göm från navigation"
+msgstr ""
+
+#: functions.php:1361
+msgid "Din webbläsare har inte stöd för HTML5-video."
+msgstr ""
+
+#: header.php:41
+msgid "Den här webbplatsen använder cookies för att förbättra användarupplevelsen."
+msgstr ""
+
+#: header.php:42
+msgid "Jag förstår"
+msgstr ""
+
+#: header.php:55 /header.php:62
+msgid "Nedåtpil"
+msgstr ""
+
+#: header.php:56
+msgid "Gå till navigation"
+msgstr ""
+
+#: header.php:63
+msgid "Gå till huvudinnehåll"
+msgstr ""
+
+#: header.php:75
+msgid "Meny"
+msgstr ""
+
+#: home.php:16
+msgid "Start"
+msgstr ""
+
+#: page.php:21 /page.php:23 /parts/posts/loop.php:21 /parts/posts/loop.php:23
+#: parts/posts/single.php:15 /parts/posts/single.php:17
+msgid "Redigera inlägg"
+msgstr ""
+
+#: page.php:21 /page.php:23 /parts/posts/loop.php:21 /parts/posts/loop.php:23
+#: parts/posts/single.php:15 /parts/posts/single.php:17
+msgid "Redigera sida"
+msgstr ""
+
+#: search.php:11
+#, php-format
+msgid "Hittade %s sökresultat."
+msgstr ""
+
+#: search.php:14
+#, php-format
+msgid "Sökresultaten är uppdelade i  %s sidor."
+msgstr ""
+
+#: search.php:17
+msgid "Hittade inga sökresultat"
+msgstr ""
+
+#: searchform.php:10 /searchform.php:11
+msgid "Sök på webbplatsen"
+msgstr ""
+
+#: searchform.php:13
+msgid "Sök"
+msgstr ""
+
+#: sidebar.php:1
+msgid "Sidomeny"
+msgstr ""
+
+#: single.php:54
+msgid "Relaterade artiklar"
+msgstr ""
+
+#: _framework/_general.php:103
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: _framework/_general.php:125
+msgctxt "Nyheter"
+msgid "Läs mer"
+msgstr ""
+
+#: _framework/_performance.php:21
+#, php-format
+msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:334
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:110
+msgid "Install Required Plugins"
+msgstr "Installera obligatoriska tillägg"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:335
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:111
+msgid "Install Plugins"
+msgstr "Installera tillägg"
+
+#. translators: %s: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:337
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:112
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:339
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:113
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:340
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:114
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:382
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:150
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:387
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:155
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:392
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:160
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:393
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:920
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2626
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:394
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3252
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:161
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:395
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3045
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:162
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:397
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:163
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:399
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:164
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:401
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:165
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:402
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:166
+msgid "Dismiss this notice"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:403
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:167
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:404
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:168
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:1027
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:1214
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr "Obligatoriskt"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr "Extern källa"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr "Inte installerat"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Alla <span class=\"count\">(%s)</span>"
+msgstr[1] "Alla <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Att installera <span class=\"count\">(%s)</span>"
+msgstr[1] "Att installera <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr "Tillägg"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr "Källa"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr "Typ"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr "Installera"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3602
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3602
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:120
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:125
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:130
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:135
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:140
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework-customizations/theme/options/customizer.php:5
+msgid "Grafisk profil"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:11
+msgid "Välj grundfärg"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:12
+msgid "Det här bestämmer vilken färg som används i huvudsak på din sida"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:13
+msgid "Du kan be din utvecklare att bygga in fler färgteman"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:15
+msgid "Blå"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:16
+msgid "Röd"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:17
+msgid "Grön"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:18
+msgid "Lila"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:19
+msgid "Rosa"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:20
+msgid "Gråblå"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:31
+msgid "Logotyp"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:32
+msgid "Ladda upp företagslogotyp"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:39
+msgid "Typografi"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:45
+msgid "Välj typsnitt för rubriker"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:46
+msgid "Det valda typsnittet kommer att användas för <b>rubriker</b> på hela sidan"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:59
+msgid "Välj typsnitt för brödtext"
+msgstr ""
+
+#: framework-customizations/theme/options/customizer.php:60
+msgid "Det valda typsnittet kommer att användas för <b>brödtext</b> på hela sidan"
+msgstr ""
+
+#: parts/media/thumbnail.php:38
+msgid "Helskärm"
+msgstr ""
+
+#: parts/meta/tags.php:5
+msgid "Innehållet är taggat med"
+msgstr ""
+
+#: parts/navigation/single.php:1 /parts/navigation/single.php:2
+msgid "Innehåll"
+msgstr ""
+
+#: parts/navigation/single.php:5 /parts/navigation/single.php:5
+msgid "Artikel"
+msgstr ""
+
+#: parts/navigation/single.php:9 /parts/navigation/single.php:9
+msgid "Taggar"
+msgstr ""
+
+#: parts/navigation/single.php:27
+msgid "Dela artikeln"
+msgstr ""
+
+#: parts/navigation/subpages.php:58
+msgid "Undersidor"
+msgstr ""
+
+#: parts/posts/attachment.php:17
+msgid "Redigera media"
+msgstr ""
+
+#: parts/posts/attachment.php:36
+msgid "Uppladdad av"
+msgstr ""
+
+#: parts/posts/loop.php:39 /parts/posts/single.php:38
+msgid "Författare"
+msgstr ""
+
+#: parts/posts/loop.php:43
+msgid "kommentarer"
+msgstr ""
+
+#: parts/posts/related.php:15
+msgid "Information"
+msgstr ""
+
+#: parts/posts/related.php:18
+msgid "Den här artikeln är skriven i samma kategori."
+msgstr ""
+
+#: parts/posts/related.php:20
+msgid "Den här artikeln innehåller liknande taggar."
+msgstr ""
+
+#. Name of the template
+msgid "Fullbredd"
+msgstr ""
+
+#. Name of the theme
+msgid "Wally"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://wally-wp.se"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Ett tillgängligt WordPress-tema byggt med kärlek och kaffe av Raket Webbyrå "
+"i samarbete med ETU."
+msgstr ""
+
+#. Author of the theme
+msgid "Raket Webbyrå"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.raketwebbyra.se/"
+msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:377
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:145
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Installera tillägg"
+msgstr[1] "Installera tillägg"
+
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:115
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Detta tema kräver följande tillägg: %1$s."
+msgstr[1] "Detta tema kräver följande tillägg: %1$s."

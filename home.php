@@ -13,7 +13,7 @@ get_header() ?>
 		<section id="site-content" class="site-content" aria-labelledby="page-title-start" role="region">
 
 
-			<h1 class="page-title"><?php echo is_front_page() ? __('Start', 'wally') : __('Artiklar', 'wally') ?></h1>
+			<h1 class="page-title"><?php echo is_front_page() ? __('Start', 'wally-theme') : __('Artiklar', 'wally-theme') ?></h1>
 			<h2>Senaste artiklarna</h2>
 
 			<?php
@@ -29,8 +29,8 @@ get_header() ?>
 				endwhile ?>
 					<div class="pagination" id="pagination" data-pagination="<?php echo $post->ID ?>">
 						<?php the_posts_pagination(array(
-							'prev_text'          => __( 'Föregående sida', 'wally' ),
-							'next_text'          => __( 'Nästa sida', 'wally' ),
+							'prev_text'          => __( 'Föregående sida', 'wally-theme'),
+							'next_text'          => __( 'Nästa sida', 'wally-theme'),
 							'screen_reader_text' => __( 'Sidnavigation' ),
 						)) ?>
 					</div>

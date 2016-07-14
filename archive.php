@@ -7,7 +7,7 @@
             ?>
             <section id="site-content" class="site-content" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>" data-paginate>
                 <?php the_archive_title('<h1 class="page-title" id="page-title-' . $post->ID .'">', '</h1>') ?>
-                <h2><?php _e('Artiklar', 'wally') ?></h2>
+                <h2><?php _e('Artiklar', 'wally-theme') ?></h2>
                 <?php
                     do_action("wally_before_post_loop");
                     if(have_posts()): while(have_posts()): the_post();
@@ -16,8 +16,8 @@
 
                         <div class="pagination">
                             <?php the_posts_pagination(array(
-                                'prev_text'          => __( 'Föregående sida', 'wally' ),
-                                'next_text'          => __( 'Nästa sida', 'wally' ),
+                                'prev_text'          => __( 'Föregående sida', 'wally-theme'),
+                                'next_text'          => __( 'Nästa sida', 'wally-theme'),
                                 'screen_reader_text' => __( 'Sidnavigation' ),
                             )) ?>
                         </div>

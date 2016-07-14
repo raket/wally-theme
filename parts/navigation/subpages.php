@@ -55,7 +55,7 @@ $subpages = get_posts($args);
 
 	<?php wp_reset_postdata(); endif ?> */
 ?>
-<nav class="subpages" role="navigation" aria-label="<?php _e('Undersidor', 'wally') ?>">
+<nav class="subpages" role="navigation" aria-label="<?php _e('Undersidor', 'wally-theme') ?>">
 	<ul class="list-group">
 		<?php
 

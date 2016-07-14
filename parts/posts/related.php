@@ -12,12 +12,12 @@
 				<p class="related-posts__post-meta">Publicerad <time><?php echo get_the_date($post->id) ?></time></p>
 			</div>
 			<div class="related-posts__post-footer">
-				<i class="material-icons" aria-label="<?php _e('Information', 'wally') ?>" aria-hidden="true">info_outline</i>
+				<i class="material-icons" aria-label="<?php _e('Information', 'wally-theme') ?>" aria-hidden="true">info_outline</i>
 
 				<?php if($relation == 'category'): ?>
-					<?php _e('Den här artikeln är skriven i samma kategori.', 'wally') ?>
+					<?php _e('Den här artikeln är skriven i samma kategori.', 'wally-theme') ?>
 				<?php elseif($relation == 'tag'): ?>
-					<?php _e('Den här artikeln innehåller liknande taggar.', 'wally') ?>
+					<?php _e('Den här artikeln innehåller liknande taggar.', 'wally-theme') ?>
 				<?php endif ?>
 
 			</div>

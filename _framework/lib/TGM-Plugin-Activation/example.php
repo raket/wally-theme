@@ -134,13 +134,13 @@ function wally_register_required_plugins() {
 
 		/*
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'wally' ),
-			'menu_title'                      => __( 'Install Plugins', 'wally' ),
+			'page_title'                      => __( 'Install Required Plugins', 'wally-theme'),
+			'menu_title'                      => __( 'Install Plugins', 'wally-theme'),
 			/* translators: %s: plugin name. * /
-			'installing'                      => __( 'Installing Plugin: %s', 'wally' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'wally-theme'),
 			/* translators: %s: plugin name. * /
-			'updating'                        => __( 'Updating Plugin: %s', 'wally' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'wally' ),
+			'updating'                        => __( 'Updating Plugin: %s', 'wally-theme'),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'wally-theme'),
 			'notice_can_install_required'     => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme requires the following plugin: %1$s.',
@@ -192,18 +192,18 @@ function wally_register_required_plugins() {
 				'Begin activating plugins',
 				'wally'
 			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'wally' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'wally' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'wally' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'wally-theme'),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'wally-theme'),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'wally-theme'),
 			/* translators: 1: plugin name. * /
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'wally' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'wally-theme'),
 			/* translators: 1: plugin name. * /
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'wally' ),
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'wally-theme'),
 			/* translators: 1: dashboard link. * /
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'wally' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'wally' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'wally' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'wally' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'wally-theme'),
+			'dismiss'                         => __( 'Dismiss this notice', 'wally-theme'),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'wally-theme'),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'wally-theme'),
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),

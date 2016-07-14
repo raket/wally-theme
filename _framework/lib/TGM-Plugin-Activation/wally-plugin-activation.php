@@ -63,11 +63,13 @@ function wally_register_required_plugins() {
 		// This presumes that the plugin code is based in the root of the GitHub repository
 		// and not in a subdirectory ('/src') of the repository.
 		array(
-			'name'      => 'Wally Plugin',
-			'slug'      => 'wally-plugin',
-			'source'    => 'https://github.com/raket/wally-plugin/archive/master.zip',
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'name'             => 'Wally Plugin',
+			'slug'             => 'wally-plugin',
+			'source'           => 'https://github.com/raket/wally-plugin/archive/master.zip',
+			'required'         => true,
+			// If false, the plugin is only 'recommended' instead of required.
+			'force_activation' => true,
+			// If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 		),
 
 
@@ -83,81 +85,90 @@ function wally_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'wally',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-		'default_path' => '',                      // Default absolute path to bundled plugins.
-		'menu'         => 'tgmpa-install-plugins', // Menu slug.
-		'parent_slug'  => 'themes.php',            // Parent menu slug.
-		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
-		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => false,                    // If false, a user cannot dismiss the nag message.
-		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-		'message'      => '',                      // Message to output right before the plugins table.
+		'id'           => 'wally',
+		// Unique ID for hashing notices for multiple instances of TGMPA.
+		'default_path' => '',
+		// Default absolute path to bundled plugins.
+		'menu'         => 'tgmpa-install-plugins',
+		// Menu slug.
+		'parent_slug'  => 'themes.php',
+		// Parent menu slug.
+		'capability'   => 'edit_theme_options',
+		// Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+		'has_notices'  => true,
+		// Show admin notices or not.
+		'dismissable'  => false,
+		// If false, a user cannot dismiss the nag message.
+		'dismiss_msg'  => '',
+		// If 'dismissable' is false, this message will be output at top of nag.
+		'is_automatic' => false,
+		// Automatically activate plugins after installation or not.
+		'message'      => '',
+		// Message to output right before the plugins table.
 
-
-
-		'strings'      => array(
-			'page_title'                       => __( 'Installera obligatoriska tillägg', 'wally' ),
-			'menu_title'                      => __( 'Installera tillägg', 'wally' ),
-			'installing'                      => __( 'Installerar tillägg: %s', 'wally' ),
-			'updating'                        => __( 'Uppdaterar tillägg: %s', 'wally' ),
-			'oops'                            => __( 'Någonting gick fel med.', 'wally' ),
+		'strings' => array(
+			'page_title'                      => __( 'Install Required Plugins', 'wally-theme' ),
+			'menu_title'                      => __( 'Install Plugins', 'wally-theme' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'wally-theme' ),
+			'updating'                        => __( 'Updating Plugin: %s', 'wally-theme' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'wally-theme' ),
 			'notice_can_install_required'     => _n_noop(
-				'Temat kräver att följande tillägg är installerade: %1$s.',
-				'Temat kräver att följande tillägg är installerade: %1$s.',
-				'wally'
+				'This theme requires the following plugin: %1$s.',
+				'This theme requires the following plugins: %1$s.',
+				'wally-theme'
 			),
 			'notice_can_install_recommended'  => _n_noop(
-				'Temat rekommenderar att följande tillägg är installerade: %1$s.',
-				'Temat rekommenderar att följande tillägg är installerade: %1$s.',
-				'wally'
+				'This theme recommends the following plugin: %1$s.',
+				'This theme recommends the following plugins: %1$s.',
+				'wally-theme'
 			),
 			'notice_ask_to_update'            => _n_noop(
-				'Följande tillägget behöver uppdateras till den senaste versionen för att säkerställa maximal kompatibilitet med detta tema: %1$s.',
-				'Följande tillägget behöver uppdateras till den senaste versionen för att säkerställa maximal kompatibilitet med detta tema: %1$s.',
-				'wally'
+				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
+				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+				'wally-theme'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
-				'Det finns en uppdatering tillgänglig för: %1$s.',
-				'Det finns uppdateringar tillgängliga för de följande tillägg: %1$s.',
-				'wally'
+				'There is an update available for: %1$s.',
+				'There are updates available for the following plugins: %1$s.',
+				'wally-theme'
 			),
 			'notice_can_activate_required'    => _n_noop(
-				'Följande obligatoriska tillägg är för närvarande inaktivt: %1$s.',
-				'Följande obligatoriska tillägg är för närvarande inaktiva: %1$s.',
-				'wally'
+				'The following required plugin is currently inactive: %1$s.',
+				'The following required plugins are currently inactive: %1$s.',
+				'wally-theme'
 			),
 			'notice_can_activate_recommended' => _n_noop(
-				'Följande rekommenderade tillägg är för närvarande inaktivt: %1$s.',
-				'Följande rekommenderade tillägg är för närvarande inaktivt: %1$s.',
-				'wally'
+				'The following recommended plugin is currently inactive: %1$s.',
+				'The following recommended plugins are currently inactive: %1$s.',
+				'wally-theme'
 			),
 			'install_link'                    => _n_noop(
-				'Installera tillägg',
-				'Installera tillägg',
-				'wally'
+				'Begin installing plugin',
+				'Begin installing plugins',
+				'wally-theme'
 			),
-			'update_link' 					  => _n_noop(
-				'Uppdaterar tillägg',
-				'Uppdaterar tillägg',
-				'wally'
+			'update_link'                     => _n_noop(
+				'Begin updating plugin',
+				'Begin updating plugins',
+				'wally-theme'
 			),
 			'activate_link'                   => _n_noop(
-				'Aktiverar tillägg',
-				'Aktiverar tillägg',
-				'wally'
+				'Begin activating plugin',
+				'Begin activating plugins',
+				'wally-theme'
 			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'wally' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'wally' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'wally' ),
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'wally' ),
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'wally' ),
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'wally' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'wally' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'wally' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'wally' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'wally-theme' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'wally-theme' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'wally-theme' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'wally-theme' ),
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'wally-theme' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'wally-theme' ),
+			'dismiss'                         => __( 'Dismiss this notice', 'wally-theme' ),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'wally-theme' ),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'wally-theme' ),
 
-			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
+			'nag_type' => '',
+			// Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),
 	);
 

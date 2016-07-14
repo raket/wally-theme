@@ -14,7 +14,7 @@
 				?>
 				<a href="<?php echo $url ?>" class="edit-btn">
 					<span>
-						<?php echo __('Redigera media', 'wally') ?>
+						<?php echo __('Redigera media', 'wally-theme') ?>
 					</span>
 				</a>
 			<?php endif ?>
@@ -33,7 +33,7 @@
 				<time datetime="<?php echo get_the_date('Y-m-d\TH:i:s') ?>"><?php echo get_the_date('j F, Y H:i') ?></time>
 			</div>
 			<div class="article-box__footer__col article-box__footer__col--meta">
-				<?php _e('Uppladdad av', 'wally') ?>:
+				<?php _e('Uppladdad av', 'wally-theme') ?>:
 				<?php echo get_the_author_posts_link() ?>
 			</div>
 		</footer>
