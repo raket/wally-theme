@@ -95,74 +95,63 @@ function wally_register_required_plugins() {
 		'message'      => '',                      // Message to output right before the plugins table.
 
 
-		/*
+
 		'strings'      => array(
-			'page_title'                       => __( 'Install Required Plugins', 'wally' ),
-			'menu_title'                      => __( 'Install Plugins', 'wally' ),
-			/* translators: %s: plugin name. * /
-			'installing'                      => __( 'Installing Plugin: %s', 'wally' ),
-			/* translators: %s: plugin name. * /
-			'updating'                        => __( 'Updating Plugin: %s', 'wally' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'wally' ),
+			'page_title'                       => __( 'Installera obligatoriska tillägg', 'wally' ),
+			'menu_title'                      => __( 'Installera tillägg', 'wally' ),
+			'installing'                      => __( 'Installerar tillägg: %s', 'wally' ),
+			'updating'                        => __( 'Uppdaterar tillägg: %s', 'wally' ),
+			'oops'                            => __( 'Någonting gick fel med.', 'wally' ),
 			'notice_can_install_required'     => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'This theme requires the following plugin: %1$s.',
-				'This theme requires the following plugins: %1$s.',
+				'Temat kräver att följande tillägg är installerade: %1$s.',
+				'Temat kräver att följande tillägg är installerade: %1$s.',
 				'wally'
 			),
 			'notice_can_install_recommended'  => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'This theme recommends the following plugin: %1$s.',
-				'This theme recommends the following plugins: %1$s.',
+				'Temat rekommenderar att följande tillägg är installerade: %1$s.',
+				'Temat rekommenderar att följande tillägg är installerade: %1$s.',
 				'wally'
 			),
 			'notice_ask_to_update'            => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
-				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+				'Följande tillägget behöver uppdateras till den senaste versionen för att säkerställa maximal kompatibilitet med detta tema: %1$s.',
+				'Följande tillägget behöver uppdateras till den senaste versionen för att säkerställa maximal kompatibilitet med detta tema: %1$s.',
 				'wally'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'There is an update available for: %1$s.',
-				'There are updates available for the following plugins: %1$s.',
+				'Det finns en uppdatering tillgänglig för: %1$s.',
+				'Det finns uppdateringar tillgängliga för de följande tillägg: %1$s.',
 				'wally'
 			),
 			'notice_can_activate_required'    => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'The following required plugin is currently inactive: %1$s.',
-				'The following required plugins are currently inactive: %1$s.',
+				'Följande obligatoriska tillägg är för närvarande inaktivt: %1$s.',
+				'Följande obligatoriska tillägg är för närvarande inaktiva: %1$s.',
 				'wally'
 			),
 			'notice_can_activate_recommended' => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'The following recommended plugin is currently inactive: %1$s.',
-				'The following recommended plugins are currently inactive: %1$s.',
+				'Följande rekommenderade tillägg är för närvarande inaktivt: %1$s.',
+				'Följande rekommenderade tillägg är för närvarande inaktivt: %1$s.',
 				'wally'
 			),
 			'install_link'                    => _n_noop(
-				'Begin installing plugin',
-				'Begin installing plugins',
+				'Installera tillägg',
+				'Installera tillägg',
 				'wally'
 			),
 			'update_link' 					  => _n_noop(
-				'Begin updating plugin',
-				'Begin updating plugins',
+				'Uppdaterar tillägg',
+				'Uppdaterar tillägg',
 				'wally'
 			),
 			'activate_link'                   => _n_noop(
-				'Begin activating plugin',
-				'Begin activating plugins',
+				'Aktiverar tillägg',
+				'Aktiverar tillägg',
 				'wally'
 			),
 			'return'                          => __( 'Return to Required Plugins Installer', 'wally' ),
 			'plugin_activated'                => __( 'Plugin activated successfully.', 'wally' ),
 			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'wally' ),
-			/* translators: 1: plugin name. * /
 			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'wally' ),
-			/* translators: 1: plugin name. * /
 			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'wally' ),
-			/* translators: 1: dashboard link. * /
 			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'wally' ),
 			'dismiss'                         => __( 'Dismiss this notice', 'wally' ),
 			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'wally' ),
@@ -170,7 +159,6 @@ function wally_register_required_plugins() {
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),
-		*/
 	);
 
 	tgmpa( $plugins, $config );
