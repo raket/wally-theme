@@ -84,7 +84,7 @@ $turl = get_template_directory_uri();
 
             <div class="row">
                 <?php $logo = ($logo_img = fw_get_db_customizer_option('logo')) ? $logo_img : false ?>
-                <a href="<?php echo get_bloginfo('url') ?>" class="site-title <?php if ($logo) echo 'has-image' ?>">
+                <a href="<?php echo esc_url( home_url() ) ?>" class="site-title <?php if ($logo) echo 'has-image' ?>">
                     <?php if ($logo): ?>
                         <img src="<?php echo make_image($logo['attachment_id'], apply_filters('logotype_width', false), apply_filters('logotype_height', 80), true) ?>"
                              alt="<?php bloginfo('name') ?>"/>

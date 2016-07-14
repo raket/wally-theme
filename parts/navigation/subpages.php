@@ -27,7 +27,7 @@ $subpages = get_posts($args);
 
 			<?php foreach($subpages as $post): setup_postdata($post) ?>
 
-				<? $children = get_posts(array(
+				<?php $children = get_posts(array(
 					'post_parent' => $post->ID,
 					'post_type' => 'page'
 				)) ?>

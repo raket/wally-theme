@@ -109,6 +109,7 @@ function _w_init() {
         'caption'
    ));
 	add_theme_support( 'menus' );
+    add_theme_support( 'automatic-feed-links' );
 
 	add_theme_support( 'phpquery' );
     if(current_theme_supports('phpquery')) {
@@ -551,7 +552,7 @@ add_action('all_admin_notices', function() {
 
     if($template_file === 'sitemap.php'): ?>
         <div class="update-nag"><?php _e('Den här sidan används som webbplatskarta och går därför inte att redigera.') ?></div>
-    <? endif;
+    <?php endif;
 
 });
 

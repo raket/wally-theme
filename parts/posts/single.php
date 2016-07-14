@@ -10,9 +10,9 @@
 			<time datetime="<?php echo get_the_date('Y-m-d\TH:i:s') ?>"><?php the_date('j F, Y H:i') ?></time>
 			<?php //Show Edit in Backend button for logged in Editors and Admins
 			if(is_user_logged_in() && current_user_can('edit_posts')):
-				$url = get_bloginfo('url').'/wp-admin/post.php?post='.$post->ID.'&action=edit';
+				$url = esc_url( home_url() ).'/wp-admin/post.php?post='.$post->ID.'&action=edit';
 				?>
-				<a href="<?= $url ?>" class="edit-btn" title="<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally') : __('Redigera sida', 'wally') ?>">
+				<a href="<?php echo $url ?>" class="edit-btn" title="<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally') : __('Redigera sida', 'wally') ?>">
 					<span>
 						<?php echo $post->post_type === 'post' ? __('Redigera inlägg', 'wally') : __('Redigera sida', 'wally') ?>
 					</span>

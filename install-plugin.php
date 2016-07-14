@@ -25,7 +25,7 @@
     <div class="install-plugin__wrapper">
         <h1>Du behöver aktivera Wally-tillägget</h1>
         <p>Du har nu aktiverat det tillgängliga WordPress-temat Wally. Kul! För att temat ska fungera krävs att du också aktiverar WordPress-tillägget som hör ihop med temat.</p>
-        <a href="<?php echo get_bloginfo('home') ?>/wp-admin/plugins.php" title="Aktivera Wally-tillägget" class="install-plugin__link">
+        <a href="<?php echo esc_url( home_url() ) ?>/wp-admin/plugins.php" title="Aktivera Wally-tillägget" class="install-plugin__link">
             <h1><span>Aktivera Wally-tillägget</span></h1>
             <h2>Jag vet att jag laddat ner tillägget och lagt det på rätt plats i mappen <pre>/wp-content/plugins/</pre></h2>
         </a>

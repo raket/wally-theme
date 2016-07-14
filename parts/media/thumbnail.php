@@ -25,8 +25,8 @@ if(has_post_thumbnail() || $thumbnail_type == 'video'):
 		$caption = get_post_meta($post->ID, 'thumbnail_text', true) ? get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true) : false;
 		$display_size = get_post_meta($post->ID, 'thumbnail_size', true) ?>
 
-		<div class="image thumbnail<?php echo $display_size ? ' thumbnail--' . $display_size : '' ?><?php echo is_single() ? ' thumbnail--single' : '' ?>" data-image="<?= $thumbnail_small ?>" style="background-image: url(<?= $thumbnail_small ?>)">
-			<img src="<?= $thumbnail_small ?>" alt="<?= $caption ?>">
+		<div class="image thumbnail<?php echo $display_size ? ' thumbnail--' . $display_size : '' ?><?php echo is_single() ? ' thumbnail--single' : '' ?>" data-image="<?php echo $thumbnail_small ?>" style="background-image: url(<?php echo $thumbnail_small ?>)">
+			<img src="<?php echo $thumbnail_small ?>" alt="<?php echo $caption ?>">
 			<?php if($caption): ?>
 				<?php if(!is_single()): ?>
 					<div class="image__caption"><?php echo apply_filters('thumbnail_caption', $caption) ?></div>
@@ -35,7 +35,7 @@ if(has_post_thumbnail() || $thumbnail_type == 'video'):
 
 			<?php if(is_page()): ?>
 				<div class="image__buttons">
-					<button class="image__button make-fullscreen" data-mfp-src="<?= $thumbnail_large ?>"><i class="material-icons" aria-label="<?php _e('Helskärm', 'wally') ?>" aria-hidden="true">&#xE5D0;</i> Visa i helskärm</button>
+					<button class="image__button make-fullscreen" data-mfp-src="<?php echo $thumbnail_large ?>"><i class="material-icons" aria-label="<?php _e('Helskärm', 'wally') ?>" aria-hidden="true">&#xE5D0;</i> Visa i helskärm</button>
 				</div>
 			<?php endif ?>
 
