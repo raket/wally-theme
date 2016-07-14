@@ -7,7 +7,7 @@
                 if($sidebar_location === 'left') {get_sidebar();}
             ?>
 
-            <section id="site-content" class="site-content" id="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
+            <section id="site-content" class="site-content" tabindex="0" id="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
                 <?php while (have_posts()) : the_post() ?>
                 <div <?php post_class('article-box') ?> id="post-<?php the_ID() ?>">
                     <div class="article-box__header">

@@ -77,20 +77,33 @@
 
     // Allow :active despite removing -webkit-tab-highlight-color http://bit.ly/1WqdsZL
     document.addEventListener("touchstart", function(){}, true);
-    
+
+    // Bosse-fix
     if(($( window ).width())<960){
-        $(".off-canvas__navigation__item > a").attr("tabindex", "0");}
-    else
-    {
-        $(".off-canvas__navigation__item > a").attr("tabindex", "-1");
+        $("ul.off-canvas__navigation__list").attr("aria-hidden", "false");
+        $("ul.navigation__item").attr("aria-hidden", "true");
+        $("div.off-canvas").attr("tabindex", "0");
+        $("div.off-canvas").attr("aria-hidden", "false");
+    } else {
+        $("ul.off-canvas__navigation__item").attr("aria-hidden", "true");
+        $("ul.navigation__list").attr("aria-hidden", "false");
+        $("div.off-canvas").attr("tabindex", "-1");
+        $("div.off-canvas").attr("aria-hidden", "true");
     }
 
     $(window).bind("resize",function(){
-        if(($(window).width()) < 960){
-            $(".off-canvas__navigation__item > a").attr("tabindex", "0");}
-        else {
-            $(".off-canvas__navigation__item > a").attr("tabindex", "-1");
+        if(($( window ).width())<960){
+            $("ul.off-canvas__navigation__list").attr("aria-hidden", "false");
+            $("ul.navigation__list").attr("aria-hidden", "true");
+            $("div.off-canvas").attr("tabindex", "0");
+            $("div.off-canvas").attr("aria-hidden", "false");
+        } else {
+            $("ul.off-canvas__navigation__list").attr("aria-hidden", "true");
+            $("ul.navigation__list").attr("aria-hidden", "false");
+            $("div.off-canvas").attr("tabindex", "-1");
+            $("div.off-canvas").attr("aria-hidden", "true");
         }
     });
+
 
 })(jQuery);
