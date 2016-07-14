@@ -145,7 +145,7 @@ add_action( 'widgets_init', function(){
     register_sidebar( array(
         'name' => __( 'Bloggmeny', 'wally' ),
         'id' => 'blog-sidebar',
-        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'wally' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget__title">',
@@ -1057,8 +1057,8 @@ function _w_google_fonts() {
 /**
  * Add an option to
  */
-add_filter( 'admin_post_thumbnail_html', '_reflex_video_thumbnail', 11);
-function _reflex_video_thumbnail($html) {
+add_filter( 'admin_post_thumbnail_html', '_wally_video_thumbnail', 11);
+function _wally_video_thumbnail($html) {
 
     global $post;
 
@@ -1078,8 +1078,8 @@ function _reflex_video_thumbnail($html) {
 
     return '
         <p>Utvald bild kan också kallas huvudbild.</p>
-        <p><strong>' . __('Använd', 'reflex') . '</strong></p>
-        <p>' . __('Välj mellan att använda bild eller video.', 'reflex') . '</p>
+        <p><strong>' . __('Använd', 'wally') . '</strong></p>
+        <p>' . __('Välj mellan att använda bild eller video.', 'wally') . '</p>
         <p>
             <label for="image_thumbnail" style="padding-right: 15px">
                 <input type="radio" name="thumbnail_type" id="image_thumbnail" value="image" '. $image .'>
@@ -1095,7 +1095,7 @@ function _reflex_video_thumbnail($html) {
 ' . $html . '
 		</div>
 		<div id="thumbnail_type_video" ' . $hide_video . '>
-	        <p><strong>' . __('Video-URL', 'reflex') . '</strong></p>
+	        <p><strong>' . __('Video-URL', 'wally') . '</strong></p>
 			<input style="width: 100%" type="text" id="thumbnail-video-url" name="thumbnail_video" class="thumbnailvideo form-input-tip" size="16" autocomplete="off" value=" '. $url .'">
 
 		</div>
@@ -1124,8 +1124,8 @@ function _reflex_video_thumbnail($html) {
 /**
  * Save the post thumbnail size as metadata
  */
-add_action( 'save_post', '_reflex_save_video_thumbnail' );
-function _reflex_save_video_thumbnail($post_id) {
+add_action( 'save_post', '_wally_save_video_thumbnail' );
+function _wally_save_video_thumbnail($post_id) {
     if(@isset($_POST['thumbnail_video'])) {
         update_post_meta($post_id, 'thumbnail_video', $_POST['thumbnail_video']);
     }
