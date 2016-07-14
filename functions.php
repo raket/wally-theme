@@ -30,6 +30,12 @@ function load_module($file, $attributes = false){
     include(locate_template($file));
 }
 
+
+//---------------------------------------------------------------------------------
+//	Install plugins and add update functions for plugins & theme
+//---------------------------------------------------------------------------------
+include_once get_stylesheet_directory() . '/_framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php';
+
 //---------------------------------------------------------------------------------
 //	Require Files and load Wally
 //---------------------------------------------------------------------------------
