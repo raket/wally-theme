@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Wally\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Jul 14 2016 16:24:16 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Thu Jul 14 2016 16:46:37 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Fri Jul 15 2016 07:46:28 GMT+0200 (CEST)\n"
 "Last-Translator: raket <daniel@raket.nu>\n"
 "Language-Team: \n"
 "Language: Swedish\n"
@@ -425,16 +425,6 @@ msgstr ""
 msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
 msgstr ""
 
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:334
-#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:110
-msgid "Install Required Plugins"
-msgstr "Installera obligatoriska tillägg"
-
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:335
-#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:111
-msgid "Install Plugins"
-msgstr "Installera tillägg"
-
 #. translators: %s: plugin name.
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:337
 #: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:112
@@ -471,7 +461,7 @@ msgstr[1] ""
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:392
 #: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:160
 msgid "Return to Required Plugins Installer"
-msgstr ""
+msgstr "Tillbaka till obligatoriska plugin"
 
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:393
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:920
@@ -509,13 +499,6 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
-
-#. translators: 1: dashboard link.
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:401
-#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:165
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Alla plugins är installerade och aktiverade. %1$s"
 
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:402
 #: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:166
@@ -577,10 +560,6 @@ msgstr ""
 msgid "TGMPA v%s"
 msgstr ""
 
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2366
-msgid "Required"
-msgstr "Obligatoriskt"
-
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2369
 msgid "Recommended"
 msgstr ""
@@ -589,17 +568,9 @@ msgstr ""
 msgid "WordPress Repository"
 msgstr ""
 
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2388
-msgid "External Source"
-msgstr "Extern källa"
-
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2391
 msgid "Pre-Packaged"
 msgstr ""
-
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2408
-msgid "Not Installed"
-msgstr "Inte installerat"
 
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2412
 msgid "Installed But Not Activated"
@@ -627,23 +598,6 @@ msgstr ""
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
-
-#. translators: 1: number of plugins.
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2481
-#, php-format
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] "Alla <span class=\"count\">(%s)</span>"
-msgstr[1] "Alla <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2485
-#, php-format
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] "Att installera <span class=\"count\">(%s)</span>"
-msgstr[1] "Att installera <span class=\"count\">(%s)</span>"
 
 #. translators: 1: number of plugins.
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2489
@@ -682,18 +636,6 @@ msgstr ""
 msgid "No plugins to install, update or activate."
 msgstr ""
 
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2640
-msgid "Plugin"
-msgstr "Tillägg"
-
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2641
-msgid "Source"
-msgstr "Källa"
-
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2642
-msgid "Type"
-msgstr "Typ"
-
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2646
 msgid "Version"
 msgstr ""
@@ -723,10 +665,6 @@ msgstr ""
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2777
 msgid "Upgrade message from the plugin author:"
 msgstr ""
-
-#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2810
-msgid "Install"
-msgstr "Installera"
 
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2816
 msgid "Update"
@@ -1024,6 +962,68 @@ msgstr ""
 #. Author URI of the theme
 msgid "http://www.raketwebbyra.se/"
 msgstr ""
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:334
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:110
+msgid "Install Required Plugins"
+msgstr "Installera obligatoriska tillägg"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:335
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:111
+msgid "Install Plugins"
+msgstr "Installera tillägg"
+
+#. translators: 1: dashboard link.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:401
+#: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:165
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Alla plugins är installerade och aktiverade. %1$s"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr "Obligatoriskt"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr "Extern källa"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr "Inte installerat"
+
+#. translators: 1: number of plugins.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Alla <span class=\"count\">(%s)</span>"
+msgstr[1] "Alla <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Att installera <span class=\"count\">(%s)</span>"
+msgstr[1] "Att installera <span class=\"count\">(%s)</span>"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr "Tillägg"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr "Källa"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr "Typ"
+
+#: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr "Installera"
 
 #: _framework/lib/TGM-Plugin-Activation/class-tgm-plugin-activation.php:377
 #: _framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php:145
