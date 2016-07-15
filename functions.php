@@ -50,7 +50,7 @@ new ThemeUpdateChecker(
 add_action('after_setup_theme', '_w_check_plugin_nopriv');
 function _w_check_plugin_nopriv() {
 
-    if(!class_exists('wally-theme') && !is_admin() && is_user_logged_in()) {
+    if(!class_exists('wally') && !is_admin() && is_user_logged_in()) {
         //echo file_get_contents(get_stylesheet_directory() . '/install-plugin.php');
         load_template(get_stylesheet_directory() . '/install-plugin.php');
         die;
