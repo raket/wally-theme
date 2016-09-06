@@ -39,7 +39,7 @@ include_once get_stylesheet_directory() . '/_framework/lib/TGM-Plugin-Activation
 //Initialize the update checker.
 require get_stylesheet_directory() . '/_framework/lib/theme-update-checker.php';
 new ThemeUpdateChecker(
-    'wally',
+    'wally-theme-master',
     'https://raw.githubusercontent.com/raket/wally-theme/master/meta.json'
 );
 
