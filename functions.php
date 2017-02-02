@@ -1454,3 +1454,14 @@ function w_has_accepted_cookies() {
 add_action( 'after_setup_theme', function() {
     load_theme_textdomain( 'wally-theme', get_template_directory() );
 }  );
+
+/**
+ * Add activated editor post types to Wally editor
+ */
+add_filter('_w_editor_mode_post_types','activated_editor_post_types', 1, 1);
+function activated_editor_post_types($post_types) {
+	if (function_exists('fw_get_db_ext_settings_option')) {
+		$post_types = array_keys(fw_get_db_ext_settings_option('page-builder', 'post_types'));
+	}
+	return $post_types;
+}
