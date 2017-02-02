@@ -90,7 +90,7 @@ $turl = get_template_directory_uri();
                              alt="<?php bloginfo('name') ?>"/>
                     <?php endif ?>
                         <span><?php bloginfo('name') ?></span>
-                        <p><?php apply_filters('wally_header_description', get_bloginfo('description')) ?></p>
+                        <p><?php echo apply_filters('wally_header_description', get_bloginfo('description')) ?></p>
                 </a>
                 <div class="site-header__tools">
                     <ul>
