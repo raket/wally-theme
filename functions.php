@@ -1184,7 +1184,8 @@ add_filter( 'teeny_mce_plugins', function($plugins) {
  * Register meta box(es).
  */
 function _w_register_meta_boxes() {
-    add_meta_box( 'wally_box-styling', __( 'Utseende', 'wally-theme' ), '_w_column_styling_meta_box_content', 'page', 'side', 'default' );
+	$post_types = apply_filters('_w_editor_mode_post_types', array('page'));
+	add_meta_box( 'wally_box-styling', __( 'Utseende', 'wally-theme' ), '_w_column_styling_meta_box_content', $post_types, 'side', 'default' );
     add_meta_box( 'wally_exclude-page', __( 'Göm från navigation', 'wally-theme' ), '_w_exclude_page_meta_box_content', 'page', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', '_w_register_meta_boxes' );
