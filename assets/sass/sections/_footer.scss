@@ -4,6 +4,7 @@
   color: $black;
   padding: 0;
   @include font-size(xs);
+  width:100%;
 
   a {
     color: $primary;
