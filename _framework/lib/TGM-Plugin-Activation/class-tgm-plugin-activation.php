@@ -474,7 +474,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				// Plugin, we'll need to adjust the file name.
 				add_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10, 2 );
 //				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );
-				load_theme_textdomain( 'tgmpa', get_stylesheet_directory() . '/_framework/lib/TGM-Plugin-Activation/languages' );
+				load_theme_textdomain( 'tgmpa', get_template_directory() . '/_framework/lib/TGM-Plugin-Activation/languages' );
 				remove_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10 );
 			} else {
 				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );

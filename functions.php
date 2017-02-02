@@ -34,10 +34,10 @@ function load_module($file, $attributes = false){
 //---------------------------------------------------------------------------------
 //	Install plugins and add update functions for plugins & theme
 //---------------------------------------------------------------------------------
-include_once get_stylesheet_directory() . '/_framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php';
+include_once get_template_directory() . '/_framework/lib/TGM-Plugin-Activation/wally-plugin-activation.php';
 
 //Initialize the update checker.
-require get_stylesheet_directory() . '/_framework/lib/theme-update-checker.php';
+require get_template_directory() . '/_framework/lib/theme-update-checker.php';
 new ThemeUpdateChecker(
     'wally-theme-master',
     'https://raw.githubusercontent.com/raket/wally-theme/master/meta.json'
@@ -52,7 +52,7 @@ function _w_check_plugin_nopriv() {
 
     if(!class_exists('wally') && !is_admin() && is_user_logged_in()) {
         //echo file_get_contents(get_stylesheet_directory() . '/install-plugin.php');
-        load_template(get_stylesheet_directory() . '/install-plugin.php');
+        load_template(get_template_directory() . '/install-plugin.php');
         die;
         //die(__('Var god aktivera Wally-tilläget.', 'wally-theme'));
     }
