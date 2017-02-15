@@ -127,6 +127,7 @@ a.button.button--primary,
 button.button--primary,
 .button--primary {
   @extend %bgc-p;
+  @extend %c-white;
   &:hover, &:focus, &:active {
     span {
       @extend %bc-p;
