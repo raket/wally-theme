@@ -1,4 +1,7 @@
-<div class="sidebar fw-col-md-4" aria-label="<?php _e('Sidomeny', 'wally-theme') ?>">
+<?php
+$sidebar_location = fw_get_db_customizer_option('sidebar_setting');
+?>
+<div class="sidebar fw-col-md-4 sidebar--location-<?=$sidebar_location;?>" aria-label="<?php _e('Sidomeny', 'wally-theme') ?>">
 	<?php
 	$show_dynamic_sidebar = apply_filters( 'w_show_dynamic_sidebar', false );
 	if(is_front_page() || is_home() || is_archive() || is_page_template('home.php') || $show_dynamic_sidebar){
@@ -14,3 +17,4 @@
 	}
 	?>
 </div>
+

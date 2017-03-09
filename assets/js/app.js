@@ -28,7 +28,14 @@
         if($('body.single .sidebar').length) {
             $('body.single .sidebar').stick_in_parent({
                 parent: $('.main'),
-                offset_top: 20
+                offset_top: 20,
+
+            }).on("sticky_kit:stick", function(e) {
+                if ($(e.target).hasClass('sidebar--location-right')) {
+	                $(e.target).parent().addClass('sidebar-spacer-sticky-right');
+                } else {
+	                $(e.target).parent().addClass('sidebar-spacer-sticky-left');
+                }
             });
         }
 
