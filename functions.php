@@ -1050,6 +1050,7 @@ function _w_customizer_classes( $classes ) {
 	$classes[] = fw_get_db_customizer_option( 'image_height' );
 	$classes[] = fw_get_db_customizer_option( 'header_height' );
 	$classes[] = fw_get_db_customizer_option( 'appearance' );
+	$classes[] = fw_get_db_customizer_option('header_setting');
 
 	return $classes;
 }
