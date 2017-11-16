@@ -118,12 +118,22 @@
 .vertical-header {
 
   .before-main {
-    width: 100%;
     padding: 1rem 0;
     .container {
-      max-width: 25%;
-      padding: 0 1.5rem;
-      margin: 0 2rem;
+      margin-left: 2rem;
+      padding-left: 0;
+    }
+  }
+
+  .site-header__tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+
+    li {
+      margin-left: 0;
+      margin-right: $base-spacing;
     }
   }
 
@@ -137,7 +147,6 @@
     min-width: $sidebar-width;
     height: auto;
     &__tools {
-      display: inline-block;
       a {
         &:focus{
         }
@@ -146,10 +155,7 @@
       ul{
         float: left;
       }
-      position: relative;
-
     }
-
   }
 
 

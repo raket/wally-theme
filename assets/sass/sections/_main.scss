@@ -17,11 +17,13 @@ section.site-content {
 }
 
 .vertical-header {
+
+  .container {
+    max-width: $main-vertical-max-width;
+  }
   .main {
     background-color: #FFF;
-    padding-top: 3rem;
     .container {
-      max-width: $main-vertical-max-width;
       padding: 0;
       margin-left: $main-left-margin;
       margin-right: $main-left-margin;
@@ -71,6 +73,7 @@ section.site-content {
 
   .main {
     flex-direction: column;
+    padding-top: 0;
   }
 
   .fw-main-row {

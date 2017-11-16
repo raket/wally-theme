@@ -546,60 +546,59 @@ jQuery(document).ready(function($){
         /**
          * Setup $navigation
          */
+
         $verticalLayout = $('body').hasClass('vertical-header');
 
-        if(! $verticalLayout ) {
 
-            $navigation = $('.primary-navigation > ul');
+        $navigation = $('.primary-navigation > ul');
 
-            $navigation.fixOverflowingItems = function () {
+        $navigation.fixOverflowingItems = function() {
 
-                var navigationTotalWidth = $navigation.outerWidth();
-                var moreContentListItemWidth = $moreContentListItem.outerWidth();
-                var hasHiddenItems = $moreContentListItem.hiddenItemWidths.length;
-                var itemsTotalWidth = 0;
+            var navigationTotalWidth = $navigation.outerWidth();
+            var moreContentListItemWidth = $moreContentListItem.outerWidth();
+            var hasHiddenItems = $moreContentListItem.hiddenItemWidths.length;
+            var itemsTotalWidth = 0;
 
-                $navigation.children('li').each(function () {
-                    itemsTotalWidth += $(this).outerWidth();
-                });
+            $navigation.children('li').each(function() {
+                itemsTotalWidth += $(this).outerWidth();
+            });
 
-                if (navigationTotalWidth < itemsTotalWidth) {
-                    // Overflow found
+            if( navigationTotalWidth < itemsTotalWidth && ! $verticalLayout ) {
+                // Overflow found
 
-                    // Is the moreContentListItem attached?
-                    if (!$.contains(document, $moreContentListItem[0])) {
+                // Is the moreContentListItem attached?
+                if(!$.contains(document, $moreContentListItem[0])) {
 
-                        // If not - attach it
-                        $moreContentListItem.appendTo($navigation);
-                    }
+                    // If not - attach it
+                    $moreContentListItem.appendTo($navigation);
+                }
 
-                    $moreContentListItem.hidePreviousItem();
+                $moreContentListItem.hidePreviousItem();
 
-                    this.fixOverflowingItems();
+                this.fixOverflowingItems();
 
-                } else {
-                    // Overflow not found
-                    if (hasHiddenItems) {
-                        var hiddenItemWidth = $moreContentListItem.hiddenItemWidths[0];
+            } else {
+                // Overflow not found
+                if(hasHiddenItems) {
+                    var hiddenItemWidth = $moreContentListItem.hiddenItemWidths[0];
 
-                        if (hasHiddenItems == 1) {
-                            // Only one item hidden? Could it be displayed if we removed the "more content" button?
-                            if (navigationTotalWidth >= itemsTotalWidth - moreContentListItemWidth + hiddenItemWidth) {
-                                $moreContentListItem.showPreviousItem();
-                                $moreContentListItem.detach();
-                            }
-                        } else {
-                            if (navigationTotalWidth >= itemsTotalWidth + hiddenItemWidth) {
-                                $moreContentListItem.showPreviousItem();
-                            }
+                    if(hasHiddenItems == 1) {
+                        // Only one item hidden? Could it be displayed if we removed the "more content" button?
+                        if(navigationTotalWidth >= itemsTotalWidth - moreContentListItemWidth + hiddenItemWidth) {
+                            $moreContentListItem.showPreviousItem();
+                            $moreContentListItem.detach();
                         }
-
+                    } else {
+                        if(navigationTotalWidth >= itemsTotalWidth + hiddenItemWidth) {
+                            $moreContentListItem.showPreviousItem();
+                        }
                     }
 
                 }
 
-            };
-        }
+            }
+
+        };
 
         /**
          * Setup $moreContentButton
