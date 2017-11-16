@@ -131,3 +131,10 @@ div.breadcrumbs {
     }
   }
 }
+
+.vertical-header {
+  .breadcrumbs-wrapper {
+    background: none;
+    padding-top: 0;
+  }
+}
