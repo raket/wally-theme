@@ -51,9 +51,6 @@ section.site-content {
     flex: 1 0 auto;
     overflow: scroll;
     overflow-x: hidden;
-    iframe, img:not(.docread) {
-      width: 100%;
-    }
     p img, iframe {
       margin-bottom: 2rem;
     }
