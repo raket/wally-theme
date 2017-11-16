@@ -65,7 +65,10 @@ $turl = get_template_directory_uri();
         </div>
     </a>
 
-<?php do_action("wally_before_site_header") ?>
+    <div class="main-wrapper">
+
+    <?php do_action("wally_before_site_header") ?>
+
     <header id="site-header" class="site-header">
 
         <div class="container">
@@ -146,26 +149,28 @@ $turl = get_template_directory_uri();
             </div>
         </div>
     </header>
-<?php do_action("wally_after_site_header") ?>
 
-<?php do_action("wally_before_site_content") ?>
+    <div class="main-content">
+    <?php do_action("wally_after_site_header") ?>
 
-<div class="alert-wrapper">
-    <div class="container">
-        <?php do_action("wally_theme_alerts") ?>
+    <?php do_action("wally_before_site_content") ?>
+
+    <main class="main" role="main" aria-labelledby="page-title">
+
+    <div class="alert-wrapper">
+        <div class="container">
+			<?php do_action("wally_theme_alerts") ?>
+        </div>
     </div>
-</div>
 
 <?php if (function_exists('fw_ext_breadcrumbs')): ?>
     <div class="breadcrumbs-wrapper">
         <div class="container">
             <div class="row">
-                <?php fw_ext_breadcrumbs('') ?>
+				<?php fw_ext_breadcrumbs('') ?>
             </div>
         </div>
     </div>
 <?php endif ?>
-
-<main class="main" role="main" aria-labelledby="page-title">
 
 <?php do_action("wally_prepend_site_content") ?>

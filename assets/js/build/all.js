@@ -546,55 +546,60 @@ jQuery(document).ready(function($){
         /**
          * Setup $navigation
          */
-        $navigation = $('.primary-navigation > ul');
+        $verticalLayout = $('body').hasClass('vertical-header');
 
-        $navigation.fixOverflowingItems = function() {
+        if(! $verticalLayout ) {
 
-            var navigationTotalWidth = $navigation.outerWidth();
-            var moreContentListItemWidth = $moreContentListItem.outerWidth();
-            var hasHiddenItems = $moreContentListItem.hiddenItemWidths.length;
-            var itemsTotalWidth = 0;
+            $navigation = $('.primary-navigation > ul');
 
-            $navigation.children('li').each(function() {
-                itemsTotalWidth += $(this).outerWidth();
-            });
+            $navigation.fixOverflowingItems = function () {
 
-            if(navigationTotalWidth < itemsTotalWidth) {
-                // Overflow found
+                var navigationTotalWidth = $navigation.outerWidth();
+                var moreContentListItemWidth = $moreContentListItem.outerWidth();
+                var hasHiddenItems = $moreContentListItem.hiddenItemWidths.length;
+                var itemsTotalWidth = 0;
 
-                // Is the moreContentListItem attached?
-                if(!$.contains(document, $moreContentListItem[0])) {
+                $navigation.children('li').each(function () {
+                    itemsTotalWidth += $(this).outerWidth();
+                });
 
-                    // If not - attach it
-                    $moreContentListItem.appendTo($navigation);
-                }
+                if (navigationTotalWidth < itemsTotalWidth) {
+                    // Overflow found
 
-                $moreContentListItem.hidePreviousItem();
+                    // Is the moreContentListItem attached?
+                    if (!$.contains(document, $moreContentListItem[0])) {
 
-                this.fixOverflowingItems();
+                        // If not - attach it
+                        $moreContentListItem.appendTo($navigation);
+                    }
 
-            } else {
-                // Overflow not found
-                if(hasHiddenItems) {
-                    var hiddenItemWidth = $moreContentListItem.hiddenItemWidths[0];
+                    $moreContentListItem.hidePreviousItem();
 
-                    if(hasHiddenItems == 1) {
-                        // Only one item hidden? Could it be displayed if we removed the "more content" button?
-                        if(navigationTotalWidth >= itemsTotalWidth - moreContentListItemWidth + hiddenItemWidth) {
-                            $moreContentListItem.showPreviousItem();
-                            $moreContentListItem.detach();
+                    this.fixOverflowingItems();
+
+                } else {
+                    // Overflow not found
+                    if (hasHiddenItems) {
+                        var hiddenItemWidth = $moreContentListItem.hiddenItemWidths[0];
+
+                        if (hasHiddenItems == 1) {
+                            // Only one item hidden? Could it be displayed if we removed the "more content" button?
+                            if (navigationTotalWidth >= itemsTotalWidth - moreContentListItemWidth + hiddenItemWidth) {
+                                $moreContentListItem.showPreviousItem();
+                                $moreContentListItem.detach();
+                            }
+                        } else {
+                            if (navigationTotalWidth >= itemsTotalWidth + hiddenItemWidth) {
+                                $moreContentListItem.showPreviousItem();
+                            }
                         }
-                    } else {
-                        if(navigationTotalWidth >= itemsTotalWidth + hiddenItemWidth) {
-                            $moreContentListItem.showPreviousItem();
-                        }
+
                     }
 
                 }
 
-            }
-
-        };
+            };
+        }
 
         /**
          * Setup $moreContentButton

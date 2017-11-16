@@ -1,8 +1,10 @@
 // NAVIGATION
 
 .primary-navigation {
-  @include span-columns(8);
-  min-height: $navigation-height;
+  .horizontal-header & {
+    @include span-columns(8);
+    min-height: $navigation-height;
+  }
 }
 
 .navigation {
@@ -28,8 +30,11 @@
 
 // NAVIGATION ITEM
 .navigation__item {
-  float: left;
-  position: relative;
+
+  .horizontal-header & {
+    float: left;
+    position: relative;
+  }
 
   border-right: solid 2px $ghost-black;
   &:first-child {

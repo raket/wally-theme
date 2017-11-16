@@ -251,3 +251,13 @@
   }
 
 }
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
