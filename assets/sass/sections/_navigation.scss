@@ -13,7 +13,7 @@
   .horizontal-header & {
     background-color: $white;
   }
-  
+
   display: none;
   @include media($medium) {
     display: block;
@@ -38,11 +38,10 @@
   .horizontal-header & {
     float: left;
     position: relative;
-  }
-
-  border-right: solid 2px $ghost-black;
-  &:first-child {
-    border-left: solid 2px $ghost-black;
+    border-right: solid 2px $ghost-black;
+    &:first-child {
+      border-left: solid 2px $ghost-black;
+    }
   }
 
   &.is-current, a:hover, a:focus, a:active {
