@@ -9,7 +9,11 @@
 
 .navigation {
   min-height: $navigation-height;
-  background-color: $white;
+
+  .horizontal-header & {
+    background-color: $white;
+  }
+  
   display: none;
   @include media($medium) {
     display: block;

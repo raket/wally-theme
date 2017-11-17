@@ -92,6 +92,12 @@ button[type="submit"] {
   @extend %c-white;
 }
 
+// Vertical header settings
+&.vertical-header {
+  @import 'vertical-header';
+}
+
+
 // Sidebar
 .subpages__item button:hover {
   @extend %bc-p;
