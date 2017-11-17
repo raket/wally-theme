@@ -75,6 +75,30 @@ $options = array(
 		'title'   => 'Layout',
 		'options' => array(
 
+			'header_setting' => array(
+				'type'        => 'select',
+				'value'       => 'top',
+				'label'       => 'Placering av sidhuvud',
+				'desc'        => 'Välj om sidhuvudet ska synas till vertikalt till vänster eller horisontellt längst upp',
+				'choices'     => array(
+					'horizontal-header' => 'Horisontellt i topp',
+					'vertical-header'   => 'Vertikalt till vänster',
+				),
+				'no-validate' => false,
+			),
+
+			'header_height' => array(
+				'type'        => 'select',
+				'value'       => 'normal-header-height',
+				'label'       => 'Sidhuvudets höjd',
+				'desc'        => 'Välj om sidhuvudet ska vara högt eller lågt',
+				'choices'     => array(
+					'normal-header-height' => 'Normal höjd',
+					'high-header-height'   => 'Extra hög höjd',
+				),
+				'no-validate' => false,
+			),
+
 			'sidebar_setting' => array(
 				'type'        => 'select',
 				'value'       => 'left',
@@ -98,32 +122,6 @@ $options = array(
 				),
 				'no-validate' => false,
 			),
-
-			'header_setting' => array(
-				'type'        => 'select',
-				'value'       => 'top',
-				'label'       => 'Placering av sidhuvud',
-				'desc'        => 'Välj om sidhuvudet ska synas till vertikalt till vänster eller horisontellt längst upp',
-				'choices'     => array(
-					'horizontal-header' => 'Horisontellt i topp',
-					'vertical-header'   => 'Vertikalt till vänster',
-				),
-				'no-validate' => false,
-			),
-
-
-			'header_height' => array(
-				'type'        => 'select',
-				'value'       => 'normal-header-height',
-				'label'       => 'Sidhuvudets höjd',
-				'desc'        => 'Välj om sidhuvudet ska vara högt eller lågt',
-				'choices'     => array(
-					'normal-header-height' => 'Normal höjd',
-					'high-header-height'   => 'Extra hög höjd',
-				),
-				'no-validate' => false,
-			),
-
 
 			'appearance' => array(
 				'type'        => 'select',
