@@ -1,5 +1,55 @@
 (function($) {
 
+    $(document).ready(function () {
+        /**
+         * Sidebar logic
+         */
+        var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        var mainContent = 0;
+        var bottom = false;
+        var top = false;
+        var onSidebar = false;
+
+
+        $('.main-content').on('scroll', function () {
+            if(mobile)return;
+            var scrollValue = mainContent - $(this).scrollTop();
+            mainContent = $(this).scrollTop();
+
+            $(this).bind('scroll', chk_scroll);
+
+
+            var siteheader = $('.site-header');
+            siteheader.scrollTop(siteheader.scrollTop() - scrollValue);
+        });
+
+        $('.site-header').on("mouseenter mouseleave", function (event) {
+            onSidebar = event.type === "mouseenter";
+        });
+
+
+        function chk_scroll(e) {
+            var elem = $(e.currentTarget);
+            bottom = elem[0].scrollHeight - elem.scrollTop() < elem.outerHeight() + 5;
+            top = elem.scrollTop() === 0;
+        }
+
+        $(document).bind('mousewheel', function (evt) {
+            if(mobile)return;
+            var siteheader = $('.site-header');
+            var mainContent = $('.main-content');
+            var delta = evt.originalEvent.wheelDelta;
+            if (bottom && delta < 0  || onSidebar || top && delta > 0) {
+                siteheader.scrollTop(siteheader.scrollTop() - (delta / 2));
+                mainContent.scrollTop(mainContent.scrollTop() - (delta / 2));
+                /** TODO
+                 * Add smooth scrolling
+                 */
+            }
+
+        });
+    });
+
     FastClick.attach(document.body);
 
     window.isMobile = function() {
