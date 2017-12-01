@@ -1,32 +1,10 @@
 .sidebar-spacer-sticky-right {
-  width: 31.76157% !important;
-}
+   width: 31.76157% !important;
+ }
 .sidebar-spacer-sticky-left {
   margin-right: 2.35765% !important;
   width: 31.76157% !important;
 }
-
-//.sidebar {
-//  &.stuck {
-//    position: fixed;
-//    z-index: 0;
-//    top: 0;
-//    width: 100%;
-//    max-width: 1160px;
-//    @include media(max-width 1240px) {
-//      left: 0;
-//      padding: 0 1rem;
-//    }
-//    > * {
-//      @include media($medium) {
-//        @include span-columns(4);
-//      }
-//      margin: 0 !important;
-//      float: right !important;
-//      clear: both !important;
-//    }
-//  }
-//}
 
 .sidebar,
 .sidebar__wrapper {

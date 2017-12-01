@@ -7,6 +7,9 @@ $main-vertical-max-width: 50rem;
 //Sidebar
 $sidebar-width: 18.4rem;
 
+//Sub Sidebar
+$sub-sidebar-font-size: 16px;
+
 // Media queries
 $tiny: new_breakpoint(max-width 767px);
 $small: new_breakpoint(min-width 768px);
