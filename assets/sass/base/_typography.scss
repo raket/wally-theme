@@ -6,11 +6,11 @@
   }
   body.body-font-#{$key} {
     font-family: #{$name};
-    font-weight: 200;
+    font-weight: 400;
 
     button, input {
       font-family: #{$name};
-      font-weight: 200;
+      font-weight: 400;
     }
 
   }
