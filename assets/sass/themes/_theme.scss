@@ -92,12 +92,6 @@ button[type="submit"] {
   @extend %c-white;
 }
 
-// Vertical header settings
-&.vertical-header {
-  @import 'vertical-header';
-}
-
-
 // Sidebar
 .subpages__item button:hover {
   @extend %bc-p;
@@ -314,4 +308,53 @@ a.edit-btn {
 // Search
 .search__input:focus {
   @extend %oc-p;
+}
+
+
+// Vertical header settings
+&.vertical-header {
+  .site-header .navigation {
+    //color: $white;
+    a, button:not([type=submit]) {
+      color: $white;
+    }
+    button[type="submit"] {
+      color: $white;
+    }
+    .navigation__subitem a {
+      color: $white;
+    }
+    a:hover {
+      outline-color: $white;
+    }
+  }
+
+  .site-navigation *:focus {
+    outline-color: $white;
+  }
+
+  .navigation__item a:hover span {
+    border-color: $white;
+  }
+
+  .navigation__item.is-current,
+  .navigation__item.current-page-ancestor,
+  .navigation__item a:focus,
+  .navigation__item a:active {
+    outline-color: $white;
+  }
+
+  .navigation__item.is-current span,
+  .navigation__item a:focus span,
+  .navigation__item a:active span {
+    border-color: white;
+  }
+
+  .site-header .list-group__item.is-current > a,
+  .site-header .list-group__subitem.is-current > a {
+    &, &:hover {
+      background-color: $white;
+      @extend %c-p;
+    }
+  }
 }
