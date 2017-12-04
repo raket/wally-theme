@@ -33,14 +33,12 @@
     bottom: 1rem !important;
   }
 
-
   .mejs-controls {
     background: $white;
     border: 1px solid rgba( 0, 0, 0, 0.1);
     height: 3rem;
     white-space: nowrap;
-
-    display: block !important;
+    
     visibility: visible !important;
     opacity: 1 !important;
     bottom: -3rem;
