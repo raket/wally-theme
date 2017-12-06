@@ -9,6 +9,7 @@
                     </i>
                 </button>
 			<?php endif ?>
+
 			<?php $logo = ($logo_img = fw_get_db_customizer_option('logo')) ? $logo_img : false ?>
             <a href="<?php echo esc_url( home_url() ) ?>" class="site-title <?php if ($logo) echo 'has-image' ?>">
 				<?php if ($logo): ?>
