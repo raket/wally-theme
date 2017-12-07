@@ -220,56 +220,32 @@ nav.subpages {
     border-bottom: solid 1px rgba(0,0,0,0.1);
 
     *:focus{
-      //background-color: $default-focus-color !important;
+      background-color: $default-focus-color !important;
     }
     a {
       //background: $default-color;
       //border-bottom-color: $default-color;
       &:hover span{
-        border: none !important;
+        //border: none;
       }
       span {
         //color: $white-font;
       }
       button {
-        //color: $white-font;
         background-color: rgba(0,0,0,0.1);
         border-left: none !important;
       }
       &:hover {
-        //background-color: $default-light-color;
-        //border-bottom-color: $default-color !important;
+        background-color: $default-light-color;
+        border-bottom-color: $default-color !important;
       }
     }
 
     button {
-      //border-left: solid 2px $sidebar-divider-color;
-      &:before {
-        //color: $white-font;
-      }
-      &:hover {
-        //border-color: $default-light-color !important;
-      }
-    }
     &:first-child {
       border-top: solid 2px rgba(0,0,0,0.1);
     }
 
-  }
-
-  .list-group__item.is-current > a {
-
-    &:hover, &:focus {
-      //background-color: $default-light-color !important;
-    }
-    //background-color: $default-dark-color !important;
-  }
-
-  .list-group__subitem.is-current > a {
-    &:hover {
-      //background-color: $default-light-color !important;
-    }
-    //background-color: $default-dark-color !important;
   }
 
   nav.primary-navigation-wally-sub {

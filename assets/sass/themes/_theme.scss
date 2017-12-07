@@ -313,6 +313,11 @@ a.edit-btn {
 
 // Vertical header settings
 &.vertical-header {
+
+  *:focus {
+    outline-color: white;
+  }
+
   .site-header .navigation {
     //color: $white;
     a, button:not([type=submit]) {
@@ -333,8 +338,15 @@ a.edit-btn {
     outline-color: $white;
   }
 
-  .navigation__item a:hover span {
+  .site-header .navigation__item a:hover span {
     border-color: $white;
+  }
+
+  .site-header__tools {
+        a:focus{
+          @extend %c-p;
+          @extend %oc-p;
+        }
   }
 
   .navigation__item.is-current,
@@ -344,9 +356,9 @@ a.edit-btn {
     outline-color: $white;
   }
 
-  .navigation__item.is-current span,
-  .navigation__item a:focus span,
-  .navigation__item a:active span {
+  .site-header .navigation__item.is-current span,
+  .site-header .navigation__item a:focus span,
+  .site-header .navigation__item a:active span {
     border-color: white;
   }
 
