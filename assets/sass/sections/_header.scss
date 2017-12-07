@@ -163,7 +163,7 @@
 
   .site-header {
     overflow: hidden;
-    width: $sidebar-width;
+    width: auto;
     min-width: $sidebar-width;
     height: auto;
     &__tools {

@@ -92,3 +92,17 @@
   background-color: $tertiary;
   border: 2px solid $primary;
 }
+
+.vertical-header .list-group {
+  .list-group__item {
+    a {
+      span {
+        border-bottom: 2px solid $ghost-black;
+      }
+
+      &:hover, &:focus, &:active {
+        //text-decoration: underline;
+      }
+    }
+  }
+}

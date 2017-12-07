@@ -357,4 +357,19 @@ a.edit-btn {
       @extend %c-p;
     }
   }
+
+  .site-header .list-group__item.is-current a button:before {
+    @extend %c-p;
+  }
+
+  .site-header .list-group__item,
+  .site-header .list-group__subitem {
+    a:hover,
+    a:focus {
+      border-color: $ghost-black;
+      span {
+        border-color: $ghost-black;
+      }
+    }
+  }
 }
