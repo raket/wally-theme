@@ -130,6 +130,21 @@
     }
   }
 
+  .site-title {
+    width: 100%;
+    display: block;
+
+    img {
+      margin: auto;
+      display: block;
+    }
+
+    @include media($small) {
+      padding: 2rem;
+      margin-bottom: 0 !important;
+    }
+  }
+
   .site-header__tools {
     display: flex;
     align-items: center;
