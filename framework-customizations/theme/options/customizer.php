@@ -77,7 +77,7 @@ $options = array(
 
 			'header_setting' => array(
 				'type'        => 'select',
-				'value'       => 'top',
+				'value'       => 'horizontal-header',
 				'label'       => 'Placering av sidhuvud',
 				'desc'        => 'Välj om sidhuvudet ska synas till vertikalt till vänster eller horisontellt längst upp',
 				'choices'     => array(
