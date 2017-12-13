@@ -94,6 +94,9 @@ $wssm = get_option('wally_settings_social_media');
 		</div>
 	</div>
 </footer>
+</div><!-- End main-content -->
+</div><!-- End main-wrapper -->
+
 
 <!-- WP footer -->
 <?php wp_footer() ?>

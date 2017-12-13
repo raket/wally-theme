@@ -1,13 +1,19 @@
 // NAVIGATION
 
 .primary-navigation {
-  @include span-columns(8);
-  min-height: $navigation-height;
+  .horizontal-header & {
+    @include span-columns(8);
+    min-height: $navigation-height;
+  }
 }
 
 .navigation {
   min-height: $navigation-height;
-  background-color: $white;
+
+  .horizontal-header & {
+    background-color: $white;
+  }
+
   display: none;
   @include media($medium) {
     display: block;
@@ -28,12 +34,14 @@
 
 // NAVIGATION ITEM
 .navigation__item {
-  float: left;
-  position: relative;
 
-  border-right: solid 2px $ghost-black;
-  &:first-child {
-    border-left: solid 2px $ghost-black;
+  .horizontal-header & {
+    float: left;
+    position: relative;
+    border-right: solid 2px $ghost-black;
+    &:first-child {
+      border-left: solid 2px $ghost-black;
+    }
   }
 
   &.is-current, a:hover, a:focus, a:active {
@@ -157,5 +165,95 @@ nav.subpages {
   }
   .page_item_has_children a {
         padding-right: 2.5rem;
+  }
+}
+
+// Vertical menu
+.vertical-header {
+
+  .primary-navigation-wally-sub {
+    margin-top: 2rem;
+    .list-group__item {
+      a {
+        border: none;
+      }
+      span {
+        font-size: $sub-sidebar-font-size;
+      }
+    }
+  }
+
+  .site-navigation {
+    //background-color: $default-color !important;
+    padding-bottom: 2rem;
+    .container {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .sidebar-navigation {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 0;
+
+    }
+  }
+
+  .list-group__item{
+    .is-open{
+      //background-color: $default-dark-color;
+    }
+  }
+
+  .list-group__sublist{
+    a{
+      //background: darken($default-dark-color, 2%) !important;
+      &:hover {
+        //background: $default-light-color;
+      }
+    }
+  }
+
+  .list-group__item {
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+
+    *:focus{
+      background-color: $default-focus-color !important;
+    }
+    a {
+      //background: $default-color;
+      //border-bottom-color: $default-color;
+      &:hover span{
+        //border: none;
+      }
+      span {
+        //color: $white-font;
+      }
+      button {
+        background-color: rgba(0,0,0,0.1);
+        border-left: none !important;
+      }
+      &:hover {
+        background-color: $default-light-color;
+        border-bottom-color: $default-color !important;
+      }
+    }
+
+    button {
+    &:first-child {
+      border-top: solid 2px rgba(0,0,0,0.1);
+    }
+
+  }
+
+  nav.primary-navigation-wally-sub {
+    .list-group__item:first-child {
+      border-top: none !important;
+    }
+    .list-group__item span {
+      font-size: 16px;
+    }
   }
 }

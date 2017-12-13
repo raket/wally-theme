@@ -22,4 +22,21 @@
     border-color: $black;
   }
 
+  &.vertical-header {
+    .site-header .navigation {
+      //color: $white;
+      a, button:not([type=submit]) {
+        color: $black;
+      }
+      button[type="submit"] {
+        color: $white;
+      }
+      .navigation__subitem a {
+        color: $white;
+      }
+      a:hover {
+        outline-color: $black;
+      }
+    }
+  }
 }
