@@ -3,8 +3,9 @@
         <div class="row">
 
             <?php
+                $header_setting = fw_get_db_customizer_option('header_setting');
                 $sidebar_location = fw_get_db_customizer_option('sidebar_setting');
-                if($sidebar_location === 'left') {get_sidebar();}
+                if($sidebar_location === 'left' && $header_setting != 'vertical-header' ) {get_sidebar();}
             ?>
 
             <section id="site-content" class="site-content" tabindex="0" id="main" role="region" aria-labelledby="page-title-<?php echo $post->ID ?>">
@@ -37,7 +38,7 @@
                 <?php endwhile ?>
 
             </section>
-            <?php if($sidebar_location === 'right') {get_sidebar();} ?>
+            <?php if($sidebar_location === 'right' && $header_setting != 'vertical-header' ) {get_sidebar();} ?>
         </div>
     </div>
 <?php get_footer() ?>

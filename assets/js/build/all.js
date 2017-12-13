@@ -32,6 +32,56 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 !function(){"use strict";function t(s){this.options=e.extend({},i.defaults,t.defaults,s),this.element=this.options.element,this.$element=e(this.element),this.createWrapper(),this.createWaypoint()}var e=window.jQuery,i=window.Waypoint;t.prototype.createWaypoint=function(){var t=this.options.handler;this.waypoint=new i(e.extend({},this.options,{element:this.wrapper,handler:e.proxy(function(e){var i=this.options.direction.indexOf(e)>-1,s=i?this.$element.outerHeight(!0):"";this.$wrapper.height(s),this.$element.toggleClass(this.options.stuckClass,i),t&&t.call(this,e)},this)}))},t.prototype.createWrapper=function(){this.options.wrapper&&this.$element.wrap(this.options.wrapper),this.$wrapper=this.$element.parent(),this.wrapper=this.$wrapper[0]},t.prototype.destroy=function(){this.$element.parent()[0]===this.wrapper&&(this.waypoint.destroy(),this.$element.removeClass(this.options.stuckClass),this.options.wrapper&&this.$element.unwrap())},t.defaults={wrapper:'<div class="sticky-wrapper" />',stuckClass:"stuck",direction:"down right"},i.Sticky=t}();
 (function($) {
 
+    $(document).ready(function () {
+        /**
+         * Sidebar logic
+         */
+        var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        var mainContent = 0;
+        var bottom = false;
+        var top = false;
+        var onSidebar = false;
+
+
+        $('.main-content').on('scroll', function () {
+            if(mobile)return;
+            var scrollValue = mainContent - $(this).scrollTop();
+            mainContent = $(this).scrollTop();
+
+            $(this).bind('scroll', chk_scroll);
+
+
+            var siteheader = $('.site-header');
+            siteheader.scrollTop(siteheader.scrollTop() - scrollValue);
+        });
+
+        $('.site-header').on("mouseenter mouseleave", function (event) {
+            onSidebar = event.type === "mouseenter";
+        });
+
+
+        function chk_scroll(e) {
+            var elem = $(e.currentTarget);
+            bottom = elem[0].scrollHeight - elem.scrollTop() < elem.outerHeight() + 5;
+            top = elem.scrollTop() === 0;
+        }
+
+        $(document).bind('mousewheel', function (evt) {
+            if(mobile)return;
+            var siteheader = $('.site-header');
+            var mainContent = $('.main-content');
+            var delta = evt.originalEvent.wheelDelta;
+            if (bottom && delta < 0  || onSidebar || top && delta > 0) {
+                siteheader.scrollTop(siteheader.scrollTop() - (delta / 2));
+                mainContent.scrollTop(mainContent.scrollTop() - (delta / 2));
+                /** TODO
+                 * Add smooth scrolling
+                 */
+            }
+
+        });
+    });
+
     FastClick.attach(document.body);
 
     window.isMobile = function() {
@@ -539,13 +589,70 @@ jQuery(document).ready(function($){
     var $navigation,
         $moreContentListItem,
         $moreContentButton,
-        $moreContentSubList;
+        $moreContentSubList,
+        $verticalLayout;
 
     $(document).ready(function() {
 
         /**
          * Setup $navigation
          */
+
+        $verticalLayout = $('body').hasClass('vertical-header');
+
+        if( $verticalLayout ) {
+            console.log($verticalLayout);
+            /**
+             * Sidebar logic
+             */
+            var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            var mainContent = 0;
+            var bottom = false;
+            var top = false;
+            var onSidebar = false;
+
+
+            $('.main-content').on('scroll', function () {
+                console.log($('.main-content'));
+                if(mobile)return;
+                var scrollValue = mainContent - $(this).scrollTop();
+                mainContent = $(this).scrollTop();
+
+                $(this).bind('scroll', chk_scroll);
+
+
+                var siteheader = $('.site-header');
+                siteheader.scrollTop(siteheader.scrollTop() - scrollValue);
+            });
+
+            $('.site-header').on("mouseenter mouseleave", function (event) {
+                onSidebar = event.type === "mouseenter";
+            });
+
+
+            function chk_scroll(e) {
+                var elem = $(e.currentTarget);
+                bottom = elem[0].scrollHeight - elem.scrollTop() < elem.outerHeight() + 5;
+                top = elem.scrollTop() === 0;
+            }
+
+            $(document).bind('mousewheel', function (evt) {
+                if(mobile)return;
+                var siteheader = $('.site-header');
+                var mainContent = $('.main-content');
+                var delta = evt.originalEvent.wheelDelta;
+                if (bottom && delta < 0  || onSidebar || top && delta > 0) {
+                    siteheader.scrollTop(siteheader.scrollTop() - (delta / 2));
+                    mainContent.scrollTop(mainContent.scrollTop() - (delta / 2));
+                    /** TODO
+                     * Add smooth scrolling
+                     */
+                }
+
+            });
+        }
+
+
         $navigation = $('.primary-navigation > ul');
 
         $navigation.fixOverflowingItems = function() {
@@ -559,7 +666,7 @@ jQuery(document).ready(function($){
                 itemsTotalWidth += $(this).outerWidth();
             });
 
-            if(navigationTotalWidth < itemsTotalWidth) {
+            if( navigationTotalWidth < itemsTotalWidth && ! $verticalLayout ) {
                 // Overflow found
 
                 // Is the moreContentListItem attached?
@@ -741,6 +848,59 @@ jQuery(document).ready(function($){
 
 
 })(jQuery, window, document);
+
+(function ($) {
+    $(document).ready(function () {
+        /**
+         * Sidebar logic
+         */
+        var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        var mainContent = 0;
+        var bottom = false;
+        var top = false;
+        var onSidebar = false;
+
+
+        $('.vertical-header .main-content').on('scroll', function () {
+            if(mobile)return;
+            var scrollValue = mainContent - $(this).scrollTop();
+            console.log(scrollValue);
+            mainContent = $(this).scrollTop();
+
+            $(this).bind('scroll', chk_scroll);
+
+
+            var siteheader = $('.vertical-header .site-header');
+            siteheader.scrollTop(siteheader.scrollTop() - scrollValue);
+        });
+
+        $('.vertical-header .site-header').on("mouseenter mouseleave", function (event) {
+            onSidebar = event.type === "mouseenter";
+        });
+
+
+        function chk_scroll(e) {
+            var elem = $(e.currentTarget);
+            bottom = elem[0].scrollHeight - elem.scrollTop() < elem.outerHeight() + 5;
+            top = elem.scrollTop() === 0;
+        }
+
+        $(document).bind('mousewheel', function (evt) {
+            if(mobile)return;
+            var siteheader = $('.vertical-header .site-header');
+            var mainContent = $('.vertical-header .main-content');
+            var delta = evt.originalEvent.wheelDelta;
+            if (bottom && delta < 0  || onSidebar || top && delta > 0) {
+                siteheader.scrollTop(siteheader.scrollTop() - (delta / 2));
+                mainContent.scrollTop(mainContent.scrollTop() - (delta / 2));
+                /** TODO
+                 * Add smooth scrolling
+                 */
+            }
+
+        });
+    });
+})(jQuery);
 (function($) {
 
     var currentPage = 2;

@@ -1,3 +1,15 @@
+
+//Content settings
+$main-left-margin: 2rem;
+$main-max-width: 40rem;
+$main-vertical-max-width: 50rem;
+
+//Sidebar
+$sidebar-width: 18.4rem;
+
+//Sub Sidebar
+$sub-sidebar-font-size: 16px;
+
 // Media queries
 $tiny: new_breakpoint(max-width 767px);
 $small: new_breakpoint(min-width 768px);
@@ -98,6 +110,7 @@ $fourtiary: $light-green;
 
 
 // Spacing
+$base-spacing: 2rem;
 $tiny-spacing: 0.25rem;
 $small-spacing: 0.5rem;
 $regular-spacing: 1rem;

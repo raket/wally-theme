@@ -309,3 +309,79 @@ a.edit-btn {
 .search__input:focus {
   @extend %oc-p;
 }
+
+
+// Vertical header settings
+&.vertical-header {
+
+  *:focus {
+    outline-color: white;
+  }
+
+  .site-header .navigation {
+    //color: $white;
+    a, button:not([type=submit]) {
+      color: $white;
+    }
+    button[type="submit"] {
+      color: $white;
+    }
+    .navigation__subitem a {
+      color: $white;
+    }
+    a:hover {
+      outline-color: $white;
+    }
+  }
+
+  .site-navigation *:focus {
+    outline-color: $white;
+  }
+
+  .site-header .navigation__item a:hover span {
+    border-color: $white;
+  }
+
+  .site-header__tools {
+        a:focus{
+          @extend %c-p;
+          @extend %oc-p;
+        }
+  }
+
+  .navigation__item.is-current,
+  .navigation__item.current-page-ancestor,
+  .navigation__item a:focus,
+  .navigation__item a:active {
+    outline-color: $white;
+  }
+
+  .site-header .navigation__item.is-current span,
+  .site-header .navigation__item a:focus span,
+  .site-header .navigation__item a:active span {
+    border-color: white;
+  }
+
+  .site-header .list-group__item.is-current > a,
+  .site-header .list-group__subitem.is-current > a {
+    &, &:hover {
+      background-color: $white;
+      @extend %c-p;
+    }
+  }
+
+  .site-header .list-group__item.is-current a button:before {
+    @extend %c-p;
+  }
+
+  .site-header .list-group__item,
+  .site-header .list-group__subitem {
+    a:hover,
+    a:focus {
+      border-color: $ghost-black;
+      span {
+        border-color: $ghost-black;
+      }
+    }
+  }
+}

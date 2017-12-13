@@ -1,5 +1,9 @@
 .search-form {
   @include span-columns(4);
+
+  @include media($tiny-only) {
+    width: 100%;
+  }
 }
 
 .search__form {

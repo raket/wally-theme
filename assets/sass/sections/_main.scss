@@ -15,3 +15,104 @@ section.site-content {
     margin-top: 0;
   }
 }
+
+.vertical-header {
+
+  .container {
+    max-width: $main-vertical-max-width;
+  }
+  .main {
+
+    @include media($small) {
+      background-color: #FFF;
+      .container {
+        padding: 0;
+        margin-left: $main-left-margin;
+        margin-right: $main-left-margin;
+      }
+    }
+  }
+
+  body.page-template-full {
+    .container {
+      max-width: $main-max-width * 1.25;
+    }
+  }
+
+  .site-content, #site-content {
+    background-color: white;
+  }
+
+  .main-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .main-content {
+    flex: 1 0 auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    p img, iframe {
+      margin-bottom: 2rem;
+    }
+  }
+
+  figure.image {
+    img {
+      display: none;
+    }
+    &--medium {
+      padding-bottom: 50% !important;
+    }
+    &--large {
+      padding-bottom: 75% !important;
+    }
+  }
+
+  .main {
+    flex-direction: column;
+
+    @include media($small) {
+      padding-top: 0;
+    }
+  }
+
+  .fw-main-row {
+    border-top: none;
+  }
+
+  @media screen and (min-width: 864px) {
+    .navigation {
+      display: block;
+    }
+    .main-wrapper {
+      flex-direction: row;
+    }
+
+    .main {
+      flex: 1;
+    }
+
+    .off-canvas__open {
+      display: none;
+    }
+    .has-image {
+      padding: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 864px) {
+    .main {
+      .container {
+        margin-left: 0;
+      }
+    }
+
+    .has-image img {
+      max-width: 66%;
+    }
+
+  }
+}
