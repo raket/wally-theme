@@ -343,7 +343,13 @@ a.edit-btn {
     }
     a:hover {
       outline-color: $white;
+      @extend %c-s;
+
+      & button:not([type=submit]) {
+        @extend %c-s;
+      }
     }
+
   }
 
   .site-navigation {
@@ -396,12 +402,16 @@ a.edit-btn {
   .site-header .list-group__subitem.is-current > a {
     &, &:hover {
       @extend %bgc-t;
-      @extend %c-p;
+      @extend %c-s;
     }
   }
 
   .site-header .list-group__item.is-current a button:before {
     @extend %c-p;
+  }
+
+  .site-header .list-group__item.is-current a button:hover {
+    @extend %c-s;
   }
 
   .site-header .list-group__item,
@@ -426,9 +436,6 @@ a.edit-btn {
       @extend %bc-p;
       &:hover span {
         border: none;
-      }
-      span {
-        @extend %c-white;
       }
       button {
         background-color: rgba(0, 0, 0, 0.1);
