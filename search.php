@@ -23,7 +23,22 @@
 			<?php endif ?>
 
             <div class="pagination no-margin">
-				<?php the_posts_pagination( array( 'type' => 'list' ) ) ?>
+				<?php
+				global $wp_query;
+
+				$big        = 999999999;
+				$translated = __( 'Sida', 'wally-theme' );
+
+				echo paginate_links( array(
+					'base'               => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format'             => '?paged=%#%',
+					'current'            => max( 1, get_query_var( 'paged' ) ),
+					'total'              => $wp_query->max_num_pages,
+					'prev_text'          => __( '« Föregående sida' ),
+					'next_text'          => __( 'Nästa sida »' ),
+					'before_page_number' => '<span class="screen-reader-text">' . $translated . ' </span>'
+				) );
+				?>
             </div>
 
 			<?php do_action( "wally_before_post_loop" );
