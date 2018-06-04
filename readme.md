@@ -20,7 +20,7 @@ Wally är ett grundtema som har öppen källkod. Det speciella med Wally är att
 
 För mer information om Wally, besök http://wally-wp.se.
 
-##Installation
+## Installation
 
 1. I admin-panelen, gå till Utseende -> Teman och klicka på "Lägg till nytt"-knappen
 2. Klicka på "Ladda upp tema"-knappen och välj den komprimerade filen du precis laddat ned
@@ -30,10 +30,10 @@ För mer information om Wally, besök http://wally-wp.se.
 
 ## Ändringslogg
 
-###1.2
+### 1.2
 
-* Fixat bredden på mobilmenyn i små enheter.
-* Gjort paginerings-länkar mer tillgängliga
+* Bättre färger på länkar i huvudmeny vid hover och aktuell länk.
+* Gjort paginerings-länkar mer tillgängliga.
 
 ### 1.1
 
