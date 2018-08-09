@@ -37,10 +37,11 @@ add_filter( 'pre_comment_content', 'esc_html' );
 //	Dump'n'Die
 //---------------------------------------------------------------------------------
 
-function dd($var)
-{
-    echo '<pre>';
-    var_dump($var);
-    echo '</pre>';
-    die();
+if ( ! function_exists( 'dd' ) ) {
+	function dd( $var ) {
+		echo '<pre>';
+		var_dump( $var );
+		echo '</pre>';
+		die();
+	}
 }
