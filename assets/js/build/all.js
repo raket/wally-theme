@@ -485,7 +485,7 @@ jQuery(document).ready(function($){
             e.preventDefault();
             e.stopPropagation();
 
-            var $subList = $(this).parent().siblings('ul');
+            var $subList = $(this).siblings('ul');
 
             $subList.slideToggle();
             $subList.toggleClass('is-open');
