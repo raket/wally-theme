@@ -222,7 +222,7 @@ function _w_mobile_navigation_markup( $navigation ) {
 			$li = pq( $li );
 
 			if ( $li->hasClass( 'is-parent' ) ) {
-				$li->children( 'a' )->append( '<button class="off-canvas__navigation__toggle" role="button" title="Visa undersidor"></button>' );
+				$li->append( '<button class="off-canvas__navigation__toggle" role="button" title="Visa undersidor"></button>' );
 			};
 		}
 
