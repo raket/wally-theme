@@ -1174,8 +1174,9 @@ function _wally_video_thumbnail( $html ) {
 
 	global $post;
 
-	$type = get_post_meta( $post->ID, 'thumbnail_type', true );
-	$url  = get_post_meta( $post->ID, 'thumbnail_video', true );
+	$type_meta = get_post_meta( $post->ID, 'thumbnail_type', true );
+	$type      = ( ! empty ( $type_meta ) ) ? $type_meta : 'image';
+	$url       = get_post_meta( $post->ID, 'thumbnail_video', true );
 
 	if ( $type == 'video' ) {
 		$image = '';
