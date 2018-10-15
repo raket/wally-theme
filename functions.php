@@ -337,52 +337,51 @@ function _w_build_list_group( $output ) {
 /**
  * Build a child list group with phpQuery for vertical menu.
  */
-add_filter('w_child_list_group', '_w_child_build_list_group', 10);
-function _w_child_build_list_group($output) {
+add_filter( 'w_child_list_group', '_w_child_build_list_group', 10 );
+function _w_child_build_list_group( $output ) {
 
-	$header_setting = ( fw_get_db_customizer_option('header_setting') ) ?  fw_get_db_customizer_option('header_setting') : 'horizontal-header';
+	$header_setting = ( fw_get_db_customizer_option( 'header_setting' ) ) ? fw_get_db_customizer_option( 'header_setting' ) : 'horizontal-header';
 
-    if ( $header_setting != 'vertical-header' ) {
-        return;
-    }
+	if ( $header_setting != 'vertical-header' ) {
+		return;
+	}
 
-	if( current_theme_supports( 'phpquery') ) {
-		$doc = phpQuery::newDocument($output);
+	if ( current_theme_supports( 'phpquery' ) ) {
+		$doc = phpQuery::newDocument( $output );
 
-		$items = $doc->find('li');
-		foreach(pq($items) as $item) {
-			$item = pq($item);
+		$items = $doc->find( 'li' );
+		foreach ( pq( $items ) as $item ) {
+			$item = pq( $item );
 			//Add pills appearance for categories
-			if($item->hasClass('cat-item')) {
-				$item_class= 'pills__item';
+			if ( $item->hasClass( 'cat-item' ) ) {
+				$item_class    = 'pills__item';
 				$subitem_class = $item_class;
-				$item->parents('ul')->addClass('pills');
-				$item->children('a')->addClass('pills__link');
+				$item->parents( 'ul' )->addClass( 'pills' );
+				$item->children( 'a' )->addClass( 'pills__link' );
 			} else {
-				$subitem_class= 'list-group__subitem';
-				$item_class= 'list-group__item';
+				$subitem_class = 'list-group__subitem';
+				$item_class    = 'list-group__item';
 			}
 
 
-
-			if($item->parent()->parent()->is('li')) {
-				$item->addClass($subitem_class);
+			if ( $item->parent()->parent()->is( 'li' ) ) {
+				$item->addClass( $subitem_class );
 			} else {
-				$item->addClass($item_class);
+				$item->addClass( $item_class );
 			}
 
-			$item->children('a')->wrapInner('<span>');
+			$item->children( 'a' )->wrapInner( '<span>' );
 
 			// Filter wordpress classes
-			$classes = explode(' ', $item->attr('class'));
-			$item->removeAttr('class');
-			$item->attr('class', implode(' ', _w_set_navigation_classes($classes)));
+			$classes = explode( ' ', $item->attr( 'class' ) );
+			$item->removeAttr( 'class' );
+			$item->attr( 'class', implode( ' ', _w_set_navigation_classes( $classes ) ) );
 
 			// Add sublists
-			$sub_list = pq($item->children('ul'));
-			if($sub_list->length) {
-				$sub_list->addClass('list-group__sublist is-open');
-				$item->children('a')->addClass('is-open')->append('<button role="button" title="Visa undersidor" data-collapse-trigger></button>');
+			$sub_list = pq( $item->children( 'ul' ) );
+			if ( $sub_list->length ) {
+				$sub_list->addClass( 'list-group__sublist is-open' );
+				$item->children( 'a' )->addClass( 'is-open' )->append( '<button role="button" title="Visa undersidor" data-collapse-trigger></button>' );
 			}
 
 			// Open current items parent lists
@@ -393,8 +392,8 @@ function _w_child_build_list_group($output) {
 					   }*/
 
 			//Add class so the jquery will function
-			if($item->hasClass('current-page-ancestor')) {
-				$item->addClass('current_page_ancestor');
+			if ( $item->hasClass( 'current-page-ancestor' ) ) {
+				$item->addClass( 'current_page_ancestor' );
 			}
 
 		}
@@ -405,6 +404,7 @@ function _w_child_build_list_group($output) {
 
 		return $html;
 	}
+
 	return $output;
 
 }
@@ -1126,7 +1126,7 @@ function _w_customizer_classes( $classes ) {
 	$classes[] = fw_get_db_customizer_option( 'image_height' );
 	$classes[] = fw_get_db_customizer_option( 'header_height' );
 	$classes[] = fw_get_db_customizer_option( 'appearance' );
-	$classes[] = fw_get_db_customizer_option('header_setting');
+	$classes[] = fw_get_db_customizer_option( 'header_setting' );
 
 	return $classes;
 }
