@@ -155,6 +155,14 @@ function _w_init() {
 	) );
 }
 
+//---------------------------------------------------------------------------------
+//	Remove WP's default ID:s for menu items
+//---------------------------------------------------------------------------------
+add_filter('nav_menu_item_id', '_w_css_attributes_filter', 100, 1);
+function _w_css_attributes_filter($var) {
+	return is_array($var) ? array() : '';
+}
+
 // Register sidebars
 add_action( 'widgets_init', function () {
 	register_sidebar( array(
