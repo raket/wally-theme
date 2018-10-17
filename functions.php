@@ -381,7 +381,8 @@ function _w_child_build_list_group( $output ) {
 			$sub_list = pq( $item->children( 'ul' ) );
 			if ( $sub_list->length ) {
 				$sub_list->addClass( 'list-group__sublist is-open' );
-				$item->children( 'a' )->addClass( 'is-open' )->append( '<button role="button" title="Visa undersidor" data-collapse-trigger></button>' );
+				$sub_list->parent()->append( '<button role="button" title="Visa undersidor" data-collapse-trigger></button>' );
+				$item->children( 'a' )->addClass( 'is-open' );
 			}
 
 			// Open current items parent lists

@@ -20,8 +20,7 @@
             }
         });
         $listGroupButtons.each(function(index) {
-
-            var subList = $(this).parent().siblings('.list-group__sublist');
+            var subList = $(this).siblings('.list-group__sublist');
             if(subList.length) {
 
                 subList.on('toggle', function(e){
